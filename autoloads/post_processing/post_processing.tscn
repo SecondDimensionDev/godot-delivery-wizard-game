@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dttfolcn0l87u"]
+
+[ext_resource type="Shader" uid="uid://k8lgi2usrigq" path="res://scripts/core_shaders/screen_overlays/overlay_crunchy_retro.gdshader" id="1_yhgus"]
+[ext_resource type="Script" uid="uid://comchlyps1euw" path="res://autoloads/post_processing/post_processing.gd" id="1_yjke8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yjke8"]
+shader = ExtResource("1_yhgus")
+shader_parameter/scanline_count = 180
+shader_parameter/scanline_strength = 0.08
+shader_parameter/aberration_amount = 0.15
+shader_parameter/aberration_mult = 0.002
+shader_parameter/vignette_size = 0.3
+shader_parameter/vignette_opacity = 0.4
+shader_parameter/vignette_mult = 15.0
+shader_parameter/noise_intensity = 0.025
+shader_parameter/glow_strength = 1.0
+shader_parameter/glow_radius = 1
+shader_parameter/glow_threshold = 1.0
+
+[node name="PostProcessing" type="CanvasLayer" unique_id=933049511 node_paths=PackedStringArray("screen_overlay")]
+process_mode = 3
+layer = 9999
+script = ExtResource("1_yjke8")
+screen_overlay = NodePath("ScreenOverlay")
+
+[node name="ScreenOverlay" type="ColorRect" parent="." unique_id=1486644612]
+material = SubResource("ShaderMaterial_yjke8")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

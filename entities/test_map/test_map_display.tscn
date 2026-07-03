@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ci5dggr1rv1ow"]
+
+[ext_resource type="Script" uid="uid://d1achhjidr432" path="res://scripts/components/linear_map/linear_map_display.gd" id="1_u7tkx"]
+
+[node name="TestMapDisplay" type="Control" unique_id=701158156]
+physics_interpolation_mode = 0
+layout_mode = 3
+anchors_preset = 0
+offset_right = 60.0
+offset_bottom = 60.0
+script = ExtResource("1_u7tkx")

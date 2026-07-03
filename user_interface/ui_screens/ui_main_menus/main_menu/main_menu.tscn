@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://8gd3x5mtdsk0"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_k136u"]
+[ext_resource type="Script" uid="uid://b3652tttjeo4m" path="res://user_interface/ui_screens/ui_main_menus/main_menu/main_menu.gd" id="1_l8n0t"]
+[ext_resource type="AudioStream" uid="uid://db7nlw1bqw8vi" path="res://assets/assets_audio/audio_sfx/ui_click_b.ogg" id="3_nr0q6"]
+[ext_resource type="AudioStream" uid="uid://ci4drk7ewnegc" path="res://assets/assets_audio/audio_sfx/ui_tap_a.ogg" id="3_yjuii"]
+[ext_resource type="Texture2D" uid="uid://i5es21hwcam8" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_left.png" id="5_u3p4r"]
+[ext_resource type="Texture2D" uid="uid://cuwyikr6olxwy" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_right.png" id="6_ly6g3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ly6g3"]
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[node name="MainMenu" type="Control" unique_id=1799607220 node_paths=PackedStringArray("start_button", "options_button", "credits_button", "help_button", "quit_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_k136u")
+script = ExtResource("1_l8n0t")
+start_button = NodePath("MenuPanel/MenuMargins/MenuElements/StartGameButton")
+options_button = NodePath("MenuPanel/MenuMargins/MenuElements/OptionsButton")
+credits_button = NodePath("MenuPanel/MenuMargins/MenuElements/CreditsButton")
+help_button = NodePath("MenuPanel/MenuMargins/MenuElements/HelpButton")
+quit_button = NodePath("MenuPanel/MenuMargins/MenuElements/QuitButton")
+confirm_sound = ExtResource("3_yjuii")
+back_sound = ExtResource("3_nr0q6")
+metadata/_edit_lock_ = true
+
+[node name="MenuPanel" type="PanelContainer" parent="." unique_id=1220513353]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -170.0
+offset_right = 150.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+metadata/_edit_group_ = true
+
+[node name="MenuMargins" type="MarginContainer" parent="MenuPanel" unique_id=1178730734]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuElements" type="VBoxContainer" parent="MenuPanel/MenuMargins" unique_id=1215706851]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="MenuTitleBox" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements" unique_id=193449258]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="DecorationLeft" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1472715294]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_u3p4r")
+
+[node name="SpacerLeft" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=2132928537]
+layout_mode = 2
+
+[node name="MenuTitle" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1597865439]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_ly6g3")
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpacerRight" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1342877108]
+layout_mode = 2
+
+[node name="DecorationRight" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1541843691]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("6_ly6g3")
+
+[node name="Spacer" type="Control" parent="MenuPanel/MenuMargins/MenuElements" unique_id=2126298470]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="StartGameButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1766787286]
+layout_mode = 2
+text = "Start Game"
+
+[node name="OptionsButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=72367574]
+layout_mode = 2
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1369092154]
+layout_mode = 2
+text = "Credits"
+
+[node name="HelpButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=615379685]
+layout_mode = 2
+text = "Help"
+
+[node name="QuitButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1399798114]
+layout_mode = 2
+text = "Quit"

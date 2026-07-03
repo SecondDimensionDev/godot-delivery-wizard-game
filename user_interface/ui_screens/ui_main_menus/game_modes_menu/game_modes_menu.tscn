@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cvk3qp1pc7fvy"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_t17tj"]
+[ext_resource type="Script" uid="uid://cn31emsprrtdx" path="res://user_interface/ui_screens/ui_main_menus/game_modes_menu/game_modes_menu.gd" id="2_53bm5"]
+[ext_resource type="AudioStream" uid="uid://ci4drk7ewnegc" path="res://assets/assets_audio/audio_sfx/ui_tap_a.ogg" id="3_t17tj"]
+[ext_resource type="AudioStream" uid="uid://db7nlw1bqw8vi" path="res://assets/assets_audio/audio_sfx/ui_click_b.ogg" id="4_0k3mu"]
+[ext_resource type="Texture2D" uid="uid://i5es21hwcam8" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_left.png" id="5_0k3mu"]
+[ext_resource type="Texture2D" uid="uid://cuwyikr6olxwy" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_right.png" id="6_y0rll"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jl0ts"]
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[node name="GameModesMenu" type="Control" unique_id=1867735515 node_paths=PackedStringArray("start_button", "back_button", "continue_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_t17tj")
+script = ExtResource("2_53bm5")
+start_button = NodePath("MenuPanel/MenuMargins/MenuElements/StartButton")
+back_button = NodePath("MenuPanel/MenuMargins/MenuElements/BackButton")
+show_continue_run = true
+continue_button = NodePath("MenuPanel/MenuMargins/MenuElements/ContinueButton")
+confirm_sound = ExtResource("3_t17tj")
+back_sound = ExtResource("4_0k3mu")
+metadata/_edit_lock_ = true
+
+[node name="MenuPanel" type="PanelContainer" parent="." unique_id=27243723]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -170.0
+offset_right = 150.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+metadata/_edit_group_ = true
+
+[node name="MenuMargins" type="MarginContainer" parent="MenuPanel" unique_id=1603982938]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuElements" type="VBoxContainer" parent="MenuPanel/MenuMargins" unique_id=674218044]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="MenuTitleBox" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1461250411]
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="DecorationLeft" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=76793069]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("5_0k3mu")
+
+[node name="SpacerLeft" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=595667220]
+layout_mode = 2
+
+[node name="MenuTitle" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=443416838]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_jl0ts")
+text = "New Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpacerRight" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=979828604]
+layout_mode = 2
+
+[node name="DecorationRight" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=677618573]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("6_y0rll")
+
+[node name="Spacer" type="Control" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1562941255]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="StartButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1598667337]
+layout_mode = 2
+text = "Start New Run"
+
+[node name="ContinueButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=206851193]
+layout_mode = 2
+text = "Continue Run	"
+
+[node name="BackButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=751236073]
+layout_mode = 2
+size_flags_vertical = 10
+text = "Back"

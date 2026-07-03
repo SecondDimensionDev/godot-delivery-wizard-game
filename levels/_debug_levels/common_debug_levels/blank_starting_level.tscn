@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cnwusdma22ef2"]
+
+[ext_resource type="PackedScene" uid="uid://dkopin4q8i8s2" path="res://user_interface/ui_screens/ui_pause_menus/pause_menu.tscn" id="1_oshx4"]
+
+[node name="BlankFirstLevel" type="Node" unique_id=418859794]
+
+[node name="PauseMenu" parent="." unique_id=1256338387 instance=ExtResource("1_oshx4")]

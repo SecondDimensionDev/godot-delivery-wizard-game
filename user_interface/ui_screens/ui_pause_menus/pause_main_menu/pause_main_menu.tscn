@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cegi8a3bt0exv"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_1xrv2"]
+[ext_resource type="Texture2D" uid="uid://i5es21hwcam8" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_left.png" id="2_pbotu"]
+[ext_resource type="Script" uid="uid://coxdkib4axo4m" path="res://user_interface/ui_screens/ui_pause_menus/pause_main_menu/pause_main_menu.gd" id="2_w5sx0"]
+[ext_resource type="AudioStream" uid="uid://ci4drk7ewnegc" path="res://assets/assets_audio/audio_sfx/ui_tap_a.ogg" id="3_lqikk"]
+[ext_resource type="Texture2D" uid="uid://cuwyikr6olxwy" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_right.png" id="3_w5sx0"]
+[ext_resource type="AudioStream" uid="uid://db7nlw1bqw8vi" path="res://assets/assets_audio/audio_sfx/ui_click_b.ogg" id="4_ikpdn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w154r"]
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[node name="PauseMainMenu" type="Control" unique_id=1737985372 node_paths=PackedStringArray("resume_button", "options_button", "help_button", "quit_to_menu_button", "quit_to_desktop_button")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_1xrv2")
+script = ExtResource("2_w5sx0")
+resume_button = NodePath("MenuPanel/MenuMargins/MenuElements/ResumeButton")
+options_button = NodePath("MenuPanel/MenuMargins/MenuElements/OptionsButton")
+help_button = NodePath("MenuPanel/MenuMargins/MenuElements/HelpButton")
+quit_to_menu_button = NodePath("MenuPanel/MenuMargins/MenuElements/QuitToMenu")
+quit_to_desktop_button = NodePath("MenuPanel/MenuMargins/MenuElements/QuitToDesktop")
+confirm_sound = ExtResource("3_lqikk")
+back_sound = ExtResource("4_ikpdn")
+
+[node name="MenuPanel" type="PanelContainer" parent="." unique_id=373712133]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -170.0
+offset_right = 150.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+metadata/_edit_group_ = true
+
+[node name="MenuMargins" type="MarginContainer" parent="MenuPanel" unique_id=1186963076]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 8
+
+[node name="MenuElements" type="VBoxContainer" parent="MenuPanel/MenuMargins" unique_id=1755254535]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="MenuTitleBox" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements" unique_id=377676385]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="DecorationLeft" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1416318328]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("2_pbotu")
+
+[node name="SpacerLeft" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=39108515]
+layout_mode = 2
+
+[node name="MenuTitle" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=557335846]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_w154r")
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpacerRight" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=533098203]
+layout_mode = 2
+
+[node name="DecorationRight" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=125838642]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_w5sx0")
+
+[node name="Spacer" type="Control" parent="MenuPanel/MenuMargins/MenuElements" unique_id=570381553]
+custom_minimum_size = Vector2(8, 8)
+layout_mode = 2
+size_flags_stretch_ratio = 2.0
+
+[node name="ResumeButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=74300426]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Resume Game"
+
+[node name="OptionsButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=361654926]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Options"
+
+[node name="HelpButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=2007554261]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Help"
+
+[node name="QuitToMenu" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1948010014]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit to Menu"
+
+[node name="QuitToDesktop" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1167412609]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Quit to Desktop	"

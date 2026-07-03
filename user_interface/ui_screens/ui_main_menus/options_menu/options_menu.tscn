@@ -1,0 +1,279 @@
+[gd_scene format=3 uid="uid://bn45yoygto3y6"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_gdrc7"]
+[ext_resource type="Script" uid="uid://c6xmuli0ugi0r" path="res://user_interface/ui_screens/ui_main_menus/options_menu/options_menu.gd" id="2_kvusp"]
+[ext_resource type="AudioStream" uid="uid://ci4drk7ewnegc" path="res://assets/assets_audio/audio_sfx/ui_tap_a.ogg" id="3_70avc"]
+[ext_resource type="Texture2D" uid="uid://i5es21hwcam8" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_left.png" id="3_y8gfd"]
+[ext_resource type="AudioStream" uid="uid://db7nlw1bqw8vi" path="res://assets/assets_audio/audio_sfx/ui_click_b.ogg" id="4_ds308"]
+[ext_resource type="Texture2D" uid="uid://cuwyikr6olxwy" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_right.png" id="4_ics6v"]
+[ext_resource type="Script" uid="uid://bxxvv5k03dm0p" path="res://user_interface/ui_screens/ui_main_menus/options_menu/fullscreen_toggle.gd" id="7_sske4"]
+[ext_resource type="PackedScene" uid="uid://clmsmtabi603l" path="res://user_interface/ui_elements/failed_tests/volume_slider.tscn" id="7_ue5xx"]
+[ext_resource type="Script" uid="uid://c770t1gng07t7" path="res://user_interface/ui_screens/ui_main_menus/options_menu/mute_checkbox.gd" id="8_abjmn"]
+[ext_resource type="Script" uid="uid://coxi7rytmayxa" path="res://user_interface/ui_screens/ui_main_menus/options_menu/graphics_quality.gd" id="8_ymj1r"]
+[ext_resource type="Script" uid="uid://bcelh2eutd8s3" path="res://user_interface/ui_screens/ui_main_menus/options_menu/fullscreen_on_startup.gd" id="10_70avc"]
+[ext_resource type="Script" uid="uid://crxxp0m2n3mkl" path="res://user_interface/ui_screens/ui_main_menus/options_menu/toggle_overlay.gd" id="10_ics6v"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_abjmn"]
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70avc"]
+
+[node name="OptionsMenu" type="Control" unique_id=1354492000 node_paths=PackedStringArray("back_button", "menu_tabs")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_gdrc7")
+script = ExtResource("2_kvusp")
+back_button = NodePath("MenuPanel/MenuMargins/MenuElements/BackButton")
+menu_tabs = NodePath("MenuPanel/MenuMargins/MenuElements/MenuTabs")
+confirm_sound = ExtResource("3_70avc")
+back_sound = ExtResource("4_ds308")
+metadata/_edit_lock_ = true
+
+[node name="MenuPanel" type="PanelContainer" parent="." unique_id=1426742174]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -170.0
+offset_right = 150.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuMargins" type="MarginContainer" parent="MenuPanel" unique_id=48179523]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="MenuElements" type="VBoxContainer" parent="MenuPanel/MenuMargins" unique_id=487403280]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="MenuTitleBox" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1057661931]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_group_ = true
+
+[node name="DecorationLeft" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=422408441]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_y8gfd")
+
+[node name="SpacerLeft" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1408470651]
+layout_mode = 2
+
+[node name="MenuTitle" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1524446686]
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+theme_override_styles/normal = SubResource("StyleBoxTexture_abjmn")
+text = "Options Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpacerRight" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=1474934647]
+layout_mode = 2
+
+[node name="DecorationRight" type="TextureRect" parent="MenuPanel/MenuMargins/MenuElements/MenuTitleBox" unique_id=316010328]
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("4_ics6v")
+
+[node name="Spacer" type="Control" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1056590850]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+
+[node name="MenuTabs" type="TabContainer" parent="MenuPanel/MenuMargins/MenuElements" unique_id=458850954]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_70avc")
+current_tab = 0
+
+[node name="Audio" type="TabBar" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs" unique_id=1881351785]
+layout_mode = 2
+tab_alignment = 1
+metadata/_tab_index = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio" unique_id=1006472044]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 17.0
+offset_right = 260.0
+offset_bottom = 191.0
+theme_override_constants/separation = 8
+
+[node name="AudioMaster" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer" unique_id=1152494956]
+layout_mode = 2
+
+[node name="MasterVolumeLabel" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioMaster" unique_id=2040411491]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "Master Volume"
+
+[node name="MasterVolume" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioMaster" unique_id=1118409733 instance=ExtResource("7_ue5xx")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+bus_name = "Master"
+volume_preference_name = "master_volume"
+
+[node name="AudioMusic" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer" unique_id=1220061711]
+layout_mode = 2
+
+[node name="MusicVolumeLabel" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioMusic" unique_id=866571983]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+size_flags_vertical = 8
+text = "Music Volume"
+vertical_alignment = 2
+
+[node name="MusicVolume" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioMusic" unique_id=38963977 instance=ExtResource("7_ue5xx")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+size_flags_stretch_ratio = 3.0
+volume_preference_name = "music_volume"
+
+[node name="AudioSFX" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer" unique_id=1564582184]
+layout_mode = 2
+
+[node name="SFXVolumeLabel" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioSFX" unique_id=1745437659]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "SFX Volume"
+
+[node name="SFXVolume" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioSFX" unique_id=1270162967 instance=ExtResource("7_ue5xx")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+bus_name = "Game_SFX"
+volume_preference_name = "sfx_volume"
+
+[node name="AudioUI" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer" unique_id=536088258]
+layout_mode = 2
+
+[node name="UIVolumeLabel" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioUI" unique_id=624947045]
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+text = "UI Volume"
+
+[node name="UIVolume" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer/AudioUI" unique_id=765373095 instance=ExtResource("7_ue5xx")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 2
+bus_name = "UI_SFX"
+volume_preference_name = "ui_volume"
+
+[node name="MuteCheckbox" type="CheckBox" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer" unique_id=1954703128]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Mute All"
+script = ExtResource("8_abjmn")
+
+[node name="Window" type="TabBar" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs" unique_id=734440785]
+visible = false
+layout_mode = 2
+tab_alignment = 1
+scroll_to_selected = false
+metadata/_tab_index = 1
+
+[node name="GraphicsOptions" type="VBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Window" unique_id=642081956]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -56.0
+offset_right = 104.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 0
+
+[node name="FullscreenToggle" type="CheckButton" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Window/GraphicsOptions" unique_id=809734597]
+layout_mode = 2
+button_pressed = true
+text = "Fullscreen"
+expand_icon = true
+script = ExtResource("7_sske4")
+
+[node name="FullscreenOnStartup" type="CheckButton" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Window/GraphicsOptions" unique_id=133078216]
+layout_mode = 2
+text = "Start Fullscreen"
+script = ExtResource("10_70avc")
+
+[node name="Graphics" type="TabBar" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs" unique_id=2066974601]
+visible = false
+layout_mode = 2
+tab_alignment = 1
+scroll_to_selected = false
+metadata/_tab_index = 2
+
+[node name="GraphicsOptions" type="VBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Graphics" unique_id=170640910]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -56.0
+offset_right = 104.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Graphics/GraphicsOptions" unique_id=515512090]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Graphics/GraphicsOptions/HBoxContainer" unique_id=1007507688]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+
+[node name="QualityLabel" type="Label" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Graphics/GraphicsOptions/HBoxContainer" unique_id=305667431]
+layout_mode = 2
+text = "Graphics Quality"
+
+[node name="GraphicsQuality" type="OptionButton" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Graphics/GraphicsOptions" unique_id=2072470453]
+layout_mode = 2
+selected = 0
+item_count = 4
+popup/item_0/text = "Very High"
+popup/item_0/id = 0
+popup/item_1/text = "High"
+popup/item_1/id = 1
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Low"
+popup/item_3/id = 3
+script = ExtResource("8_ymj1r")
+
+[node name="ToggleOverlay" type="CheckButton" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Graphics/GraphicsOptions" unique_id=2042629582]
+layout_mode = 2
+text = "Screen Effects"
+script = ExtResource("10_ics6v")
+
+[node name="BackButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=218827584]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 10
+text = "Back"

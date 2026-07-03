@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dkopin4q8i8s2"]
+
+[ext_resource type="Script" uid="uid://152sr58b1b1g" path="res://user_interface/ui_screens/ui_pause_menus/pause_menu.gd" id="1_pjqoe"]
+[ext_resource type="Script" uid="uid://dvqkdugwh3abq" path="res://managers/pause_manager/pause_manager.gd" id="2_l5ko5"]
+[ext_resource type="Script" uid="uid://bwpetsp5bniri" path="res://scripts/core_components/general_components/state_machine/base_state_machine.gd" id="3_mynxp"]
+[ext_resource type="Script" uid="uid://dodkqf56pl4iw" path="res://managers/pause_manager/pause_states/pause_idle_state.gd" id="4_kid2r"]
+[ext_resource type="Script" uid="uid://d0pfb2w3hi72s" path="res://managers/pause_manager/pause_states/pause_main_menu_state.gd" id="5_4wy8g"]
+[ext_resource type="PackedScene" uid="uid://xxsqmpfqk1p0" path="res://user_interface/ui_screens/ui_pause_menus/exit_to_main_menu/exit_to_main_menu.tscn" id="5_ncs53"]
+[ext_resource type="Script" uid="uid://q5tcfdahdjmm" path="res://managers/pause_manager/pause_states/pause_options_menu_state.gd" id="6_8j7s1"]
+[ext_resource type="PackedScene" uid="uid://bn45yoygto3y6" path="res://user_interface/ui_screens/ui_main_menus/options_menu/options_menu.tscn" id="6_ncs53"]
+[ext_resource type="Script" uid="uid://sefsf2h6p51q" path="res://managers/pause_manager/pause_states/pause_help_menu_state.gd" id="7_2fx8n"]
+[ext_resource type="PackedScene" uid="uid://c250xejkdrt2h" path="res://user_interface/ui_screens/ui_main_menus/help_menu/help_menu.tscn" id="7_his81"]
+[ext_resource type="PackedScene" uid="uid://cegi8a3bt0exv" path="res://user_interface/ui_screens/ui_pause_menus/pause_main_menu/pause_main_menu.tscn" id="7_l5ko5"]
+[ext_resource type="Script" uid="uid://c7lo7gkav10qk" path="res://managers/pause_manager/pause_states/pause_exit_to_menu_state.gd" id="8_gv1nq"]
+[ext_resource type="Script" uid="uid://dt6c0iw4sb8w4" path="res://managers/pause_manager/pause_states/pause_quit_game_menu_state.gd" id="9_ik875"]
+[ext_resource type="PackedScene" uid="uid://kwh3cj813dbh" path="res://user_interface/ui_screens/ui_main_menus/exit_game_menu/exit_game_menu.tscn" id="9_sqqnr"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=1256338387 node_paths=PackedStringArray("pause_manager")]
+process_mode = 3
+script = ExtResource("1_pjqoe")
+pause_manager = NodePath("PauseManager")
+
+[node name="PauseManager" type="Node" parent="." unique_id=1187846332 node_paths=PackedStringArray("pause_menu_parent", "main_menu_scene", "options_scene", "help_scene", "exit_to_menu_scene", "quit_game_scene", "state_machine")]
+script = ExtResource("2_l5ko5")
+pause_menu_parent = NodePath("..")
+main_menu_scene = NodePath("../PauseMainMenu")
+options_scene = NodePath("../OptionsMenu")
+help_scene = NodePath("../HelpMenu")
+exit_to_menu_scene = NodePath("../ExitToMainMenu")
+quit_game_scene = NodePath("../ExitGameMenu")
+state_machine = NodePath("StateMachine")
+metadata/_custom_type_script = "uid://dvqkdugwh3abq"
+
+[node name="StateMachine" type="Node" parent="PauseManager" unique_id=1972117448 node_paths=PackedStringArray("parent")]
+script = ExtResource("3_mynxp")
+parent = NodePath("..")
+set_state_scripts = Dictionary[String, Script]({
+"ExitMenu": ExtResource("8_gv1nq"),
+"Help": ExtResource("7_2fx8n"),
+"Idle": ExtResource("4_kid2r"),
+"MainMenu": ExtResource("5_4wy8g"),
+"Options": ExtResource("6_8j7s1"),
+"QuitGame": ExtResource("9_ik875")
+})
+set_initial_state = "MainMenu"
+metadata/_custom_type_script = "uid://bwpetsp5bniri"
+
+[node name="DimLights" type="ColorRect" parent="." unique_id=393771233]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5803922)
+metadata/_edit_lock_ = true
+
+[node name="PauseMainMenu" parent="." unique_id=1606921626 instance=ExtResource("7_l5ko5")]
+
+[node name="HelpMenu" parent="." unique_id=1038927877 instance=ExtResource("7_his81")]
+visible = false
+
+[node name="OptionsMenu" parent="." unique_id=335646087 instance=ExtResource("6_ncs53")]
+visible = false
+
+[node name="ExitToMainMenu" parent="." unique_id=406849835 instance=ExtResource("5_ncs53")]
+visible = false
+
+[node name="ExitGameMenu" parent="." unique_id=1638105883 instance=ExtResource("9_sqqnr")]
+visible = false

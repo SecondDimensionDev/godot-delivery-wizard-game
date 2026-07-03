@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://1ta4uyq1kbo4"]
+
+[ext_resource type="Script" uid="uid://djrr3026tydyt" path="res://levels/_system_levels/game_splash/lvl_splash_screen.gd" id="1_3jo18"]
+[ext_resource type="Texture2D" uid="uid://c085pdal7jj1g" path="res://assets/assets_common/logos/godot_logo_pixel_colour.png" id="2_pnk5g"]
+[ext_resource type="Texture2D" uid="uid://b448jmuww2i03" path="res://assets/assets_common/logos/2dg_logo_pixel.png" id="3_pnk5g"]
+
+[node name="LvlSplashScreen" type="Control" unique_id=1962961435 node_paths=PackedStringArray("splash_screen_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3jo18")
+splash_screen_container = NodePath("SplashScreenContainer")
+
+[node name="SplashBackdrop" type="ColorRect" parent="." unique_id=812528837]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SplashScreenContainer" type="CenterContainer" parent="." unique_id=672840385]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GodotLogo" type="TextureRect" parent="SplashScreenContainer" unique_id=1470882855]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = ExtResource("2_pnk5g")
+expand_mode = 3
+
+[node name="CompanyLogo" type="TextureRect" parent="SplashScreenContainer" unique_id=701860662]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+texture = ExtResource("3_pnk5g")
+expand_mode = 3

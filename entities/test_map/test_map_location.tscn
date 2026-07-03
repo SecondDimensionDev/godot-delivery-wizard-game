@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://dmtugdyd06dcj"]
+
+[ext_resource type="Script" uid="uid://d2j48lcgu882k" path="res://scripts/components/linear_map/linear_map_location.gd" id="1_3mw53"]
+[ext_resource type="Texture2D" uid="uid://7djuluwh2i88" path="res://assets/assets_common/icons/custom_icon_other_colours/custom_icon_misc/icon_map_2.png" id="2_fei38"]
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="3_31ew5"]
+
+[sub_resource type="Gradient" id="Gradient_ua5s1"]
+colors = PackedColorArray(0.41965207, 0.86577576, 0.70176685, 1, 0.22350383, 0.3261726, 0.17410132, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4rndo"]
+gradient = SubResource("Gradient_ua5s1")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7oymx"]
+size = Vector2(95, 51)
+
+[node name="TestMapLocation" type="Node2D" unique_id=1566592328 node_paths=PackedStringArray("background_sprite", "icon_sprite", "label", "click_area", "port_north", "port_south", "port_east", "port_west", "player_inicator_location")]
+script = ExtResource("1_3mw53")
+background_sprite = NodePath("Background")
+icon_sprite = NodePath("Icon")
+label = NodePath("Label")
+click_area = NodePath("ClickArea")
+port_north = NodePath("North")
+port_south = NodePath("South")
+port_east = NodePath("East")
+port_west = NodePath("West")
+player_inicator_location = NodePath("Player")
+color_locked = Color(0.75, 0.75, 0.75, 0.7372549)
+color_unreachable = Color(0.67, 0.19262502, 0.1675, 0.39607844)
+color_next_locked = Color(0.77, 0.72611, 0.6314, 0.7882353)
+color_current_incomplete = Color(0.06369648, 0.7761862, 0.70195144, 1)
+color_current_complete = Color(1, 1, 1, 1)
+color_visited = Color(0.315, 0.5, 0.33658338, 0.6784314)
+color_skipped = Color(0.3, 0.3, 0.3, 0.77254903)
+metadata/_custom_type_script = "uid://d2j48lcgu882k"
+
+[node name="Background" type="Sprite2D" parent="." unique_id=852377095]
+position = Vector2(1.5000038, 1.2500019)
+scale = Vector2(1.671875, 0.8984375)
+texture = SubResource("GradientTexture2D_4rndo")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1743511901]
+position = Vector2(-1, -6)
+texture = ExtResource("2_fei38")
+
+[node name="Label" type="Label" parent="." unique_id=1390089905]
+offset_left = -52.0
+offset_top = 5.0
+offset_right = 55.0
+offset_bottom = 27.0
+theme = ExtResource("3_31ew5")
+text = "Location"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=1908269184]
+position = Vector2(-53, -28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=593046558]
+position = Vector2(53.5, 28.5)
+shape = SubResource("RectangleShape2D_7oymx")
+
+[node name="North" type="Marker2D" parent="." unique_id=1026606039]
+position = Vector2(0, -26)
+metadata/_edit_lock_ = true
+
+[node name="South" type="Marker2D" parent="." unique_id=1546949308]
+position = Vector2(0, 28)
+metadata/_edit_lock_ = true
+
+[node name="East" type="Marker2D" parent="." unique_id=1337917098]
+position = Vector2(53, 0)
+metadata/_edit_lock_ = true
+
+[node name="West" type="Marker2D" parent="." unique_id=1638041341]
+position = Vector2(-51, 0)
+metadata/_edit_lock_ = true
+
+[node name="Player" type="Marker2D" parent="." unique_id=506949759]
+position = Vector2(28, -13)

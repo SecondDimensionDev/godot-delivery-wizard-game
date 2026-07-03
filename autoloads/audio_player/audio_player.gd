@@ -1,0 +1,2 @@
+## AudioPlayer Autoload
+extends BaseAudioPlayer
