@@ -21,8 +21,8 @@ func enter() -> void:
 	fov_component = player.player_camera as FPSCameraViewfinder
 	
 	fov_component.reset_fov()
-	#player.animation_player.play("animation_library/Idle")
-	player.animation_player_states.travel("Idle")
+	player.animation_player.play("animation_library/Idle")
+	#player.animation_player_states.travel("Idle")
 
 
 func handle_input(event: InputEvent) -> State:

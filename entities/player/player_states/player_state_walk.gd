@@ -21,8 +21,8 @@ func enter() -> void:
 	fov_component = player.player_camera as FPSCameraViewfinder
 	
 	fov_component.reset_fov()
-	#player.animation_player.play("animation_library/Walk")
-	player.animation_player_states.travel("Walk")
+	player.animation_player.play("animation_library/Walk")
+	#player.animation_player_states.travel("Walk")
 
 func handle_input(event: InputEvent) -> State:
 	if event.is_action_pressed("jump") and player.is_on_floor():
