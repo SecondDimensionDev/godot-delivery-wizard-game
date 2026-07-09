@@ -58,7 +58,9 @@ func _on_lobby_created(connect_status: Steam.Result, lobby_id: int) -> void:
 			printerr("Failed to set lobby name")
 		# We will grab and set all lobby data sets; these must have been both
 		# comma-separated and in key:value pairs
-		var data_sets: PackedStringArray = lobby_data.text.split(",", false)
+		var search_string = custom_lobby_data + "," + lobby_data.text
+		#var data_sets: PackedStringArray = lobby_data.text.split(",", false)
+		var data_sets: PackedStringArray = search_string.split(",", false)
 		for this_data in data_sets:
 			var data_key_value: PackedStringArray = this_data.split(":", false, 1)
 			if data_key_value.size() == 2:

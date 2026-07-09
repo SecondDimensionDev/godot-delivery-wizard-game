@@ -27,7 +27,8 @@ func enter() -> void:
 	crouch_multiplier = controller.crouch_mulitplier
 	fov_component.reset_fov()
 	crouch_component.crouch()
-	player.animation_player.play("animation_library/Crouch_Fwd")
+	#player.animation_player.play("animation_library/Crouch_Fwd")
+	
 
 
 func exit() -> void:
