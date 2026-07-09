@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://cyxec5s21t7be"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_rr3cf"]
+[ext_resource type="Script" uid="uid://b5kb4y41vkb0r" path="res://user_interface/ui_elements/steam_lobby_elements/steam_lobby_chat.gd" id="2_rr3cf"]
+
+[node name="SteamChat" type="Control" unique_id=944540423]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_rr3cf")
+script = ExtResource("2_rr3cf")
+metadata/_edit_lock_ = true
+
+[node name="Frame" type="VBoxContainer" parent="." unique_id=2099036503]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Log" type="RichTextLabel" parent="Frame" unique_id=2125803093]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+scroll_following = true
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="HBoxContainer" parent="Frame" unique_id=418552141]
+layout_mode = 2
+theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
+
+[node name="Message" type="LineEdit" parent="Frame/Controls" unique_id=772321179]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/caret_color = Color(0, 0, 0, 1)
+placeholder_text = "Enter chat message"
+metadata/_edit_lock_ = true
+
+[node name="Send" type="Button" parent="Frame/Controls" unique_id=615518981]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Send"
+metadata/_edit_lock_ = true

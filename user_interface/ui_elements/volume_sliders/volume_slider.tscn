@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://clmsmtabi603l"]
+
+[ext_resource type="Script" uid="uid://dv5g6tbrf2iwm" path="res://user_interface/ui_screens/ui_main_menus/options_menu/main_volume_slider.gd" id="1_e8uio"]
+
+[node name="VolumeSlider" type="HSlider" unique_id=1660792501]
+offset_right = 261.0
+offset_bottom = 28.0
+size_flags_vertical = 3
+max_value = 1.0
+step = 0.005
+value = 1.0
+script = ExtResource("1_e8uio")
+bus_name = "Music"
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

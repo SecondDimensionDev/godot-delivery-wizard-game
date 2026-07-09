@@ -1,0 +1,156 @@
+[gd_scene format=3 uid="uid://b3pqyjio5xjv"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_tbh07"]
+[ext_resource type="Script" uid="uid://b4tp7j64hnsee" path="res://user_interface/ui_screens/ui_lobbies/steam_lobby_host.gd" id="2_dauwd"]
+[ext_resource type="LabelSettings" uid="uid://b00077jiwqivx" path="res://addons/godotsteamkit/themes/label_settings/lobby_title.tres" id="3_hanmd"]
+[ext_resource type="LabelSettings" uid="uid://cccv0hcqhqvac" path="res://addons/godotsteamkit/themes/label_settings/lobby_subtitle.tres" id="4_j0p20"]
+
+[node name="SteamLobbyHost" type="Control" unique_id=1095709009]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_tbh07")
+script = ExtResource("2_dauwd")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=358760655]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=307303619]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+metadata/_edit_lock_ = true
+
+[node name="VFrame" type="VBoxContainer" parent="Panel/Margin" unique_id=2031580543]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="Panel/Margin/VFrame" unique_id=2030359316]
+layout_mode = 2
+text = "Host Lobby"
+label_settings = ExtResource("3_hanmd")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="VFrame" type="VBoxContainer" parent="Panel/Margin/VFrame" unique_id=1326698023]
+layout_mode = 2
+theme_override_constants/separation = 25
+metadata/_edit_lock_ = true
+
+[node name="LobbyMaxPlayers" type="HBoxContainer" parent="Panel/Margin/VFrame/VFrame" unique_id=1214049695]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Panel/Margin/VFrame/VFrame/LobbyMaxPlayers" unique_id=639445640]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+text = "Max Players"
+label_settings = ExtResource("4_j0p20")
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MaxPlayers" type="SpinBox" parent="Panel/Margin/VFrame/VFrame/LobbyMaxPlayers" unique_id=2044867354]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 1.0
+max_value = 250.0
+value = 6.0
+rounded = true
+metadata/_edit_lock_ = true
+
+[node name="LobbyVisibility" type="HBoxContainer" parent="Panel/Margin/VFrame/VFrame" unique_id=566487212]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Panel/Margin/VFrame/VFrame/LobbyVisibility" unique_id=706135511]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+text = "Lobby Visibility"
+label_settings = ExtResource("4_j0p20")
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Visibility" type="OptionButton" parent="Panel/Margin/VFrame/VFrame/LobbyVisibility" unique_id=816507945]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 2
+item_count = 4
+popup/item_0/text = "Private"
+popup/item_0/id = 0
+popup/item_1/text = "Friends Only"
+popup/item_1/id = 1
+popup/item_2/text = "Public"
+popup/item_2/id = 2
+popup/item_3/text = "Invisible"
+popup/item_3/id = 3
+metadata/_edit_lock_ = true
+
+[node name="LobbyDataList" type="HBoxContainer" parent="Panel/Margin/VFrame/VFrame" unique_id=1753637868]
+visible = false
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="Panel/Margin/VFrame/VFrame/LobbyDataList" unique_id=1395190589]
+custom_minimum_size = Vector2(350, 75)
+layout_mode = 2
+text = "Lobby Data"
+label_settings = ExtResource("4_j0p20")
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="LobbyData" type="LineEdit" parent="Panel/Margin/VFrame/VFrame/LobbyDataList" unique_id=1286283631]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Enter lobby data as key1:value1, key2:value2, etc."
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="HBoxContainer" parent="Panel/Margin/VFrame" unique_id=514001590]
+layout_mode = 2
+size_flags_vertical = 10
+metadata/_edit_lock_ = true
+
+[node name="Create" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=1086653260]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Create"
+metadata/_edit_lock_ = true
+
+[node name="Close" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=2095277390]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Close"
+metadata/_edit_lock_ = true

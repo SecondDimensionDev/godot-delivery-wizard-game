@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://jhrhtpolcnpk"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_ekbcw"]
+[ext_resource type="Script" uid="uid://b11w0vypa6ac2" path="res://user_interface/ui_elements/steam_lobby_elements/steam_lobby_player.gd" id="2_5pg54"]
+[ext_resource type="Texture2D" uid="uid://c5cm6165mpvlx" path="res://addons/godotsteamkit/ui/avatar_default.png" id="3_mks1j"]
+[ext_resource type="Script" uid="uid://dilm0gpgemtja" path="res://addons/godotsteamkit/custom_nodes/avatars/steam_avatar_rect.gd" id="4_tvkgv"]
+[ext_resource type="Texture2D" uid="uid://co6s4nyjdlutx" path="res://addons/godotsteamkit/ui/kenney/lobby_host.png" id="5_xwlwf"]
+[ext_resource type="FontFile" uid="uid://c51mib6y5cxbg" path="res://assets/assets_fonts/Zain-Bold.ttf" id="6_12wav"]
+[ext_resource type="LabelSettings" uid="uid://cccv0hcqhqvac" path="res://addons/godotsteamkit/themes/label_settings/lobby_subtitle.tres" id="6_s8ver"]
+[ext_resource type="Script" uid="uid://bycdbw7o5na3f" path="res://addons/godotsteamkit/custom_nodes/usernames/steam_username.gd" id="7_6i06k"]
+[ext_resource type="Texture2D" uid="uid://c84r1eec5hj6n" path="res://addons/godotsteamkit/ui/kenney/profile.png" id="8_q1gbb"]
+[ext_resource type="Texture2D" uid="uid://2whihy7rprqo" path="res://addons/godotsteamkit/ui/kenney/achievements.png" id="9_yd4ay"]
+[ext_resource type="Texture2D" uid="uid://b80kv8sopp0f0" path="res://addons/godotsteamkit/ui/kenney/promote.png" id="10_otaj3"]
+[ext_resource type="Texture2D" uid="uid://bbwy3t2gjpjgq" path="res://addons/godotsteamkit/ui/kenney/kick.png" id="11_c3a4d"]
+[ext_resource type="Texture2D" uid="uid://2ibf8fv4iiyy" path="res://addons/godotsteamkit/ui/kenney/more.png" id="12_aflkc"]
+
+[node name="SteamLobbyPlayer" type="Panel" unique_id=813406713]
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = ExtResource("1_ekbcw")
+script = ExtResource("2_5pg54")
+metadata/_edit_lock_ = true
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=866023209]
+custom_minimum_size = Vector2(0, 105)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 18
+metadata/_edit_lock_ = true
+
+[node name="HFrame" type="HBoxContainer" parent="Margin" unique_id=1882979746]
+layout_mode = 2
+theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
+
+[node name="Avatar" type="TextureRect" parent="Margin/HFrame" unique_id=1252906895]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+texture = ExtResource("3_mks1j")
+script = ExtResource("4_tvkgv")
+metadata/_custom_type_script = "uid://dilm0gpgemtja"
+metadata/_edit_lock_ = true
+
+[node name="Host" type="TextureRect" parent="Margin/HFrame/Avatar" unique_id=188269361]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 57.0
+offset_top = 56.5
+offset_right = 81.0
+offset_bottom = 80.5
+texture = ExtResource("5_xwlwf")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Name" type="Label" parent="Margin/HFrame" unique_id=1136662495]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme = ExtResource("1_ekbcw")
+theme_override_fonts/font = ExtResource("6_12wav")
+text = "Empty Player"
+label_settings = ExtResource("6_s8ver")
+vertical_alignment = 1
+clip_text = true
+script = ExtResource("7_6i06k")
+metadata/_custom_type_script = "uid://bycdbw7o5na3f"
+metadata/_edit_lock_ = true
+
+[node name="OptionList" type="HBoxContainer" parent="Margin/HFrame" unique_id=748531727]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
+
+[node name="Profile" type="Button" parent="Margin/HFrame/OptionList" unique_id=375764805]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+icon = ExtResource("8_q1gbb")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_lock_ = true
+
+[node name="Achievements" type="Button" parent="Margin/HFrame/OptionList" unique_id=564739156]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+icon = ExtResource("9_yd4ay")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_lock_ = true
+
+[node name="Promote" type="Button" parent="Margin/HFrame/OptionList" unique_id=1532040513]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+icon = ExtResource("10_otaj3")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_lock_ = true
+
+[node name="Kick" type="Button" parent="Margin/HFrame/OptionList" unique_id=874140000]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+icon = ExtResource("11_c3a4d")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_lock_ = true
+
+[node name="Options" type="Button" parent="Margin/HFrame" unique_id=446856299]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+toggle_mode = true
+icon = ExtResource("12_aflkc")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_lock_ = true

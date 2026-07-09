@@ -23,6 +23,6 @@ func _init() -> void:
 	CORE_LEVELS = {
 		"splash" : "uid://1ta4uyq1kbo4",
 		"main_menu" : "uid://boamc4f1glu8m",
-		"hub" : "uid://c84xdpmyfa2m6",
-		"first_level" : "uid://cnwusdma22ef2",
+		"hub" : "uid://cqtcmhntie66",
+		"first_level" : "uid://cqtcmhntie66",
 	}

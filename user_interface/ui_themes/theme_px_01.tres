@@ -489,7 +489,7 @@ texture_margin_bottom = 4.0
 
 [resource]
 default_font = ExtResource("70_204pt")
-default_font_size = 19
+default_font_size = 30
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_disabled_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
 Button/colors/font_hover_color = Color(1, 1, 1, 1)
@@ -534,11 +534,13 @@ HSlider/styles/grabber_area = SubResource("StyleBoxTexture_vo2xj")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_02sj1")
 HSlider/styles/slider = SubResource("StyleBoxTexture_iyvk3")
 Label/colors/font_color = Color(1, 1, 1, 1)
+Label/font_sizes/font_size = 30
 LineEdit/colors/font_color = Color(0, 0, 0, 1)
 LineEdit/styles/focus = SubResource("StyleBoxTexture_4kvob")
 LineEdit/styles/normal = SubResource("StyleBoxTexture_th37h")
 LineEdit/styles/read_only = SubResource("StyleBoxTexture_ufej5")
 OptionButton/constants/arrow_margin = 16
+OptionButton/font_sizes/font_size = 30
 OptionButton/icons/arrow = ExtResource("35_urgcu")
 OptionButton/styles/disabled = SubResource("StyleBoxTexture_yao3r")
 OptionButton/styles/hover = SubResource("StyleBoxTexture_h3o1c")

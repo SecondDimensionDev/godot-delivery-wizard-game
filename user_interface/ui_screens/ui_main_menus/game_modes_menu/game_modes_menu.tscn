@@ -13,7 +13,7 @@ texture_margin_top = 6.0
 texture_margin_right = 6.0
 texture_margin_bottom = 6.0
 
-[node name="GameModesMenu" type="Control" unique_id=1867735515 node_paths=PackedStringArray("start_button", "back_button", "continue_button")]
+[node name="GameModesMenu" type="Control" unique_id=1867735515 node_paths=PackedStringArray("menu_panel", "back_button", "host_game_button", "join_game_button")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,13 +22,22 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_t17tj")
 script = ExtResource("2_53bm5")
-start_button = NodePath("MenuPanel/MenuMargins/MenuElements/StartButton")
+menu_panel = NodePath("MenuPanel")
 back_button = NodePath("MenuPanel/MenuMargins/MenuElements/BackButton")
-show_continue_run = true
-continue_button = NodePath("MenuPanel/MenuMargins/MenuElements/ContinueButton")
+host_game_button = NodePath("MenuPanel/MenuMargins/MenuElements/HostGame")
+join_game_button = NodePath("MenuPanel/MenuMargins/MenuElements/JoinGame")
 confirm_sound = ExtResource("3_t17tj")
 back_sound = ExtResource("4_0k3mu")
 metadata/_edit_lock_ = true
+
+[node name="Scene" type="Control" parent="." unique_id=29359446]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="MenuPanel" type="PanelContainer" parent="." unique_id=27243723]
 layout_mode = 1
@@ -37,10 +46,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -170.0
-offset_right = 150.0
-offset_bottom = 170.0
+offset_left = -200.0
+offset_top = -250.0
+offset_right = 200.0
+offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
@@ -90,13 +99,13 @@ custom_minimum_size = Vector2(8, 8)
 layout_mode = 2
 size_flags_stretch_ratio = 2.0
 
-[node name="StartButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1598667337]
+[node name="HostGame" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=206851193]
 layout_mode = 2
-text = "Start New Run"
+text = "Host Game"
 
-[node name="ContinueButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=206851193]
+[node name="JoinGame" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=1598667337]
 layout_mode = 2
-text = "Continue Run	"
+text = "Join Game"
 
 [node name="BackButton" type="Button" parent="MenuPanel/MenuMargins/MenuElements" unique_id=751236073]
 layout_mode = 2

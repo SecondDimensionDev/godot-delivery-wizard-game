@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://bai03oh2ugyst"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_uphgy"]
+[ext_resource type="Script" uid="uid://plratg2du45v" path="res://user_interface/ui_screens/ui_lobbies/steam_lobby.gd" id="2_xb1sm"]
+[ext_resource type="LabelSettings" uid="uid://b00077jiwqivx" path="res://addons/godotsteamkit/themes/label_settings/lobby_title.tres" id="3_oardm"]
+[ext_resource type="PackedScene" uid="uid://cyxec5s21t7be" path="res://user_interface/ui_elements/steam_lobby_elements/steam_lobby_chat.tscn" id="4_uphgy"]
+
+[node name="SteamLobby" type="Control" unique_id=1786295115]
+custom_minimum_size = Vector2(1440, 720)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -360.0
+offset_right = 720.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uphgy")
+script = ExtResource("2_xb1sm")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=912546532]
+custom_minimum_size = Vector2(1440, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -720.0
+offset_top = -513.0
+offset_right = 720.0
+offset_bottom = 518.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=1663593030]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+metadata/_edit_lock_ = true
+
+[node name="VFrame" type="VBoxContainer" parent="Panel/Margin" unique_id=255035325]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="Panel/Margin/VFrame" unique_id=1891489984]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Empty Lobby"
+label_settings = ExtResource("3_oardm")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="HFrame" type="HBoxContainer" parent="Panel/Margin/VFrame" unique_id=1361940418]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 25
+metadata/_edit_lock_ = true
+
+[node name="Chat" parent="Panel/Margin/VFrame/HFrame" unique_id=944540423 instance=ExtResource("4_uphgy")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Players" type="VBoxContainer" parent="Panel/Margin/VFrame/HFrame" unique_id=1068065613]
+layout_mode = 2
+size_flags_horizontal = 3
+metadata/_edit_lock_ = true
+
+[node name="Scroller" type="ScrollContainer" parent="Panel/Margin/VFrame/HFrame/Players" unique_id=963760945]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="Margin" type="MarginContainer" parent="Panel/Margin/VFrame/HFrame/Players/Scroller" unique_id=1826921481]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="PlayerList" type="VBoxContainer" parent="Panel/Margin/VFrame/HFrame/Players/Scroller/Margin" unique_id=1990601750]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 5
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="HBoxContainer" parent="Panel/Margin/VFrame" unique_id=402255840]
+layout_mode = 2
+theme_override_constants/separation = 15
+metadata/_edit_lock_ = true
+
+[node name="Start" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=1822591844]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Start"
+metadata/_edit_lock_ = true
+
+[node name="Invite" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=318853631]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Invite"
+metadata/_edit_lock_ = true
+
+[node name="Leave" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=2034524976]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Leave"
+metadata/_edit_lock_ = true

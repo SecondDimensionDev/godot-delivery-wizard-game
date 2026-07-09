@@ -1,0 +1,261 @@
+[gd_scene format=3 uid="uid://cvxjg0tqcxjd8"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_bswem"]
+[ext_resource type="Script" uid="uid://dfdycp7p7yiii" path="res://user_interface/ui_screens/ui_lobbies/steam_lobby_join.gd" id="2_u3qn6"]
+[ext_resource type="LabelSettings" uid="uid://b00077jiwqivx" path="res://addons/godotsteamkit/themes/label_settings/lobby_title.tres" id="3_065xy"]
+[ext_resource type="LabelSettings" uid="uid://cccv0hcqhqvac" path="res://addons/godotsteamkit/themes/label_settings/lobby_subtitle.tres" id="4_acu1b"]
+
+[node name="SteamLobbyJoin" type="Control" unique_id=172060940]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_bswem")
+script = ExtResource("2_u3qn6")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="." unique_id=389048760]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Margin" type="MarginContainer" parent="Panel" unique_id=83090319]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+metadata/_edit_lock_ = true
+
+[node name="VFrame" type="VBoxContainer" parent="Panel/Margin" unique_id=22972477]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Title" type="Label" parent="Panel/Margin/VFrame" unique_id=279672312]
+layout_mode = 2
+text = "Lobby List"
+label_settings = ExtResource("3_065xy")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/Margin/VFrame" unique_id=1260908329]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="Margin" type="MarginContainer" parent="Panel/Margin/VFrame/ScrollContainer" unique_id=87378344]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+metadata/_edit_lock_ = true
+
+[node name="LobbyList" type="VBoxContainer" parent="Panel/Margin/VFrame/ScrollContainer/Margin" unique_id=1530642879]
+unique_name_in_owner = true
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="HBoxContainer" parent="Panel/Margin/VFrame" unique_id=1415751990]
+layout_mode = 2
+theme_override_constants/separation = 25
+metadata/_edit_lock_ = true
+
+[node name="Filters" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=1264068858]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+theme = ExtResource("1_bswem")
+text = "Filters"
+metadata/_edit_lock_ = true
+
+[node name="Refresh" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=788708282]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Refresh"
+metadata/_edit_lock_ = true
+
+[node name="Close" type="Button" parent="Panel/Margin/VFrame/Controls" unique_id=1111217279]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Close"
+metadata/_edit_lock_ = true
+
+[node name="LobbyFilters" type="Control" parent="." unique_id=1172523129]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="LobbyFilters" unique_id=1106668385]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Margin" type="MarginContainer" parent="LobbyFilters/Panel" unique_id=1621648752]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+metadata/_edit_lock_ = true
+
+[node name="VFrame" type="VBoxContainer" parent="LobbyFilters/Panel/Margin" unique_id=999707217]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LobbyFilters/Panel/Margin/VFrame" unique_id=2070643655]
+layout_mode = 2
+text = "Lobby Filters"
+label_settings = ExtResource("3_065xy")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Filters" type="VBoxContainer" parent="LobbyFilters/Panel/Margin/VFrame" unique_id=1496348683]
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="LobbyDistance" type="HBoxContainer" parent="LobbyFilters/Panel/Margin/VFrame/Filters" unique_id=1169047077]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LobbyFilters/Panel/Margin/VFrame/Filters/LobbyDistance" unique_id=2130557627]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Search Distance"
+label_settings = ExtResource("4_acu1b")
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Distance" type="OptionButton" parent="LobbyFilters/Panel/Margin/VFrame/Filters/LobbyDistance" unique_id=1549145821]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+selected = 1
+item_count = 4
+popup/item_0/text = "Close"
+popup/item_0/id = 0
+popup/item_1/text = "Default"
+popup/item_1/id = 1
+popup/item_2/text = "Far"
+popup/item_2/id = 2
+popup/item_3/text = "Worldwide"
+popup/item_3/id = 3
+metadata/_edit_lock_ = true
+
+[node name="HasOpenSlots" type="HBoxContainer" parent="LobbyFilters/Panel/Margin/VFrame/Filters" unique_id=478973523]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LobbyFilters/Panel/Margin/VFrame/Filters/HasOpenSlots" unique_id=1122372265]
+layout_mode = 2
+text = "Open Player Slots"
+label_settings = ExtResource("4_acu1b")
+metadata/_edit_lock_ = true
+
+[node name="OpenSlots" type="SpinBox" parent="LobbyFilters/Panel/Margin/VFrame/Filters/HasOpenSlots" unique_id=383716278]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+metadata/_edit_lock_ = true
+
+[node name="MaxLobbiesReturned" type="HBoxContainer" parent="LobbyFilters/Panel/Margin/VFrame/Filters" unique_id=789934578]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LobbyFilters/Panel/Margin/VFrame/Filters/MaxLobbiesReturned" unique_id=1914597117]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+text = "Max Lobbies Returned"
+label_settings = ExtResource("4_acu1b")
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="MaxLobbies" type="SpinBox" parent="LobbyFilters/Panel/Margin/VFrame/Filters/MaxLobbiesReturned" unique_id=674168597]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 50.0
+value = 50.0
+metadata/_edit_lock_ = true
+
+[node name="LobbyTerms" type="HBoxContainer" parent="LobbyFilters/Panel/Margin/VFrame/Filters" unique_id=2023370989]
+layout_mode = 2
+theme_override_constants/separation = 25
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="LobbyFilters/Panel/Margin/VFrame/Filters/LobbyTerms" unique_id=1628992343]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+text = "Search Terms"
+label_settings = ExtResource("4_acu1b")
+metadata/_edit_lock_ = true
+
+[node name="SearchTerms" type="LineEdit" parent="LobbyFilters/Panel/Margin/VFrame/Filters/LobbyTerms" unique_id=663002447]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Enter lobby data as key1:value1, key2:value2, etc."
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="HBoxContainer" parent="LobbyFilters/Panel/Margin/VFrame" unique_id=1555258432]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="CloseFilters" type="Button" parent="LobbyFilters/Panel/Margin/VFrame/Controls" unique_id=765533533]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Close"
+metadata/_edit_lock_ = true

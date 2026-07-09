@@ -7,7 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://db7nlw1bqw8vi" path="res://assets/assets_audio/audio_sfx/ui_click_b.ogg" id="4_ds308"]
 [ext_resource type="Texture2D" uid="uid://cuwyikr6olxwy" path="res://assets/assets_ui_themes/ui_theme_01_1bit_monochrome/decorative/icon_decorative_arrow_right.png" id="4_ics6v"]
 [ext_resource type="Script" uid="uid://bxxvv5k03dm0p" path="res://user_interface/ui_screens/ui_main_menus/options_menu/fullscreen_toggle.gd" id="7_sske4"]
-[ext_resource type="PackedScene" uid="uid://clmsmtabi603l" path="res://user_interface/ui_elements/failed_tests/volume_slider.tscn" id="7_ue5xx"]
+[ext_resource type="PackedScene" uid="uid://clmsmtabi603l" path="res://user_interface/ui_elements/volume_sliders/volume_slider.tscn" id="7_ue5xx"]
 [ext_resource type="Script" uid="uid://c770t1gng07t7" path="res://user_interface/ui_screens/ui_main_menus/options_menu/mute_checkbox.gd" id="8_abjmn"]
 [ext_resource type="Script" uid="uid://coxi7rytmayxa" path="res://user_interface/ui_screens/ui_main_menus/options_menu/graphics_quality.gd" id="8_ymj1r"]
 [ext_resource type="Script" uid="uid://bcelh2eutd8s3" path="res://user_interface/ui_screens/ui_main_menus/options_menu/fullscreen_on_startup.gd" id="10_70avc"]
@@ -43,10 +43,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -170.0
-offset_right = 150.0
-offset_bottom = 170.0
+offset_left = -400.0
+offset_top = -300.0
+offset_right = 400.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -107,10 +107,10 @@ metadata/_tab_index = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio" unique_id=1006472044]
 layout_mode = 0
-offset_left = 10.0
-offset_top = 17.0
-offset_right = 260.0
-offset_bottom = 191.0
+offset_left = 17.0
+offset_top = 20.0
+offset_right = 328.0
+offset_bottom = 285.0
 theme_override_constants/separation = 8
 
 [node name="AudioMaster" type="HBoxContainer" parent="MenuPanel/MenuMargins/MenuElements/MenuTabs/Audio/VBoxContainer" unique_id=1152494956]

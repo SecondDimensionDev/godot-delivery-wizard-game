@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://dnf7ej2e41wwe"]
+
+[ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="1_ei40f"]
+[ext_resource type="Script" uid="uid://ct4jfgwkvpjya" path="res://user_interface/ui_screens/ui_main_menus/game_modes_menu/steam_lobby_manager.gd" id="2_kw0t7"]
+[ext_resource type="AudioStream" uid="uid://da7ijtvgs4gck" path="res://assets/assets_audio/audio_sfx/ui_click_a.ogg" id="3_vxy30"]
+[ext_resource type="AudioStream" uid="uid://bnpv36y2wenrh" path="res://assets/assets_audio/audio_sfx/ui_tap_b.ogg" id="4_xruqo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vxy30"]
+font_size = 40
+
+[node name="SteamLobbyManager" type="Control" unique_id=1080078957 node_paths=PackedStringArray("back_button", "host_button", "join_button", "lobby_parent_scene", "button_controls")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ei40f")
+script = ExtResource("2_kw0t7")
+back_button = NodePath("Margin/VFrame/Controls/Back")
+host_button = NodePath("Margin/VFrame/Controls/Host")
+join_button = NodePath("Margin/VFrame/Controls/Join")
+lobby_parent_scene = NodePath("Margin/VFrame/LobbyParentScene")
+button_controls = NodePath("Margin/VFrame/Controls")
+confirm_sound = ExtResource("3_vxy30")
+back_sound = ExtResource("4_xruqo")
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="PanelContainer" parent="." unique_id=2043411590]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -590.0
+offset_top = -410.0
+offset_right = 590.0
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=888291303]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1271712237]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=1014746683]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Welcome to the Game"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer" unique_id=1320259083]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer" unique_id=148301484]
+custom_minimum_size = Vector2(60, 20)
+layout_mode = 2
+text = "Click on the join button to find a game, or click the host button to create a new game"
+label_settings = SubResource("LabelSettings_vxy30")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="." unique_id=859762299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+metadata/_edit_lock_ = true
+
+[node name="VFrame" type="VBoxContainer" parent="Margin" unique_id=1258985622]
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="LobbyParentScene" type="Control" parent="Margin/VFrame" unique_id=265134178]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+metadata/_edit_lock_ = true
+
+[node name="Controls" type="HBoxContainer" parent="Margin/VFrame" unique_id=798552890]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Join" type="Button" parent="Margin/VFrame/Controls" unique_id=54185939]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+text = "Join"
+metadata/_edit_lock_ = true
+
+[node name="Host" type="Button" parent="Margin/VFrame/Controls" unique_id=195622566]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+text = "Host"
+metadata/_edit_lock_ = true
+
+[node name="Back" type="Button" parent="Margin/VFrame/Controls" unique_id=2080309898]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 75)
+layout_mode = 2
+text = "Back"
+metadata/_edit_lock_ = true

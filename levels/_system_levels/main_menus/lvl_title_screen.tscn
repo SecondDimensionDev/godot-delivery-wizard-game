@@ -8,13 +8,13 @@
 [ext_resource type="Theme" uid="uid://b4u1l4x65m3ip" path="res://user_interface/ui_themes/theme_px_01.tres" id="3_wvfis"]
 [ext_resource type="PackedScene" uid="uid://c250xejkdrt2h" path="res://user_interface/ui_screens/ui_main_menus/help_menu/help_menu.tscn" id="4_0sfnv"]
 [ext_resource type="Script" uid="uid://c0i0cc8a6o466" path="res://managers/menu_manager/menu_states/options_menu_state.gd" id="4_32td2"]
-[ext_resource type="PackedScene" uid="uid://cvk3qp1pc7fvy" path="res://user_interface/ui_screens/ui_main_menus/game_modes_menu/game_modes_menu.tscn" id="4_pa41n"]
 [ext_resource type="PackedScene" uid="uid://kwh3cj813dbh" path="res://user_interface/ui_screens/ui_main_menus/exit_game_menu/exit_game_menu.tscn" id="5_41tiq"]
 [ext_resource type="Script" uid="uid://bkntk7g0d8cnq" path="res://managers/menu_manager/menu_states/credits_menu_state.gd" id="5_qcypq"]
 [ext_resource type="Script" uid="uid://bsnbh1l1n48wq" path="res://managers/menu_manager/menu_states/help_menu_state.gd" id="6_3y2d6"]
 [ext_resource type="Script" uid="uid://he6biuwemhay" path="res://managers/menu_manager/menu_states/quit_game_menu_state.gd" id="7_mx1q2"]
 [ext_resource type="PackedScene" uid="uid://bn45yoygto3y6" path="res://user_interface/ui_screens/ui_main_menus/options_menu/options_menu.tscn" id="7_r7ysh"]
 [ext_resource type="Script" uid="uid://b8uhdsjjxusmd" path="res://managers/menu_manager/menu_states/game_modes_menu_state.gd" id="8_kqsch"]
+[ext_resource type="PackedScene" uid="uid://dnf7ej2e41wwe" path="res://user_interface/ui_screens/ui_main_menus/game_modes_menu/steam_lobby_manager.tscn" id="16_8joav"]
 
 [node name="LvlTitleScreen" type="Control" unique_id=200361499]
 layout_mode = 3
@@ -28,7 +28,7 @@ metadata/_edit_lock_ = true
 [node name="MenuManager" type="Node" parent="." unique_id=630655545 node_paths=PackedStringArray("main_menu_scene", "game_modes_scene", "options_scene", "help_scene", "credit_scene", "quit_game_scene", "state_machine")]
 script = ExtResource("1_48axo")
 main_menu_scene = NodePath("../MenuUI/MainMenu")
-game_modes_scene = NodePath("../MenuUI/GameModesMenu")
+game_modes_scene = NodePath("../MenuUI/StartGame")
 options_scene = NodePath("../MenuUI/OptionsMenu")
 help_scene = NodePath("../MenuUI/HelpMenu")
 credit_scene = NodePath("../MenuUI/CreditsMenu")
@@ -65,19 +65,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 640.0
-offset_top = 360.0
-offset_right = -640.0
-offset_bottom = -360.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 theme = ExtResource("3_wvfis")
+metadata/_edit_lock_ = true
 
 [node name="MainMenu" parent="MenuUI" unique_id=2048539100 instance=ExtResource("2_63elh")]
 layout_mode = 1
 
-[node name="GameModesMenu" parent="MenuUI" unique_id=1062525429 instance=ExtResource("4_pa41n")]
+[node name="StartGame" parent="MenuUI" unique_id=1080078957 instance=ExtResource("16_8joav")]
 visible = false
 layout_mode = 1
 
