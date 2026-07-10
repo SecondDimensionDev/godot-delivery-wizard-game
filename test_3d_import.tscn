@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://t2br2h30hfpu"]
 
-[ext_resource type="AnimationLibrary" uid="uid://4nethsgqcnka" path="res://assets/assets_animations/player_animation_library.res" id="1_xd6xc"]
+[ext_resource type="AnimationLibrary" uid="uid://4nethsgqcnka" path="res://assets/assets_animations_old/player_animation_library.res" id="1_xd6xc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m3npp"]
 resource_name = "MI_Ranger"
