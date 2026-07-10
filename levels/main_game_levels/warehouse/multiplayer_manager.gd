@@ -46,6 +46,8 @@ func _on_connection_to_host_failed() -> void:
 		multiplayer.connected_to_server.disconnect(_on_connected_to_host)
 	printerr("Failed to connect to the host's game session")
 	Steamworks.end_session()
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	EventBus.system_state.mouse_released.emit()
 	SystemManager.request_system_state_and_scene_change("Menu", Directory.CORE_LEVELS.main_menu, LoadingScreen.LevelType.MENU, true, true)
 
 

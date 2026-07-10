@@ -75,5 +75,9 @@ func _on_server_disconnected() -> void:
 	end_session()
 	if SystemManager.state_machine.current_state_name == "Gameplay":
 		printerr("Disconnected from the host's game session")
+		# The pause menu normally releases the cursor on the way out; this
+		# path skips it, so free the mouse for the menu here.
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		EventBus.system_state.mouse_released.emit()
 		SystemManager.request_system_state_and_scene_change("Menu", Directory.CORE_LEVELS.main_menu, LoadingScreen.LevelType.MENU, true, true)
 #endregion
