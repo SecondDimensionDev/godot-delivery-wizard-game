@@ -6,6 +6,8 @@ var next_state: State
 
 func enter():
 	state_machine.parent.get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	EventBus.system_state.mouse_released.emit()
 
 
 func exit():
