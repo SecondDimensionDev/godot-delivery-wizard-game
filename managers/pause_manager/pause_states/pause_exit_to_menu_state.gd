@@ -41,4 +41,5 @@ func _request_go_back() -> void:
 
 
 func _exit_to_menu() -> void:
+	Steamworks.leave_game_session()
 	SystemManager.request_system_state_and_scene_change("Menu", Directory.CORE_LEVELS.main_menu, LoadingScreen.LevelType.MENU, true, true)

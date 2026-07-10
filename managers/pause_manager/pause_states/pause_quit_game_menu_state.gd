@@ -41,4 +41,5 @@ func _request_go_back() -> void:
 
 
 func _confirm_quit() -> void:
+	Steamworks.leave_game_session()
 	pause_manager.get_tree().quit()

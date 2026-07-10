@@ -4,6 +4,14 @@ extends BaseSteamworks
 func _ready() -> void:
 	super()
 	Steam.initRelayNetworkAccess()
+	multiplayer.server_disconnected.connect(_on_server_disconnected)
+
+
+# Ensures clients are disconnected immediately (instead of timing out) when
+# the host closes the window directly.
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		leave_game_session()
 
 
 func _process(_delta) -> void:
@@ -48,4 +56,24 @@ func end_session() -> void: ## Closes any active multiplayer peer, returning to 
 
 func is_lobby_owner() -> bool: ## Whether the local player owns the current lobby.
 	return lobby_id > 0 and Steam.getLobbyOwner(lobby_id) == steam_id
+
+
+## Call when deliberately leaving a running game (exit to menu, quit). The
+## host also clears the start flag so lobby members stop auto-joining a game
+## that no longer exists. Closing the host peer disconnects every client,
+## which returns them to the main menu via their server_disconnected signal.
+func leave_game_session() -> void:
+	if is_lobby_owner():
+		Steam.setLobbyData(lobby_id, "game_started", "")
+	end_session()
+
+
+# Fires on clients when the host quits or the connection drops. The client
+# stays in the Steam lobby, so they can rejoin it (or be re-invited) and drop
+# back into the game if the host is still running.
+func _on_server_disconnected() -> void:
+	end_session()
+	if SystemManager.state_machine.current_state_name == "Gameplay":
+		printerr("Disconnected from the host's game session")
+		SystemManager.request_system_state_and_scene_change("Menu", Directory.CORE_LEVELS.main_menu, LoadingScreen.LevelType.MENU, true, true)
 #endregion
