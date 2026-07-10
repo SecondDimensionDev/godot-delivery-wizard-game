@@ -75,16 +75,20 @@ func _spawn_player(peer_id: int) -> void:
 		
 	var new_player = player_scene.instantiate()
 	new_player.name = str(peer_id)
-	
-	player_container.add_child(new_player)
-	
-	# Grab the spawn point at the current index
+
+	# The position must be set before add_child: the MultiplayerSpawner
+	# captures the replicated spawn state at that moment, and the owning
+	# client (who has authority over position) starts from that state.
+	# Setting it afterwards spawns remote copies at the origin.
 	if spawn_points.size() > 0:
 		var current_spawn = spawn_points[_spawn_index]
-		
-		# Move the player to that spawn point
+
+		# Move the player to that spawn point (the player container sits at
+		# the world origin, so global spawn coordinates map directly)
 		if new_player is Node3D:
-			new_player.global_position = current_spawn.global_position
-		
+			new_player.position = current_spawn.global_position
+
 		# Increment the index, and wrap it back to 0 if we exceed the array size (modulo operator)
 		_spawn_index = (_spawn_index + 1) % spawn_points.size()
+
+	player_container.add_child(new_player)
