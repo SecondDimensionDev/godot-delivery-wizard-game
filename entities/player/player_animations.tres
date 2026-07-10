@@ -1,0 +1,72 @@
+[gd_resource type="AnimationLibrary" format=3 uid="uid://dsls4r1r777it"]
+
+[ext_resource type="Animation" uid="uid://ctcs3rmo0qyql" path="res://assets/assets_animations/Crouch_Bwd.res" id="1_a6teq"]
+[ext_resource type="Animation" uid="uid://65cly3lyc2t0" path="res://assets/assets_animations/Crouch_Bwd_L.res" id="2_h6ubb"]
+[ext_resource type="Animation" uid="uid://c5mnjiax7ou8u" path="res://assets/assets_animations/Crouch_Bwd_R.res" id="3_vk27b"]
+[ext_resource type="Animation" uid="uid://b41nep3f21lsk" path="res://assets/assets_animations/Crouch_Enter.res" id="4_ckdgm"]
+[ext_resource type="Animation" uid="uid://bm4il8hxn8xw0" path="res://assets/assets_animations/Crouch_Exit.res" id="5_17lee"]
+[ext_resource type="Animation" uid="uid://b04g74qti6crb" path="res://assets/assets_animations/Crouch_Fwd.res" id="6_ian3e"]
+[ext_resource type="Animation" uid="uid://blpmgervf47s7" path="res://assets/assets_animations/Crouch_Fwd_L.res" id="7_duf0h"]
+[ext_resource type="Animation" uid="uid://s33odxu6se4p" path="res://assets/assets_animations/Crouch_Fwd_R.res" id="8_dfc5i"]
+[ext_resource type="Animation" uid="uid://bmb6vdhs1t0lf" path="res://assets/assets_animations/Crouch_Idle.res" id="9_0vauu"]
+[ext_resource type="Animation" uid="uid://be2fplt077ybl" path="res://assets/assets_animations/Crouch_Left.res" id="10_ergq6"]
+[ext_resource type="Animation" uid="uid://cxiclbegkne4d" path="res://assets/assets_animations/Crouch_Right.res" id="11_m07jv"]
+[ext_resource type="Animation" uid="uid://cahn0s0t3dm23" path="res://assets/assets_animations/Idle.res" id="12_p6uoh"]
+[ext_resource type="Animation" uid="uid://coessr7oaaak6" path="res://assets/assets_animations/Jog_Bwd.res" id="13_3ycqx"]
+[ext_resource type="Animation" uid="uid://xxrn65gl4qje" path="res://assets/assets_animations/Jog_Bwd_L.res" id="14_utbk1"]
+[ext_resource type="Animation" uid="uid://by578fjww8pmb" path="res://assets/assets_animations/Jog_Bwd_R.res" id="15_t5ftc"]
+[ext_resource type="Animation" uid="uid://gvpftxqx1hhw" path="res://assets/assets_animations/Jog_Fwd.res" id="16_y4wjq"]
+[ext_resource type="Animation" uid="uid://dko0t7w7uewd6" path="res://assets/assets_animations/Jog_Fwd_L.res" id="17_y5y31"]
+[ext_resource type="Animation" uid="uid://dp0mmbgivxd8t" path="res://assets/assets_animations/Jog_Fwd_LeanL.res" id="18_8kp5w"]
+[ext_resource type="Animation" uid="uid://m3omxw642t6l" path="res://assets/assets_animations/Jog_Fwd_LeanR.res" id="19_ycevx"]
+[ext_resource type="Animation" uid="uid://rur8rkogq46j" path="res://assets/assets_animations/Jog_Fwd_R.res" id="20_1ovfx"]
+[ext_resource type="Animation" uid="uid://dw0uqjd2ishr6" path="res://assets/assets_animations/Jog_Left.res" id="21_m5ipw"]
+[ext_resource type="Animation" uid="uid://bjcyxja5cwrdn" path="res://assets/assets_animations/Jog_Right.res" id="22_7k2jh"]
+[ext_resource type="Animation" uid="uid://cdruaer6snyhx" path="res://assets/assets_animations/Jump.res" id="23_2msb6"]
+[ext_resource type="Animation" uid="uid://cbff65vsguope" path="res://assets/assets_animations/Jump_Land.res" id="24_dm7vv"]
+[ext_resource type="Animation" uid="uid://b5881a34gsa3h" path="res://assets/assets_animations/Jump_Start.res" id="25_dtjh2"]
+[ext_resource type="Animation" uid="uid://bxylbcwplh2py" path="res://assets/assets_animations/Spell_Simple_Enter.res" id="26_2ks4q"]
+[ext_resource type="Animation" uid="uid://dyewu2u0y2m73" path="res://assets/assets_animations/Spell_Simple_Exit.res" id="27_xiscu"]
+[ext_resource type="Animation" uid="uid://cua6fx0wc2gxv" path="res://assets/assets_animations/Spell_Simple_Idle.res" id="28_m4xtx"]
+[ext_resource type="Animation" uid="uid://03raq2a55dt1" path="res://assets/assets_animations/Spell_Simple_Shoot.res" id="29_cj48m"]
+[ext_resource type="Animation" uid="uid://b4ktfgnwwih3x" path="res://assets/assets_animations/Sprint.res" id="30_3p44f"]
+[ext_resource type="Animation" uid="uid://61a74x2jd2gy" path="res://assets/assets_animations/Sprint_Enter.res" id="31_lr5t0"]
+[ext_resource type="Animation" uid="uid://20p5j8np7n5h" path="res://assets/assets_animations/Sprint_Exit.res" id="32_7efg3"]
+[ext_resource type="Animation" uid="uid://bup5tvct854lp" path="res://assets/assets_animations/Walk.res" id="33_70d4b"]
+
+[resource]
+_data = {
+&"Crouch_Bwd": ExtResource("1_a6teq"),
+&"Crouch_Bwd_L": ExtResource("2_h6ubb"),
+&"Crouch_Bwd_R": ExtResource("3_vk27b"),
+&"Crouch_Enter": ExtResource("4_ckdgm"),
+&"Crouch_Exit": ExtResource("5_17lee"),
+&"Crouch_Fwd": ExtResource("6_ian3e"),
+&"Crouch_Fwd_L": ExtResource("7_duf0h"),
+&"Crouch_Fwd_R": ExtResource("8_dfc5i"),
+&"Crouch_Idle": ExtResource("9_0vauu"),
+&"Crouch_Left": ExtResource("10_ergq6"),
+&"Crouch_Right": ExtResource("11_m07jv"),
+&"Idle": ExtResource("12_p6uoh"),
+&"Jog_Bwd": ExtResource("13_3ycqx"),
+&"Jog_Bwd_L": ExtResource("14_utbk1"),
+&"Jog_Bwd_R": ExtResource("15_t5ftc"),
+&"Jog_Fwd": ExtResource("16_y4wjq"),
+&"Jog_Fwd_L": ExtResource("17_y5y31"),
+&"Jog_Fwd_LeanL": ExtResource("18_8kp5w"),
+&"Jog_Fwd_LeanR": ExtResource("19_ycevx"),
+&"Jog_Fwd_R": ExtResource("20_1ovfx"),
+&"Jog_Left": ExtResource("21_m5ipw"),
+&"Jog_Right": ExtResource("22_7k2jh"),
+&"Jump": ExtResource("23_2msb6"),
+&"Jump_Land": ExtResource("24_dm7vv"),
+&"Jump_Start": ExtResource("25_dtjh2"),
+&"Spell_Simple_Enter": ExtResource("26_2ks4q"),
+&"Spell_Simple_Exit": ExtResource("27_xiscu"),
+&"Spell_Simple_Idle": ExtResource("28_m4xtx"),
+&"Spell_Simple_Shoot": ExtResource("29_cj48m"),
+&"Sprint": ExtResource("30_3p44f"),
+&"Sprint_Enter": ExtResource("31_lr5t0"),
+&"Sprint_Exit": ExtResource("32_7efg3"),
+&"Walk": ExtResource("33_70d4b")
+}

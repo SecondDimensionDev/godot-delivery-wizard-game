@@ -27,7 +27,7 @@ func enter() -> void:
 	crouch_multiplier = controller.crouch_mulitplier
 	fov_component.reset_fov()
 	crouch_component.crouch()
-	#player.animation_player.play("animation_library/Crouch_Fwd")
+
 	
 
 
@@ -64,6 +64,10 @@ func update(delta: float) -> State:
 			return state_machine.states.get("Idle")
 		else:
 			return state_machine.states.get("Walk")
+	
+	state_machine.blend_animation_value("IsCrouching", delta, 1.0)
+	
+	state_machine.blend_animation_direction("Crouch", delta, input_dir)
 	
 	var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	controller.move(direction, delta, crouch_multiplier)

@@ -9,6 +9,7 @@ extends CanvasLayer
 
 # SIGNALS
 signal scene_loaded ## Emitted when the background thread has finished loading the resource
+signal transition_in_complete ## Emitted when the intro fade has fully covered the screen
 signal transition_complete ## Emitted when the new scene is active and the transition out has finished
 
 # ENUMS
@@ -91,6 +92,7 @@ func change_level(path: String, type: LevelType = LevelType.MENU, transition_in:
 		if fade_texture:
 			fade_texture.modulate.a = 1.0
 	
+	transition_in_complete.emit()
 	# 2. Show Content (Skip if Menu)
 	if _level_type != LevelType.MENU:
 		await _show_loading_content()

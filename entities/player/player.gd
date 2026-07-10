@@ -14,8 +14,7 @@ extends CharacterBody3D
 @export var crouch_component: PlayerCrouchComponent
 @export var recoil_component: FPSRecoilComponent
 @export var player_model: Node3D
-@export var animation_tree: AnimationTree
-@onready var animation_player_states = animation_tree.get("parameters/playback")
+@export var anim_tree: AnimationTree
 
 # PRIVATE VARIABLES
 
