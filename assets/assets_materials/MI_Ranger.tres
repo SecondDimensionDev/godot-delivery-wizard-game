@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bs4n6pw6aka7v"]
+
+[ext_resource type="Texture2D" uid="uid://ccd71ksv2x3h8" path="res://assets/assets_textures/T_Ranger_BaseColor.png" id="1_jxd00"]
+[ext_resource type="Texture2D" uid="uid://dgs0pjob6uu63" path="res://assets/assets_textures/T_Ranger_ORM.png" id="2_jjhvb"]
+[ext_resource type="Texture2D" uid="uid://dvp2dwwy8gn11" path="res://assets/assets_textures/T_Ranger_Normal.png" id="3_ut2y3"]
+
+[resource]
+resource_name = "MI_Ranger"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_jxd00")
+metallic = 1.0
+metallic_texture = ExtResource("2_jjhvb")
+metallic_texture_channel = 2
+roughness_texture = ExtResource("2_jjhvb")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("3_ut2y3")
+ao_enabled = true
+ao_texture = ExtResource("2_jjhvb")

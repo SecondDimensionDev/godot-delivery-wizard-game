@@ -1,0 +1,43 @@
+class_name MultiplayerGuard
+extends Node
+## Disables local-only systems for network puppets.
+##
+## Add nodes to the exported arrays to automatically disable their processing,
+## hide their UI, or turn off their cameras if the local client is not the authority.
+
+@export_group("Puppet Disables")
+@export var logic_nodes_to_disable: Array[Node] ## Nodes that will have their process, physics, and input turned off.
+@export var ui_to_hide: Array[CanvasLayer] ## CanvasLayers that will be hidden.
+@export var cameras_to_turn_off: Array[Camera3D] ## Cameras that will have 'current' set to false.
+
+func _ready() -> void:
+	# Check if the parent node (the Player CharacterBody3D) is owned by the local client.
+	# If we DO have authority, we just return and let everything run normally.
+	if get_parent().is_multiplayer_authority():
+		return
+		
+	# If we are a puppet, shut down the specified systems.
+	_disable_logic_nodes()
+	_hide_ui()
+	_deactivate_cameras()
+
+
+func _disable_logic_nodes() -> void:
+	for node in logic_nodes_to_disable:
+		if node:
+			node.set_process(false)
+			node.set_physics_process(false)
+			node.set_process_unhandled_input(false)
+			node.set_process_input(false)
+
+
+func _hide_ui() -> void:
+	for ui_layer in ui_to_hide:
+		if ui_layer:
+			ui_layer.hide()
+
+
+func _deactivate_cameras() -> void:
+	for cam in cameras_to_turn_off:
+		if cam:
+			cam.current = false

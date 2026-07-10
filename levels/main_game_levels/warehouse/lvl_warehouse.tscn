@@ -97,11 +97,15 @@ emission_energy_multiplier = 1.5
 [node name="PauseMenu" parent="." unique_id=1256338387 instance=ExtResource("1_m24gl")]
 visible = false
 
-[node name="MultiplayerManager" type="Node" parent="." unique_id=1015275999]
+[node name="MultiplayerManager" type="Node" parent="." unique_id=1015275999 node_paths=PackedStringArray("spawn_points", "player_container")]
 script = ExtResource("2_mbekb")
+player_scene = ExtResource("1_o8ylh")
+spawn_points = [NodePath("../PlayerSpawners/PlayerSpawn1"), NodePath("../PlayerSpawners/PlayerSpawn2"), NodePath("../PlayerSpawners/PlayerSpawn3"), NodePath("../PlayerSpawners/PlayerSpawn4"), NodePath("../PlayerSpawners/PlayerSpawn5"), NodePath("../PlayerSpawners/PlayerSpawn6")]
+player_container = NodePath("../Players")
 
-[node name="GameplayManager" type="Node" parent="." unique_id=1886335999 node_paths=PackedStringArray("state_machine")]
+[node name="GameplayManager" type="Node" parent="." unique_id=1886335999 node_paths=PackedStringArray("multiplayer_manager", "state_machine")]
 script = ExtResource("2_0govi")
+multiplayer_manager = NodePath("../MultiplayerManager")
 state_machine = NodePath("StateMachine")
 metadata/_custom_type_script = "uid://bx5q8wii80aap"
 
@@ -112,6 +116,7 @@ set_state_scripts = Dictionary[String, Script]({
 "Play": ExtResource("5_p1lvr"),
 "Setup": ExtResource("4_22kvn")
 })
+set_initial_state = "Setup"
 metadata/_custom_type_script = "uid://bwpetsp5bniri"
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=1210740259]
@@ -334,22 +339,32 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
 [node name="Far" type="Marker3D" parent="DeliveryMarkers" unique_id=1998916879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 17)
 
+[node name="PlayerSpawners" type="Node3D" parent="." unique_id=767352803]
+metadata/_edit_lock_ = true
+
+[node name="PlayerSpawn1" type="Marker3D" parent="PlayerSpawners" unique_id=1427020682]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2.4189339, 0, -14.862454)
+
+[node name="PlayerSpawn2" type="Marker3D" parent="PlayerSpawners" unique_id=1992289944]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1.874021, 0, -16.57154)
+
+[node name="PlayerSpawn3" type="Marker3D" parent="PlayerSpawners" unique_id=990679307]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1.7871389, 0, -16.72998)
+
+[node name="PlayerSpawn4" type="Marker3D" parent="PlayerSpawners" unique_id=853617371]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -4.498899, 0, -15.98052)
+
+[node name="PlayerSpawn5" type="Marker3D" parent="PlayerSpawners" unique_id=1901527358]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.833906, 0, -17.263182)
+
+[node name="PlayerSpawn6" type="Marker3D" parent="PlayerSpawners" unique_id=1707379079]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.9772377, 0, -15.734555)
+
 [node name="CargoSpawn" type="Marker3D" parent="." unique_id=1044762057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -12)
-
-[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=1427020682]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16)
 
 [node name="Players" type="Node3D" parent="." unique_id=1925063452]
 
 [node name="PlayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1977595812]
 _spawnable_scenes = PackedStringArray("uid://d2wm6wow7y4c7")
 spawn_path = NodePath("../Players")
-
-[node name="Cargo" type="Node3D" parent="." unique_id=142971072]
-
-[node name="CargoSpawner" type="MultiplayerSpawner" parent="." unique_id=1291438535]
-spawn_path = NodePath("../Cargo")
-
-[node name="Player" parent="." unique_id=1712070701 instance=ExtResource("1_o8ylh")]
-transform = Transform3D(-0.9999543, 0, -0.009564167, 0, 1, 0, 0.009564167, 0, -0.9999543, 0.7927036, 0, -14.330003)

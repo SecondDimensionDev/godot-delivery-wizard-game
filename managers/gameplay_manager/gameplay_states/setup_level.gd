@@ -9,6 +9,8 @@ var _setup_complete: bool = false
 func enter():
 	gameplay_manager = state_machine.parent as GameplayManager
 	
+	gameplay_manager.multiplayer_manager.setup_multiplayer()
+	
 	_first_time_setup.call_deferred()
 
 

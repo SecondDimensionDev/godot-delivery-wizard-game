@@ -2,7 +2,7 @@ class_name GameplayManager
 extends LocalStateManager
 
 # PUBLIC VARIABLES
-
+@export var multiplayer_manager: MultiplayerManager
 
 # VIRTUAL BUILT-IN FUNCTIONS
 

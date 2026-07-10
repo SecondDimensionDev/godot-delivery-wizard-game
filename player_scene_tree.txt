@@ -1,0 +1,35 @@
+Godot Scene Tree. Each node shows the base node type, associated script and instantiated child scene if applicable.  Any nodes inheriting from StateMachine will also show the associated registered state scripts.
+
+- Player (CharacterBody3D) [Script: player.gd]
+  - PlayerUI (CanvasLayer)
+    - CrosshairComponent (Control) [Script: crosshair_component.gd]
+  - PlayerMovementState (Node) [Script: base_state_machine.gd]
+    Registered States:
+      -> Air [player_state_air.gd]
+      -> Crouch [player_state_crouch.gd]
+      -> Idle [player_state_idle.gd]
+      -> Run [player_state_run.gd]
+      -> Walk [player_state_walk.gd]
+    - FPSMovementController (Node) [Script: fps_movement_controller.gd]
+    - PlayerCrouchComponent (Node) [Script: fps_crouch_component.gd]
+    - FPSCameraController (Node) [Script: fps_camera_controller.gd]
+    - MouseCaptureComponent (Node) [Script: mouse_capture_component.gd]
+  - MulitplayerGuard (Node)
+  - MultiplayerSynchronizer (MultiplayerSynchronizer)
+  - CollisionShape (CollisionShape3D)
+  - CeilingCheck (RayCast3D)
+  - CameraAnchor (Marker3D)
+  - FPSDynamicHead (Node3D)
+    - FPSCameraPitch (Node3D)
+      - FPSRecoil (Node3D) [Script: fps_recoil_component.gd]
+        - FPSCameraLean (Node3D) [Script: fps_lean_component.gd]
+          - RayCast3D (RayCast3D)
+          - FPSCameraViewfinder (Camera3D) [Script: fps_camera_viewfinder.gd]
+            - FPSWeaponTilt (Node3D) [Script: fps_weapon_tilt_component.gd]
+              - FPSWeaponSway (Node3D) [Script: fps_weapon_sway_component.gd]
+                - FPSWeaponBob (Node3D) [Script: fps_weapon_bob_component.gd]
+                  - FPSWeaponRig (Node3D)
+  - PlayerModel (Node3D) [Script: player_model.gd] [Scene: player_model.tscn]
+  - GeneralSkeleton (Skeleton3D)
+  - AnimationPlayer (AnimationPlayer)
+  - AnimationTree (AnimationTree)
