@@ -38,5 +38,11 @@ func update(_delta: float) -> State:
 
 
 func _first_time_setup() -> void:
+	# Clients spawn their player only after connecting to the host, so hold
+	# setup completion (and with it the loading screen) until it exists. The
+	# host spawns synchronously in setup_multiplayer, so it never waits here.
+	var multiplayer_manager := gameplay_manager.multiplayer_manager
+	if multiplayer_manager and not multiplayer_manager.has_local_player():
+		await multiplayer_manager.local_player_spawned
 	EventBus.system_state.scene_setup_complete.emit()
 	_setup_complete = true

@@ -97,11 +97,12 @@ emission_energy_multiplier = 1.5
 [node name="PauseMenu" parent="." unique_id=1256338387 instance=ExtResource("1_m24gl")]
 visible = false
 
-[node name="MultiplayerManager" type="Node" parent="." unique_id=1015275999 node_paths=PackedStringArray("spawn_points", "player_container")]
+[node name="MultiplayerManager" type="Node" parent="." unique_id=1015275999 node_paths=PackedStringArray("spawn_points", "player_container", "player_spawner")]
 script = ExtResource("2_mbekb")
 player_scene = ExtResource("1_o8ylh")
 spawn_points = [NodePath("../PlayerSpawners/PlayerSpawn1"), NodePath("../PlayerSpawners/PlayerSpawn2"), NodePath("../PlayerSpawners/PlayerSpawn3"), NodePath("../PlayerSpawners/PlayerSpawn4"), NodePath("../PlayerSpawners/PlayerSpawn5"), NodePath("../PlayerSpawners/PlayerSpawn6")]
 player_container = NodePath("../Players")
+player_spawner = NodePath("../PlayerSpawner")
 
 [node name="GameplayManager" type="Node" parent="." unique_id=1886335999 node_paths=PackedStringArray("multiplayer_manager", "state_machine")]
 script = ExtResource("2_0govi")

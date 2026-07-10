@@ -96,7 +96,10 @@ func _on_start_pressed() -> void:
 
 
 func _load_game_level() -> void:
-	SystemManager.request_system_state_and_scene_change("Gameplay", Directory.CORE_LEVELS.first_level, LoadingScreen.LevelType.SIMPLE_2D, true, true)
+	# wait_for_setup keeps the loading screen up until the level reports setup
+	# complete — for clients that includes connecting to the host and spawning
+	# their player, so there is never a visible frame without an active camera.
+	SystemManager.request_system_state_and_scene_change("Gameplay", Directory.CORE_LEVELS.first_level, LoadingScreen.LevelType.SIMPLE_2D, true, true, true)
 #endregion
 
 

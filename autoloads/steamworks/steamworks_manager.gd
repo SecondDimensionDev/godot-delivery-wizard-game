@@ -73,11 +73,19 @@ func leave_game_session() -> void:
 # back into the game if the host is still running.
 func _on_server_disconnected() -> void:
 	end_session()
-	if SystemManager.state_machine.current_state_name == "Gameplay":
-		printerr("Disconnected from the host's game session")
-		# The pause menu normally releases the cursor on the way out; this
-		# path skips it, so free the mouse for the menu here.
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		EventBus.system_state.mouse_released.emit()
-		SystemManager.request_system_state_and_scene_change("Menu", Directory.CORE_LEVELS.main_menu, LoadingScreen.LevelType.MENU, true, true)
+	var current_state: String = SystemManager.state_machine.current_state_name
+	if current_state == "Loading":
+		# Still loading into the game: the loading screen is waiting on level
+		# setup, which now can never finish (no host to spawn our player).
+		# Unblock it and let the load finish before redirecting to the menu.
+		EventBus.system_state.scene_setup_complete.emit()
+		await LoadingScreen.scene_loaded
+	elif current_state != "Gameplay":
+		return
+	printerr("Disconnected from the host's game session")
+	# The pause menu normally releases the cursor on the way out; this
+	# path skips it, so free the mouse for the menu here.
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	EventBus.system_state.mouse_released.emit()
+	SystemManager.request_system_state_and_scene_change("Menu", Directory.CORE_LEVELS.main_menu, LoadingScreen.LevelType.MENU, true, true)
 #endregion
