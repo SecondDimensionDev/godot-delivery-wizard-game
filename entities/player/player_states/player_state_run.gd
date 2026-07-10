@@ -24,8 +24,8 @@ func enter() -> void:
 	
 	run_multiplier = controller.run_mulitplier
 	fov_component.set_target_fov(86.0)
-	player.animation_player.play("animation_library/Walk")
-	#player.animation_player_states.travel("Walk")
+	#player.animation_player.play("animation_library/Walk")
+	player.animation_player_states.travel("Run")
 
 func handle_input(event: InputEvent) -> State:
 	if event.is_action_pressed("jump") and player.is_on_floor():

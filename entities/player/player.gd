@@ -16,8 +16,8 @@ extends CharacterBody3D
 @export var weapon_manager: WeaponManagerComponent
 @export var recoil_component: FPSRecoilComponent
 @export var player_model: Node3D
-@export var animation_player: AnimationPlayer
-@onready var animation_player_states = animation_player.get("parameters/playback")
+@export var animation_tree: AnimationTree
+@onready var animation_player_states = animation_tree.get("parameters/playback")
 
 # PRIVATE VARIABLES
 var _current_weapon: BaseWeapon = null

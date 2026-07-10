@@ -26,12 +26,13 @@ func handle_input(_event: InputEvent) -> State:
 
 func update(_delta: float) -> State:
 	if _setup_complete:
-		next_state = state_machine.states["PlayMode"]
+		next_state = state_machine.states["Play"]
 	
 	if next_state:
 		return next_state
 	
 	return null
+
 
 
 func _first_time_setup() -> void:

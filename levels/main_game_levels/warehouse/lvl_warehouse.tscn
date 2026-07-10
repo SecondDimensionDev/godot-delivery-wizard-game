@@ -2,6 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://dkopin4q8i8s2" path="res://user_interface/ui_screens/ui_pause_menus/pause_menu.tscn" id="1_m24gl"]
 [ext_resource type="PackedScene" uid="uid://d2wm6wow7y4c7" path="res://entities/player/player.tscn" id="1_o8ylh"]
+[ext_resource type="Script" uid="uid://bx5q8wii80aap" path="res://managers/gameplay_manager/gameplay_manager.gd" id="2_0govi"]
+[ext_resource type="Script" uid="uid://b6fghli6cu820" path="res://levels/main_game_levels/warehouse/multiplayer_manager.gd" id="2_mbekb"]
+[ext_resource type="Script" uid="uid://bwpetsp5bniri" path="res://scripts/core_components/general_components/state_machine/base_state_machine.gd" id="3_mbekb"]
+[ext_resource type="Script" uid="uid://bw1w123qrdqv8" path="res://managers/gameplay_manager/gameplay_states/setup_level.gd" id="4_22kvn"]
+[ext_resource type="Script" uid="uid://ruo3hnkiudsa" path="res://managers/gameplay_manager/gameplay_states/play_mode.gd" id="5_p1lvr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m24gl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -91,6 +96,23 @@ emission_energy_multiplier = 1.5
 
 [node name="PauseMenu" parent="." unique_id=1256338387 instance=ExtResource("1_m24gl")]
 visible = false
+
+[node name="MultiplayerManager" type="Node" parent="." unique_id=1015275999]
+script = ExtResource("2_mbekb")
+
+[node name="GameplayManager" type="Node" parent="." unique_id=1886335999 node_paths=PackedStringArray("state_machine")]
+script = ExtResource("2_0govi")
+state_machine = NodePath("StateMachine")
+metadata/_custom_type_script = "uid://bx5q8wii80aap"
+
+[node name="StateMachine" type="Node" parent="GameplayManager" unique_id=1596771252 node_paths=PackedStringArray("parent")]
+script = ExtResource("3_mbekb")
+parent = NodePath("..")
+set_state_scripts = Dictionary[String, Script]({
+"Play": ExtResource("5_p1lvr"),
+"Setup": ExtResource("4_22kvn")
+})
+metadata/_custom_type_script = "uid://bwpetsp5bniri"
 
 [node name="Environment" type="WorldEnvironment" parent="." unique_id=1210740259]
 environment = SubResource("Environment_c8rgr")

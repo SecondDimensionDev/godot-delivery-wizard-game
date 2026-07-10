@@ -20,8 +20,11 @@ func enter() -> void:
 		player.lean_component.can_lean = false
 	controller = player.movement_controller
 	run_multiplier = controller.run_mulitplier
-	player.animation_player.play("animation_library/Jump")
-	#player.animation_player_states.travel("Jump")
+	#player.animation_player.play("animation_library/Jump")
+	player.animation_player_states.travel("Jump_Start")
+
+
+
 
 func update(delta: float) -> State:
 	controller.apply_gravity(delta)
@@ -45,3 +48,8 @@ func update(delta: float) -> State:
 			return state_machine.states.get("Walk")
 			
 	return null
+
+
+func exit() -> void:
+	player.animation_player_states.travel("Jump_Land")
+	print("END")
