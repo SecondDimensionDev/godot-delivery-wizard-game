@@ -17,27 +17,29 @@ var _spawn_index: int = 0
 
 # PUBLIC FUNCTIONS
 func setup_multiplayer() -> void: ## Initializes the multiplayer environment.
-	
-	# 1. Authority Check: Only the host should spawn objects
+
+	# 1. Authority Check: Clients report in so the host knows their level (and
+	# its MultiplayerSpawner) is loaded and able to receive spawns
 	if not multiplayer.is_server():
+		_notify_ready.rpc_id(1)
 		return
-		
-	# 2. Connect Signals: Listen for drop-ins and drop-outs
-	multiplayer.peer_connected.connect(_on_player_joined)
+
+	# 2. Connect Signals: Listen for drop-outs
 	multiplayer.peer_disconnected.connect(_on_player_left)
-	
+
 	# 3. Spawn the Host: Get the unique ID for the local host instance
 	_spawn_player(multiplayer.get_unique_id())
-	
-	# 4. Spawn Existing Peers: Spawn anyone already connected to the lobby
-	for peer_id in multiplayer.get_peers():
-		_spawn_player(peer_id)
 
 
 # PRIVATE FUNCTIONS
-func _on_player_joined(peer_id: int) -> void:
-	# Triggered when a new client connects mid-game
-	_spawn_player(peer_id)
+# Remote players are spawned only once their level has loaded. Spawning on
+# peer_connected instead would race the client's scene load and the
+# MultiplayerSpawner would drop the spawn on their end.
+@rpc("any_peer", "call_remote", "reliable")
+func _notify_ready() -> void:
+	if not multiplayer.is_server():
+		return
+	_spawn_player(multiplayer.get_remote_sender_id())
 
 
 func _on_player_left(peer_id: int) -> void:

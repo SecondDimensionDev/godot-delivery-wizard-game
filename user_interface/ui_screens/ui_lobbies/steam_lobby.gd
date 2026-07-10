@@ -21,6 +21,9 @@ const LOBBY_PLAYER = preload("uid://jhrhtpolcnpk")
 @onready var _start: Button = %Start
 @onready var _title: Label = %Title
 
+## Guards against starting the game twice from repeated lobby data updates.
+var _game_starting: bool = false
+
 
 func _ready() -> void:
 	if not Engine.has_singleton("Steam"):
@@ -33,6 +36,8 @@ func _ready() -> void:
 	_connect_steam_signals()
 	_get_lobby_name()
 	_get_lobby_members()
+	_update_start_button()
+	_check_game_started()
 
 
 func _get_lobby_members() -> void:
@@ -66,6 +71,7 @@ func _on_invite_pressed() -> void:
 
 
 func _on_leave_pressed() -> void:
+	Steamworks.end_session()
 	Steam.leaveLobby(Steamworks.lobby_id)
 	Steamworks.lobby_id = 0
 	close_panel.emit()
@@ -74,6 +80,22 @@ func _on_leave_pressed() -> void:
 # This should start your match or game.  Depending on if you are using
 # persistent lobbies or not, you can close the lobby connections here.
 func _on_start_pressed() -> void:
+	if not Steamworks.is_lobby_owner():
+		return
+	if _game_starting:
+		return
+	_game_starting = true
+	# The peer must exist before the level loads so multiplayer.is_server()
+	# reports correctly during level setup.
+	Steamworks.start_session_as_host()
+	# Lobby data is persistent state, so every member (including late joiners)
+	# sees the start signal via their lobby_data_update callback.
+	if not Steam.setLobbyData(Steamworks.lobby_id, "game_started", "1"):
+		printerr("Failed to set game_started lobby data")
+	_load_game_level()
+
+
+func _load_game_level() -> void:
 	SystemManager.request_system_state_and_scene_change("Gameplay", Directory.CORE_LEVELS.first_level, LoadingScreen.LevelType.SIMPLE_2D, true, true)
 #endregion
 
@@ -88,6 +110,7 @@ func _on_lobby_chat_update(lobby_id: int, _changed_id: int, _making_change_id: i
 	if Steamworks.lobby_id != lobby_id:
 		return
 	_get_lobby_members()
+	_update_start_button()
 
 
 func _on_lobby_data_update(_success: int, lobby_id: int, _member_id: int) -> void:
@@ -95,6 +118,44 @@ func _on_lobby_data_update(_success: int, lobby_id: int, _member_id: int) -> voi
 	if Steamworks.lobby_id != lobby_id:
 		return
 	_get_lobby_members()
+	_update_start_button()
+	_check_game_started()
+
+
+# Lobby members join the host's session when the game_started lobby data is
+# set. The level only loads once the connection is confirmed, so
+# multiplayer.is_server() reports correctly during level setup.
+func _check_game_started() -> void:
+	if _game_starting:
+		return
+	if Steamworks.is_lobby_owner():
+		return
+	if Steam.getLobbyData(Steamworks.lobby_id, "game_started") != "1":
+		return
+	_game_starting = true
+	multiplayer.connected_to_server.connect(_on_connected_to_host, CONNECT_ONE_SHOT)
+	multiplayer.connection_failed.connect(_on_connection_to_host_failed, CONNECT_ONE_SHOT)
+	Steamworks.start_session_as_client(Steam.getLobbyOwner(Steamworks.lobby_id))
+
+
+func _on_connected_to_host() -> void:
+	if multiplayer.connection_failed.is_connected(_on_connection_to_host_failed):
+		multiplayer.connection_failed.disconnect(_on_connection_to_host_failed)
+	_load_game_level()
+
+
+func _on_connection_to_host_failed() -> void:
+	if multiplayer.connected_to_server.is_connected(_on_connected_to_host):
+		multiplayer.connected_to_server.disconnect(_on_connected_to_host)
+	printerr("Failed to connect to the host's game session")
+	Steamworks.end_session()
+	_game_starting = false
+
+
+# Only the lobby owner can start the game. Ownership can migrate if the host
+# leaves, so this is refreshed on every lobby update.
+func _update_start_button() -> void:
+	_start.visible = Steamworks.is_lobby_owner()
 
 
 func _steam_callback_wrapper(this_signal: String, this_function: String) -> void:
