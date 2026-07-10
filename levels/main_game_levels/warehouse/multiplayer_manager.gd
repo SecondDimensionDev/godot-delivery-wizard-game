@@ -18,10 +18,13 @@ var _spawn_index: int = 0
 # PUBLIC FUNCTIONS
 func setup_multiplayer() -> void: ## Initializes the multiplayer environment.
 
-	# 1. Authority Check: Clients report in so the host knows their level (and
-	# its MultiplayerSpawner) is loaded and able to receive spawns
-	if not multiplayer.is_server():
-		_notify_ready.rpc_id(1)
+	# 1. Role Check: Clients connect to the host only now, once this level is
+	# loaded — the host's MultiplayerSpawner replicates all existing players
+	# the moment a peer connects, which requires the spawner to be in the tree
+	if Steamworks.is_session_client():
+		multiplayer.connected_to_server.connect(_on_connected_to_host, CONNECT_ONE_SHOT)
+		multiplayer.connection_failed.connect(_on_connection_to_host_failed, CONNECT_ONE_SHOT)
+		Steamworks.start_session_as_client(Steamworks.session_host_id)
 		return
 
 	# 2. Connect Signals: Listen for drop-outs
@@ -32,9 +35,21 @@ func setup_multiplayer() -> void: ## Initializes the multiplayer environment.
 
 
 # PRIVATE FUNCTIONS
-# Remote players are spawned only once their level has loaded. Spawning on
-# peer_connected instead would race the client's scene load and the
-# MultiplayerSpawner would drop the spawn on their end.
+func _on_connected_to_host() -> void:
+	if multiplayer.connection_failed.is_connected(_on_connection_to_host_failed):
+		multiplayer.connection_failed.disconnect(_on_connection_to_host_failed)
+	_notify_ready.rpc_id(1)
+
+
+func _on_connection_to_host_failed() -> void:
+	if multiplayer.connected_to_server.is_connected(_on_connected_to_host):
+		multiplayer.connected_to_server.disconnect(_on_connected_to_host)
+	printerr("Failed to connect to the host's game session")
+	Steamworks.end_session()
+
+
+# The host spawns a remote player only once that client has connected from
+# inside the loaded level, so its MultiplayerSpawner can receive the spawn.
 @rpc("any_peer", "call_remote", "reliable")
 func _notify_ready() -> void:
 	if not multiplayer.is_server():

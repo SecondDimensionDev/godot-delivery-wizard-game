@@ -123,8 +123,9 @@ func _on_lobby_data_update(_success: int, lobby_id: int, _member_id: int) -> voi
 
 
 # Lobby members join the host's session when the game_started lobby data is
-# set. The level only loads once the connection is confirmed, so
-# multiplayer.is_server() reports correctly during level setup.
+# set. The connection itself is made by the level's MultiplayerManager after
+# loading — the host's MultiplayerSpawner replicates existing players the
+# moment a peer connects, so this level (and its spawner) must exist first.
 func _check_game_started() -> void:
 	if _game_starting:
 		return
@@ -133,23 +134,8 @@ func _check_game_started() -> void:
 	if Steam.getLobbyData(Steamworks.lobby_id, "game_started") != "1":
 		return
 	_game_starting = true
-	multiplayer.connected_to_server.connect(_on_connected_to_host, CONNECT_ONE_SHOT)
-	multiplayer.connection_failed.connect(_on_connection_to_host_failed, CONNECT_ONE_SHOT)
-	Steamworks.start_session_as_client(Steam.getLobbyOwner(Steamworks.lobby_id))
-
-
-func _on_connected_to_host() -> void:
-	if multiplayer.connection_failed.is_connected(_on_connection_to_host_failed):
-		multiplayer.connection_failed.disconnect(_on_connection_to_host_failed)
+	Steamworks.session_host_id = Steam.getLobbyOwner(Steamworks.lobby_id)
 	_load_game_level()
-
-
-func _on_connection_to_host_failed() -> void:
-	if multiplayer.connected_to_server.is_connected(_on_connected_to_host):
-		multiplayer.connected_to_server.disconnect(_on_connected_to_host)
-	printerr("Failed to connect to the host's game session")
-	Steamworks.end_session()
-	_game_starting = false
 
 
 # Only the lobby owner can start the game. Ownership can migrate if the host
