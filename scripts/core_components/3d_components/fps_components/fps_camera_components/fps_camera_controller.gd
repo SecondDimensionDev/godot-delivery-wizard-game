@@ -19,6 +19,25 @@ extends Node
 
 # PUBLIC VARIABLES
 var is_enabled: bool = true ## Toggles camera movement on or off.
+## Returns the actual pitch of the camera in radians.
+var current_pitch: float:
+	get:
+		if is_instance_valid(pitch_node):
+			return pitch_node.rotation.x
+		return 0.0
+
+## Returns the pitch normalized between -1.0 and 1.0.
+## (0.0 = looking straight, 1.0 = looking fully one way, -1.0 = looking fully the other)
+var normalized_pitch: float:
+	get:
+		var limit := deg_to_rad(pitch_limit_degrees)
+		
+		# Prevent a divide-by-zero error in case pitch_limit_degrees is ever set to 0
+		if limit == 0.0:
+			return 0.0
+			
+		# Divide the current pitch by the maximum limit to get a -1.0 to 1.0 range
+		return current_pitch / limit
 
 # BUILT-IN VIRTUAL METHODS
 func _unhandled_input(event: InputEvent) -> void:

@@ -16,17 +16,21 @@ var next_state: State
 # VIRTUAL METHODS
 func enter() -> void:
 	player = state_machine.parent as Player
+	
 	if is_instance_valid(player.lean_component):
 		player.lean_component.can_lean = true
 	controller = player.movement_controller
 	fov_component = player.player_camera as FPSCameraViewfinder
-	
+	player.animation_control.request_animation_one_shot("Land", true)
+	player.player_view_model.animation_control.request_animation_one_shot("Land", true)
 	fov_component.reset_fov()
 
 
 func handle_input(event: InputEvent) -> State:
 	if event.is_action_pressed("jump") and player.is_on_floor():
 		controller.jump()
+		player.animation_control.request_animation_one_shot("Jump")
+		player.player_view_model.animation_control.request_animation_one_shot("Jump")
 		return state_machine.states.get("Air")
 	if event.is_action_pressed("crouch") and player.is_on_floor():
 		return state_machine.states.get("Crouch")
@@ -46,9 +50,18 @@ func update(delta: float) -> State:
 	if Input.is_action_pressed("run"):
 		return state_machine.states.get("Run")
 	
-	state_machine.blend_animation_value("IsCrouching", delta, 0.0)
-	state_machine.blend_animation_direction("Move", delta, input_dir)
+	if Input.is_action_pressed("walk_forwards"):
+		player.camera_anchor.move_head_forward = true
+	else:
+		player.camera_anchor.move_head_forward = true
 	
+	player.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 3.5)
+	player.animation_control.blend_animation_value("IsCrouching", delta, 0.0)
+	player.animation_control.blend_animation_direction("Move", delta, input_dir)
+	
+	player.player_view_model.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 3.5)
+	player.player_view_model.animation_control.blend_animation_value("IsCrouching", delta, 0.0)
+	player.player_view_model.animation_control.blend_animation_direction("Move", delta, input_dir)
 	# Transform the 2D input into 3D world direction relative to the player's rotation
 	var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	controller.move(direction, delta)
@@ -56,12 +69,5 @@ func update(delta: float) -> State:
 	return null
 
 
-#func _blend_animations(delta: float) -> void:
-	## 1. Get the current position from the tree
-	#var current_blend: Vector2 = player.anim_tree.get("parameters/GroundMovement/blend_position")
-	#
-	## 2. Lerp towards the target input. (Adjust 10.0 to make the blend faster/slower)
-	#var new_blend: Vector2 = current_blend.lerp(input_dir, 10.0 * delta)
-	#
-	## 3. Set the new smoothed position
-	#player.anim_tree.set("parameters/GroundMovement/blend_position", new_blend)
+func exit():
+	player.camera_anchor.move_head_forward = false

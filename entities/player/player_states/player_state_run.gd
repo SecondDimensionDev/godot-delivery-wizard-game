@@ -23,6 +23,7 @@ func enter() -> void:
 	controller = player.movement_controller
 	fov_component = player.player_camera as FPSCameraViewfinder
 	
+	player.animation_control.request_animation_one_shot("Land", true)
 	run_multiplier = controller.run_mulitplier
 	fov_component.set_target_fov(86.0)
 
@@ -30,11 +31,11 @@ func enter() -> void:
 func handle_input(event: InputEvent) -> State:
 	if event.is_action_pressed("jump") and player.is_on_floor():
 		controller.jump()
+		player.animation_control.request_animation_one_shot("Jump")
 		return state_machine.states.get("Air")
 		
 	if event.is_action_pressed("crouch") and player.is_on_floor():
 		return state_machine.states.get("Crouch")
-		
 	return null
 
 func update(delta: float) -> State:
@@ -49,24 +50,23 @@ func update(delta: float) -> State:
 		
 	if not Input.is_action_pressed("run"):
 		return state_machine.states.get("Walk")
-		
+	
+	if Input.is_action_pressed("walk_forwards"):
+		player.camera_anchor.move_head_forward = true
+	else:
+		player.camera_anchor.move_head_forward = true
+	
 	var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	# Pass the multiplier to increase the speed
 	controller.move(direction, delta, run_multiplier)
 	
-	state_machine.blend_animation_value("IsCrouching", delta, 0.0)
-	state_machine.blend_animation_direction("Move", delta, input_dir)
+	player.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 5.0)
+	player.animation_control.blend_animation_value("IsCrouching", delta, 0.0)
+	player.animation_control.blend_animation_direction("Move", delta, input_dir)
+	
+	player.player_view_model.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 5.0)
+	player.player_view_model.animation_control.blend_animation_value("IsCrouching", delta, 0.0)
+	player.player_view_model.animation_control.blend_animation_direction("Move", delta, input_dir)
 	
 	return null
-
-
-#func _blend_animations(delta: float) -> void:
-	## 1. Get the current position from the tree
-	#var current_blend: Vector2 = player.anim_tree.get("parameters/GroundMovement/blend_position")
-	#
-	## 2. Lerp towards the target input. (Adjust 10.0 to make the blend faster/slower)
-	#var new_blend: Vector2 = current_blend.lerp(input_dir, 10.0 * delta)
-	#
-	## 3. Set the new smoothed position
-	#player.anim_tree.set("parameters/GroundMovement/blend_position", new_blend)

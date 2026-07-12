@@ -1,7 +1,8 @@
-## Example State Machine
-extends StateMachine
+class_name PlayerAnimationControl
+extends Node
 
-#export var debug_label: Label
+@export var anim_tree: AnimationTree
+
 func set_animation_value(animation_type: String, new_value: float) -> void:
 	var anim_parameter: String = "parameters/IsCrouching/blend_amount"
 	
@@ -16,7 +17,7 @@ func set_animation_value(animation_type: String, new_value: float) -> void:
 			push_warning("Animation type not found: ", animation_type)
 			return
 	
-	parent.anim_tree.set(anim_parameter, new_value)
+	anim_tree.set(anim_parameter, new_value)
 	
 
 
@@ -28,18 +29,22 @@ func blend_animation_value(animation_type: String, delta: float, target_value: f
 			anim_parameter = "parameters/IsCrouching/blend_amount"
 		"IsAirborne":
 			anim_parameter = "parameters/IsAirborne/blend_amount"
+		"IsCasting":
+			anim_parameter =  "parameters/SingleSpellCast/blend_amount"
+		"AimDirection":
+			anim_parameter = "parameters/PistolAimDirection/blend_position"
 		_:
 			push_warning("Animation type not found: ", animation_type)
 			return
 	
 	# 1. Get the current float from the tree
-	var current_blend: float = parent.anim_tree.get(anim_parameter)
+	var current_blend: float = anim_tree.get(anim_parameter)
 	
 	# 2. Use the global lerpf() function instead of a method
 	var new_blend: float = lerpf(current_blend, target_value, blend_speed * delta)
 	
 	# 3. Set the new smoothed position
-	parent.anim_tree.set(anim_parameter, new_blend)
+	anim_tree.set(anim_parameter, new_blend)
 
 
 func blend_animation_direction(animation_type: String, delta: float, input_dir: Vector2, blend_speed: float = 10.0) -> void:
@@ -55,13 +60,13 @@ func blend_animation_direction(animation_type: String, delta: float, input_dir: 
 			return
 	
 	# 1. Get the current position from the tree
-	var current_blend: Vector2 = parent.anim_tree.get(anim_parameter)
+	var current_blend: Vector2 = anim_tree.get(anim_parameter)
 	
 	# 2. Lerp towards the target input. (Adjust 10.0 to make the blend faster/slower)
 	var new_blend: Vector2 = current_blend.lerp(input_dir, blend_speed * delta)
 	
 	# 3. Set the new smoothed position
-	parent.anim_tree.set(anim_parameter, new_blend)
+	anim_tree.set(anim_parameter, new_blend)
 
 
 func  switch_animation_transition_state(animation_type: String, new_state: String,) -> void:
@@ -73,7 +78,7 @@ func  switch_animation_transition_state(animation_type: String, new_state: Strin
 		_:
 			push_warning("Animation type not found: ", animation_type)
 			return
-	parent.anim_tree.set(anim_parameter, new_state)
+	anim_tree.set(anim_parameter, new_state)
 
 
 func request_animation_one_shot(animation_type: String, fade_out: bool = false, abort: bool = false) -> void:
@@ -89,8 +94,8 @@ func request_animation_one_shot(animation_type: String, fade_out: bool = false, 
 			return
 	
 	if abort:
-		parent.anim_tree.set(anim_parameter, AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
+		anim_tree.set(anim_parameter, AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 	elif fade_out:
-		parent.anim_tree.set(anim_parameter, AnimationNodeOneShot.ONE_SHOT_REQUEST_FADE_OUT)
+		anim_tree.set(anim_parameter, AnimationNodeOneShot.ONE_SHOT_REQUEST_FADE_OUT)
 	else:
-		parent.anim_tree.set(anim_parameter, AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		anim_tree.set(anim_parameter, AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)

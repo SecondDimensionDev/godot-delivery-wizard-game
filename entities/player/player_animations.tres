@@ -26,9 +26,13 @@
 [ext_resource type="Animation" uid="uid://cbff65vsguope" path="res://assets/assets_animations/Jump_Land.res" id="24_dm7vv"]
 [ext_resource type="Animation" uid="uid://b5881a34gsa3h" path="res://assets/assets_animations/Jump_Start.res" id="25_dtjh2"]
 [ext_resource type="Animation" uid="uid://bxylbcwplh2py" path="res://assets/assets_animations/Spell_Simple_Enter.res" id="26_2ks4q"]
+[ext_resource type="Animation" uid="uid://f5k80dak0mra" path="res://assets/assets_animations/Pistol_Aim_Down.res" id="26_17lee"]
+[ext_resource type="Animation" uid="uid://b4ifih1kn5bgv" path="res://assets/assets_animations/Pistol_Aim_Neutral.res" id="27_ian3e"]
 [ext_resource type="Animation" uid="uid://dyewu2u0y2m73" path="res://assets/assets_animations/Spell_Simple_Exit.res" id="27_xiscu"]
+[ext_resource type="Animation" uid="uid://00euw7u16udq" path="res://assets/assets_animations/Pistol_Aim_Up.res" id="28_duf0h"]
 [ext_resource type="Animation" uid="uid://cua6fx0wc2gxv" path="res://assets/assets_animations/Spell_Simple_Idle.res" id="28_m4xtx"]
 [ext_resource type="Animation" uid="uid://03raq2a55dt1" path="res://assets/assets_animations/Spell_Simple_Shoot.res" id="29_cj48m"]
+[ext_resource type="Animation" uid="uid://xdlcj5uxlja1" path="res://assets/assets_animations/Pistol_Idle.res" id="29_dfc5i"]
 [ext_resource type="Animation" uid="uid://b4ktfgnwwih3x" path="res://assets/assets_animations/Sprint.res" id="30_3p44f"]
 [ext_resource type="Animation" uid="uid://61a74x2jd2gy" path="res://assets/assets_animations/Sprint_Enter.res" id="31_lr5t0"]
 [ext_resource type="Animation" uid="uid://20p5j8np7n5h" path="res://assets/assets_animations/Sprint_Exit.res" id="32_7efg3"]
@@ -61,6 +65,10 @@ _data = {
 &"Jump": ExtResource("23_2msb6"),
 &"Jump_Land": ExtResource("24_dm7vv"),
 &"Jump_Start": ExtResource("25_dtjh2"),
+&"Pistol_Aim_Down": ExtResource("26_17lee"),
+&"Pistol_Aim_Neutral": ExtResource("27_ian3e"),
+&"Pistol_Aim_Up": ExtResource("28_duf0h"),
+&"Pistol_Idle": ExtResource("29_dfc5i"),
 &"Spell_Simple_Enter": ExtResource("26_2ks4q"),
 &"Spell_Simple_Exit": ExtResource("27_xiscu"),
 &"Spell_Simple_Idle": ExtResource("28_m4xtx"),

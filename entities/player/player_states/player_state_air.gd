@@ -20,9 +20,9 @@ func enter() -> void:
 		player.lean_component.can_lean = false
 	controller = player.movement_controller
 	run_multiplier = controller.run_mulitplier
-
-
-
+	player.animation_control.request_animation_one_shot("Land", true)
+	player.player_view_model.animation_control.request_animation_one_shot("Land", true)
+	
 
 
 func update(delta: float) -> State:
@@ -45,9 +45,18 @@ func update(delta: float) -> State:
 			return state_machine.states.get("Run")
 		else:
 			return state_machine.states.get("Walk")
-			
+	
+	player.animation_control.blend_animation_value("IsAirborne", delta, 1.0)
+	player.player_view_model.animation_control.blend_animation_value("IsAirborne", delta, 1.0)
+	
 	return null
 
 
 func exit() -> void:
-	pass
+	player.animation_control.set_animation_value("IsLanding", 0.0)
+	player.animation_control.set_animation_value("IsAirborne", -1.0)
+	player.animation_control.request_animation_one_shot("Jump", true)
+	
+	player.player_view_model.animation_control.set_animation_value("IsLanding", 0.0)
+	player.player_view_model.animation_control.set_animation_value("IsAirborne", -1.0)
+	player.player_view_model.animation_control.request_animation_one_shot("Jump", true)

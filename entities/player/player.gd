@@ -10,11 +10,15 @@ extends CharacterBody3D
 @export var movement_controller: FPSMovementController ## Reference to the movement component.
 @export var player_state_machine: StateMachine
 @export var player_camera: FPSCameraViewfinder
+@export var player_camera_controller: FPSCameraController
+@export var player_view_model: PlayerViewModel
 @export var lean_component: PlayerLeanComponent
 @export var crouch_component: PlayerCrouchComponent
 @export var recoil_component: FPSRecoilComponent
+@export var camera_anchor: Marker3D
 @export var player_model: Node3D
 @export var anim_tree: AnimationTree
+@export var animation_control: PlayerAnimationControl
 
 # PRIVATE VARIABLES
 

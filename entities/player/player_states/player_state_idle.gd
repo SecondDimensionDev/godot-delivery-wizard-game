@@ -27,6 +27,8 @@ func enter() -> void:
 func handle_input(event: InputEvent) -> State:
 	if event.is_action_pressed("jump") and player.is_on_floor():
 		controller.jump()
+		player.animation_control.request_animation_one_shot("Jump")
+		player.player_view_model.animation_control.request_animation_one_shot("Jump")
 		return state_machine.states.get("Air")
 	if event.is_action_pressed("crouch") and player.is_on_floor():
 		return state_machine.states.get("Crouch")
@@ -42,24 +44,13 @@ func update(delta: float) -> State:
 	input_dir = Input.get_vector("strafe_left", "strafe_right", "walk_forwards", "walk_backwards")
 	if input_dir != Vector2.ZERO:
 		return state_machine.states.get("Walk")
-		
 	controller.move(Vector3.ZERO, delta)
 	
-	state_machine.blend_animation_value("IsCrouching", delta, 0.0)
-	state_machine.blend_animation_direction("Move", delta, input_dir)
+	player.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 2.5)
+	player.animation_control.blend_animation_value("IsCrouching", delta, 0.0)
+	player.animation_control.blend_animation_direction("Move", delta, input_dir)
 	
+	player.player_view_model.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 2.5)
+	player.player_view_model.animation_control.blend_animation_value("IsCrouching", delta, 0.0)
+	player.player_view_model.animation_control.blend_animation_direction("Move", delta, input_dir)
 	return null
-
-
-#func _blend_animations(delta: float) -> void:
-	## 1. Get the current position from the tree
-	#var current_blend: Vector2 = player.anim_tree.get("parameters/GroundMovement/blend_position")
-	#
-	## 2. Lerp towards the target input. (Adjust 10.0 to make the blend faster/slower)
-	#var new_blend: Vector2 = current_blend.lerp(input_dir, 10.0 * delta)
-	#
-	## 3. Set the new smoothed position
-	#player.anim_tree.set("parameters/GroundMovement/blend_position", new_blend)
-#
-	#var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	#controller.move(direction, delta)
