@@ -44,6 +44,8 @@ func select_job(job_index: int) -> void:
 	JobDefs.current_job_index = job_index
 	menu_open = false
 	menu_closed.emit()
+	AudioPlayer.music.stop_track() ## Fade out the lobby's BGM -- the destination level's
+		## own ambience (client-local, like the lobby's) takes over once it loads.
 	SystemManager.request_system_scene_only_change(
 		target_uid, LoadingScreen.LevelType.COMPLEX_3D, true, true, true)
 
