@@ -53,8 +53,15 @@ func setup_multiplayer() -> void: ## Initializes the multiplayer environment.
 
 
 func _is_connected_to_host() -> bool: ## Whether a prior level already established (and is still holding) the connection.
+	# Peer id 1 is always reserved for the host under Godot's multiplayer
+	# protocol, so a real client reporting it means the handshake that
+	# assigns our own id hasn't actually completed yet (e.g. a brief Steam
+	# relay renegotiation) even though the transport already reports
+	# connected -- fall through to a full reconnect rather than RPC into
+	# that gap and call ourselves the host.
 	return multiplayer.multiplayer_peer != null \
-		and multiplayer.multiplayer_peer.get_connection_status() == MultiplayerPeer.CONNECTION_CONNECTED
+		and multiplayer.multiplayer_peer.get_connection_status() == MultiplayerPeer.CONNECTION_CONNECTED \
+		and multiplayer.get_unique_id() != 1
 
 
 func has_local_player() -> bool: ## Whether this machine's own player exists yet.
