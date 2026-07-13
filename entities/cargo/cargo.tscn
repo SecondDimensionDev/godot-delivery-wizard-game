@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://entities/cargo/cargo.gd" id="1_cargo"]
+[ext_resource type="Shader" path="res://entities/cargo/damage_feedback.gdshader" id="2_shader"]
+
+[sub_resource type="PhysicsMaterial" id="PhysMat_c"]
+friction = 0.1
+
+[sub_resource type="BoxMesh" id="BoxMesh_c"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="ShaderMaterial" id="Mat_c"]
+shader = ExtResource("2_shader")
+shader_parameter/albedo = Color(0.85, 0.5, 0.2, 1)
+shader_parameter/damage = 0.0
+shader_parameter/crack_scale = 3.0
+shader_parameter/damage_tint = Color(0.6, 0.05, 0.05, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape_c"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape_zone"]
+size = Vector3(2.8, 1.4, 2.8)
+
+[sub_resource type="SphereMesh" id="SphereMesh_com"]
+radius = 0.08
+height = 0.16
+
+[sub_resource type="StandardMaterial3D" id="Mat_com"]
+transparency = 1
+no_depth_test = true
+shading_mode = 0
+albedo_color = Color(1, 0.85, 0.1, 0.85)
+render_priority = 10
+
+[sub_resource type="SceneReplicationConfig" id="RepConf_c"]
+properties/0/path = NodePath(".:net_position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:net_rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath(".:value")
+properties/2/spawn = true
+properties/2/replication_mode = 1
+properties/3/path = NodePath(".:com_offset")
+properties/3/spawn = true
+properties/3/replication_mode = 0
+
+[node name="Cargo" type="RigidBody3D"]
+mass = 12.0
+physics_material_override = SubResource("PhysMat_c")
+linear_damp = 2.0
+angular_damp = 2.0
+can_sleep = false
+script = ExtResource("1_cargo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_c")
+surface_material_override/0 = SubResource("Mat_c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape_c")
+
+[node name="ComTell" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_com")
+surface_material_override/0 = SubResource("Mat_com")
+
+[node name="GlowLight" type="OmniLight3D" parent="."]
+light_color = Color(1, 0.65, 0.3, 1)
+light_energy = 1.2
+omni_range = 5.0
+
+[node name="ValueLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0, 0)
+billboard = 1
+text = "$100"
+
+[node name="StabilizeLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+visible = false
+billboard = 1
+no_depth_test = true
+modulate = Color(0.45, 0.85, 1, 1)
+text = "STABILIZED"
+
+[node name="CatastropheLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+visible = false
+billboard = 1
+no_depth_test = true
+font_size = 96
+text = ""
+
+[node name="CrackAudio" type="AudioStreamPlayer3D" parent="."]
+
+[node name="PushZone" type="Area3D" parent="."]
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PushZone"]
+shape = SubResource("BoxShape_zone")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("RepConf_c")

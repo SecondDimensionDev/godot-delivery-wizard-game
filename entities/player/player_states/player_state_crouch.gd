@@ -73,6 +73,6 @@ func update(delta: float) -> State:
 	player.player_view_model.animation_control.blend_animation_direction("Crouch", delta, input_dir)
 	
 	var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	controller.move(direction, delta, crouch_multiplier)
+	controller.move(direction, delta, crouch_multiplier * player.slip_factor())
 	
 	return null

@@ -28,20 +28,40 @@ func setup_multiplayer() -> void: ## Initializes the multiplayer environment.
 	# so the owning client's copy would start at the world origin.
 	player_spawner.spawn_function = _spawn_player_scene
 
-	# 2. Role Check: Clients connect to the host only now, once this level is
-	# loaded — the host's MultiplayerSpawner replicates all existing players
-	# the moment a peer connects, which requires the spawner to be in the tree
+	# 2. Role Check: a client only needs to actually connect once per session —
+	# the peer/connection (and with it Godot's replication object cache) must
+	# survive scene changes, or nodes spawned via a later level's spawner
+	# desync (recreating the peer every level was tried and corrupted sync
+	# for reconnecting peers). On a level entered after the first, the peer
+	# is already connected, so just ask the host to (re)spawn us into it.
 	if Steamworks.is_session_client():
+		if _is_connected_to_host():
+			_notify_ready.rpc_id(1)
+			return
 		multiplayer.connected_to_server.connect(_on_connected_to_host, CONNECT_ONE_SHOT)
 		multiplayer.connection_failed.connect(_on_connection_to_host_failed, CONNECT_ONE_SHOT)
 		Steamworks.start_session_as_client(Steamworks.session_host_id)
 		return
 
-	# 3. Connect Signals: Listen for drop-outs
-	multiplayer.peer_disconnected.connect(_on_player_left)
+	# 3. Connect Signals: Listen for drop-outs (once per session — same
+	# persistent-peer reasoning as above applies to the host's own peer)
+	if not multiplayer.peer_disconnected.is_connected(_on_player_left):
+		multiplayer.peer_disconnected.connect(_on_player_left)
 
 	# 4. Spawn the Host: Get the unique ID for the local host instance
 	_spawn_player(multiplayer.get_unique_id())
+
+
+func _is_connected_to_host() -> bool: ## Whether a prior level already established (and is still holding) the connection.
+	# Peer id 1 is always reserved for the host under Godot's multiplayer
+	# protocol, so a real client reporting it means the handshake that
+	# assigns our own id hasn't actually completed yet (e.g. a brief Steam
+	# relay renegotiation) even though the transport already reports
+	# connected -- fall through to a full reconnect rather than RPC into
+	# that gap and call ourselves the host.
+	return multiplayer.multiplayer_peer != null \
+		and multiplayer.multiplayer_peer.get_connection_status() == MultiplayerPeer.CONNECTION_CONNECTED \
+		and multiplayer.get_unique_id() != 1
 
 
 func has_local_player() -> bool: ## Whether this machine's own player exists yet.
