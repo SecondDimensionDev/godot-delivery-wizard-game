@@ -59,7 +59,7 @@ func update(delta: float) -> State:
 	var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	
 	# Pass the multiplier to increase the speed
-	controller.move(direction, delta, run_multiplier * player.slip_factor())
+	controller.move(direction, delta, run_multiplier)
 	
 	player.animation_control.blend_animation_value("IsAirborne", delta, 0.0, 5.0)
 	player.animation_control.blend_animation_value("IsCrouching", delta, 0.0)

@@ -10,10 +10,6 @@ extends BaseDirectory
 
 const GAME_LEVELS: Dictionary = {
 	"forest" : "uid://bqtk4n0u250kb",
-	# Referenced by plain res:// path rather than a fabricated uid:// -- Godot's loader
-	# accepts either, and only the editor can safely mint new uids on first import.
-	"warehouse" : "uid://cqtcmhntie66",
-	"level_1" : "res://levels/main_game_levels/level_1/lvl_level_1.tscn",
 }
 
 const MUSIC: Dictionary = {
@@ -27,8 +23,6 @@ func _init() -> void:
 	CORE_LEVELS = {
 		"splash" : "uid://1ta4uyq1kbo4",
 		"main_menu" : "uid://boamc4f1glu8m",
-		# The lobby is now the real hub/first-level; warehouse (formerly the stand-in
-		# for both) is reachable as an ordinary job via GAME_LEVELS.warehouse instead.
-		"hub" : "res://levels/hub_lobby_levels/lobby/lvl_lobby.tscn",
-		"first_level" : "res://levels/hub_lobby_levels/lobby/lvl_lobby.tscn",
+		"hub" : "uid://cqtcmhntie66",
+		"first_level" : "uid://cqtcmhntie66",
 	}

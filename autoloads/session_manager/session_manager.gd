@@ -10,5 +10,5 @@ extends BaseSessionManager
 # PUBLIC FUNCTIONS
 func start_new_run() -> void: ## Initializes a fresh run and saves it to disk.
 	super()
-	current_run = RunData.new()
+	
 	save_run()
