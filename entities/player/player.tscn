@@ -22,6 +22,9 @@
 [ext_resource type="Script" uid="uid://b8i7cpx40gswe" path="res://entities/player/player_magic_spells.gd" id="13_ghoj8"]
 [ext_resource type="Script" uid="uid://b0ydr3mf24cum" path="res://entities/player/fps_camera_anchor.gd" id="14_221hk"]
 [ext_resource type="Script" uid="uid://bf2n8md3p0cbl" path="res://scripts/game_specific_components/levitation_spell.gd" id="14_t1t22"]
+[ext_resource type="Script" path="res://scripts/game_specific_components/carry_spell.gd" id="15_carryspell"]
+[ext_resource type="Script" path="res://scripts/game_specific_components/job_computer_interactor.gd" id="16_jobinteract"]
+[ext_resource type="Script" path="res://scripts/game_specific_components/stabilize_component.gd" id="17_stabilize"]
 [ext_resource type="PackedScene" uid="uid://bxxtg363auqj0" path="res://entities/player/player_fps_view_model.tscn" id="18_wuv6x"]
 [ext_resource type="PackedScene" uid="uid://ce0nc6spfvt65" path="res://entities/player/player_model.tscn" id="20_eyb6c"]
 [ext_resource type="AnimationLibrary" uid="uid://dsls4r1r777it" path="res://entities/player/player_animations.tres" id="21_eyb6c"]
@@ -43,6 +46,12 @@ properties/3/replication_mode = 1
 properties/4/path = NodePath("AnimationTree:parameters/IsCrouching/blend_amount")
 properties/4/spawn = true
 properties/4/replication_mode = 1
+properties/5/path = NodePath(".:aim")
+properties/5/spawn = true
+properties/5/replication_mode = 1
+properties/6/path = NodePath(".:velocity")
+properties/6/spawn = true
+properties/6/replication_mode = 1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_enorm"]
 radius = 0.3359375
@@ -351,6 +360,20 @@ raycast = NodePath("LevitationRayCast")
 metadata/_custom_type_script = "uid://bf2n8md3p0cbl"
 
 [node name="LevitationRayCast" type="RayCast3D" parent="PlayerMagicSpells/LevitationSpell" unique_id=837560371]
+
+[node name="CarrySpell" type="Node3D" parent="PlayerMagicSpells" node_paths=PackedStringArray("player")]
+script = ExtResource("15_carryspell")
+player = NodePath("../..")
+
+[node name="JobComputerInteractor" type="Node" parent="." node_paths=PackedStringArray("player", "camera")]
+script = ExtResource("16_jobinteract")
+player = NodePath("..")
+camera = NodePath("../FPSDynamicHead/FPSCameraPitch/FPSRecoil/FPSCameraLean/FPSCameraViewfinder")
+
+[node name="StabilizeComponent" type="Node" parent="." node_paths=PackedStringArray("player", "carry_spell")]
+script = ExtResource("17_stabilize")
+player = NodePath("..")
+carry_spell = NodePath("../PlayerMagicSpells/CarrySpell")
 
 [node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=593419193]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9499512, -0.006273836)

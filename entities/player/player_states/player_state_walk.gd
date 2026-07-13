@@ -64,7 +64,7 @@ func update(delta: float) -> State:
 	player.player_view_model.animation_control.blend_animation_direction("Move", delta, input_dir)
 	# Transform the 2D input into 3D world direction relative to the player's rotation
 	var direction := (player.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	controller.move(direction, delta)
+	controller.move(direction, delta, player.slip_factor())
 	
 	return null
 
