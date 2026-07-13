@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3]
+[gd_scene format=3 uid="uid://cabkyxd4m2887"]
 
 [ext_resource type="PackedScene" uid="uid://dkopin4q8i8s2" path="res://user_interface/ui_screens/ui_pause_menus/pause_menu.tscn" id="1_pausemenu"]
 [ext_resource type="PackedScene" uid="uid://d2wm6wow7y4c7" path="res://entities/player/player.tscn" id="2_player"]
@@ -7,25 +7,25 @@
 [ext_resource type="Script" uid="uid://bwpetsp5bniri" path="res://scripts/core_components/general_components/state_machine/base_state_machine.gd" id="5_statemachine"]
 [ext_resource type="Script" uid="uid://bw1w123qrdqv8" path="res://managers/gameplay_manager/gameplay_states/setup_level.gd" id="6_setup"]
 [ext_resource type="Script" uid="uid://ruo3hnkiudsa" path="res://managers/gameplay_manager/gameplay_states/play_mode.gd" id="7_play"]
-[ext_resource type="Script" path="res://levels/hub_lobby_levels/lobby/lobby.gd" id="8_lobby"]
-[ext_resource type="Script" path="res://levels/hub_lobby_levels/lobby/job_computer.gd" id="9_computer"]
-[ext_resource type="Script" path="res://levels/hub_lobby_levels/lobby/job_menu_controller.gd" id="10_jobmenu"]
-[ext_resource type="Script" path="res://levels/hub_lobby_levels/lobby/grass_blades.gd" id="11_grass"]
-[ext_resource type="Script" path="res://levels/hub_lobby_levels/lobby/scrolling_scenery.gd" id="12_scenery"]
-[ext_resource type="AudioStream" path="res://assets/assets_audio/audio_ambience/lobby_ambience/lobby_ambience.mp3" id="13_ambience"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/prop_meshes/tree_00.glb" id="14_tree00"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/prop_meshes/tree_01.glb" id="15_tree01"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/prop_meshes/tree_02.glb" id="16_tree02"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/prop_meshes/tree_03.glb" id="17_tree03"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/prop_meshes/tree_04.glb" id="18_tree04"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/prop_meshes/tree_05.glb" id="19_tree05"]
-[ext_resource type="PackedScene" path="res://assets/assets_animals/low_poly_horse.glb" id="20_horse"]
-[ext_resource type="PackedScene" path="res://assets/assets_meshes/lobby_meshes/carriage.tscn" id="21_carriage"]
-[ext_resource type="PackedScene" path="res://assets/assets_objects/scrying_orb/scrying_ball.glb" id="22_orb"]
-[ext_resource type="AudioStream" path="res://assets/assets_audio/audio_music/lobby/lobby_bgm.mp3" id="23_bgm"]
-[ext_resource type="AudioStream" path="res://assets/assets_audio/audio_music/lobby/lobby_ambience.ogg" id="26_horseambience"]
-[ext_resource type="AudioStream" path="res://assets/assets_audio/audio_ambience/lobby_ambience/horse_walk.wav" id="24_horsewalk"]
-[ext_resource type="PackedScene" path="res://assets/assets_objects/magic_lantern/magic_lantern.glb" id="25_lantern"]
+[ext_resource type="Script" uid="uid://bd5alacyutswd" path="res://levels/hub_lobby_levels/lobby/lobby.gd" id="8_lobby"]
+[ext_resource type="Script" uid="uid://dvqotj53tlkyx" path="res://levels/hub_lobby_levels/lobby/job_computer.gd" id="9_computer"]
+[ext_resource type="Script" uid="uid://b1fp6x3sjk1cg" path="res://levels/hub_lobby_levels/lobby/job_menu_controller.gd" id="10_jobmenu"]
+[ext_resource type="Script" uid="uid://bnodyy57n1mke" path="res://levels/hub_lobby_levels/lobby/grass_blades.gd" id="11_grass"]
+[ext_resource type="Script" uid="uid://ppkoq4fav435" path="res://levels/hub_lobby_levels/lobby/scrolling_scenery.gd" id="12_scenery"]
+[ext_resource type="AudioStream" uid="uid://tqng3j4083cb" path="res://assets/assets_audio/audio_ambience/lobby_ambience/lobby_ambience.mp3" id="13_ambience"]
+[ext_resource type="PackedScene" uid="uid://dg7adbxgfk58" path="res://assets/assets_meshes/prop_meshes/tree_00.glb" id="14_tree00"]
+[ext_resource type="PackedScene" uid="uid://cvoepe6885a5w" path="res://assets/assets_meshes/prop_meshes/tree_01.glb" id="15_tree01"]
+[ext_resource type="PackedScene" uid="uid://djxbxjnf4bihv" path="res://assets/assets_meshes/prop_meshes/tree_02.glb" id="16_tree02"]
+[ext_resource type="PackedScene" uid="uid://bp8ipv6jw8bm1" path="res://assets/assets_meshes/prop_meshes/tree_03.glb" id="17_tree03"]
+[ext_resource type="PackedScene" uid="uid://bbwq6fik80po2" path="res://assets/assets_meshes/prop_meshes/tree_04.glb" id="18_tree04"]
+[ext_resource type="PackedScene" uid="uid://dg6q5lvlpdoxf" path="res://assets/assets_meshes/prop_meshes/tree_05.glb" id="19_tree05"]
+[ext_resource type="PackedScene" uid="uid://ccjwptt417opd" path="res://assets/assets_animals/low_poly_horse.glb" id="20_horse"]
+[ext_resource type="PackedScene" uid="uid://bim3nf2qel7vn" path="res://assets/assets_meshes/lobby_meshes/carriage.tscn" id="21_carriage"]
+[ext_resource type="PackedScene" uid="uid://2j0h885lugql" path="res://assets/assets_objects/scrying_orb/scrying_ball.glb" id="22_orb"]
+[ext_resource type="AudioStream" uid="uid://c5bqbatb6dvbl" path="res://assets/assets_audio/audio_music/lobby/lobby_bgm.mp3" id="23_bgm"]
+[ext_resource type="AudioStream" uid="uid://ceoglntfmgag5" path="res://assets/assets_audio/audio_ambience/lobby_ambience/horse_walk.wav" id="24_horsewalk"]
+[ext_resource type="PackedScene" uid="uid://b7e5021us6ro8" path="res://assets/assets_objects/magic_lantern/magic_lantern.glb" id="25_lantern"]
+[ext_resource type="AudioStream" uid="uid://bxx7jopmhy6ri" path="res://assets/assets_audio/audio_music/lobby/lobby_ambience.ogg" id="26_horseambience"]
 [ext_resource type="PackedScene" path="res://levels/hub_lobby_levels/lobby/job_menu.tscn" id="27_jobmenu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape_slab"]
@@ -72,25 +72,30 @@ albedo_color = Color(0.15, 0.11, 0.07, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_stripe"]
 size = Vector3(0.5, 0.04, 0.9)
 
-[node name="Lobby" type="Node3D"]
+[node name="Lobby" type="Node3D" unique_id=946152979]
 script = ExtResource("8_lobby")
 
-[node name="PauseMenu" parent="." instance=ExtResource("1_pausemenu")]
+[node name="PauseMenu" parent="." unique_id=20168209 instance=ExtResource("1_pausemenu")]
+layer = 999
 visible = false
 
-[node name="MultiplayerManager" type="Node" parent="." node_paths=PackedStringArray("spawn_points", "player_container", "player_spawner")]
+[node name="JobMenu" parent="." unique_id=1408571556 node_paths=PackedStringArray("controller") instance=ExtResource("27_jobmenu")]
+visible = false
+controller = NodePath("../JobMenuController")
+
+[node name="MultiplayerManager" type="Node" parent="." unique_id=1349632289 node_paths=PackedStringArray("spawn_points", "player_container", "player_spawner")]
 script = ExtResource("4_multiplayermanager")
 player_scene = ExtResource("2_player")
 spawn_points = [NodePath("../PlayerSpawners/PlayerSpawn1"), NodePath("../PlayerSpawners/PlayerSpawn2"), NodePath("../PlayerSpawners/PlayerSpawn3"), NodePath("../PlayerSpawners/PlayerSpawn4")]
 player_container = NodePath("../Players")
 player_spawner = NodePath("../PlayerSpawner")
 
-[node name="GameplayManager" type="Node" parent="." node_paths=PackedStringArray("multiplayer_manager", "state_machine")]
+[node name="GameplayManager" type="Node" parent="." unique_id=729251900 node_paths=PackedStringArray("multiplayer_manager", "state_machine")]
 script = ExtResource("3_gameplaymanager")
 multiplayer_manager = NodePath("../MultiplayerManager")
 state_machine = NodePath("StateMachine")
 
-[node name="StateMachine" type="Node" parent="GameplayManager" node_paths=PackedStringArray("parent")]
+[node name="StateMachine" type="Node" parent="GameplayManager" unique_id=1870197496 node_paths=PackedStringArray("parent")]
 script = ExtResource("5_statemachine")
 parent = NodePath("..")
 set_state_scripts = Dictionary[String, Script]({
@@ -99,284 +104,281 @@ set_state_scripts = Dictionary[String, Script]({
 })
 set_initial_state = "Setup"
 
-[node name="JobMenuController" type="Node" parent="." node_paths=PackedStringArray("lobby")]
+[node name="JobMenuController" type="Node" parent="." unique_id=1035201977 node_paths=PackedStringArray("lobby")]
 script = ExtResource("10_jobmenu")
 lobby = NodePath("..")
 
-[node name="JobMenu" parent="." node_paths=PackedStringArray("controller") instance=ExtResource("27_jobmenu")]
-controller = NodePath("../JobMenuController")
+[node name="Floor" type="StaticBody3D" parent="." unique_id=136503275]
 
-[node name="Floor" type="StaticBody3D" parent="."]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=803265198]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03627324, 0.26714596, -0.4818563)
 shape = SubResource("BoxShape_slab")
 
-[node name="Barrier" type="StaticBody3D" parent="."]
+[node name="Barrier" type="StaticBody3D" parent="." unique_id=631153155]
 
-[node name="SideLeft" type="CollisionShape3D" parent="Barrier"]
+[node name="SideLeft" type="CollisionShape3D" parent="Barrier" unique_id=1477578458]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7, 1.6522462, -0.6083984)
 shape = SubResource("BoxShape_barrier_side")
 
-[node name="SideRight" type="CollisionShape3D" parent="Barrier"]
+[node name="SideRight" type="CollisionShape3D" parent="Barrier" unique_id=475183849]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7, 1.45, -0.57651365)
 shape = SubResource("BoxShape_barrier_side")
 
-[node name="Front" type="CollisionShape3D" parent="Barrier"]
+[node name="Front" type="CollisionShape3D" parent="Barrier" unique_id=1573963609]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4645386, -2.45)
 shape = SubResource("BoxShape_barrier_end")
 
-[node name="Rear" type="CollisionShape3D" parent="Barrier"]
+[node name="Rear" type="CollisionShape3D" parent="Barrier" unique_id=1570756394]
 transform = Transform3D(1, 0, 0, 0, 0.98998666, -0.14116102, 0, 0.14116102, 0.98998666, 0, 1.2650769, 1.0899309)
 shape = SubResource("BoxShape_barrier_end")
 
-[node name="Ceiling" type="CollisionShape3D" parent="Barrier"]
+[node name="Ceiling" type="CollisionShape3D" parent="Barrier" unique_id=412239798]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.88875, -0.5457455)
 shape = SubResource("BoxShape_slab")
 
-[node name="Horse" parent="." instance=ExtResource("20_horse")]
+[node name="Horse" parent="." unique_id=278722443 instance=ExtResource("20_horse")]
 transform = Transform3D(-0.07578333, 0, -1.2827634, 0, 1.285, 0, 1.2827634, 0, -0.07578333, 0.08421707, -0.98903, -7.8266945)
 
-[node name="Horse" parent="Horse" instance=ExtResource("20_horse")]
+[node name="Horse" parent="Horse" unique_id=648330919 instance=ExtResource("20_horse")]
 transform = Transform3D(1.0394571, -0.033452306, -0.0031204335, 0.033461653, 1.039457, 0.0031163543, 0.0030185543, -0.0032151265, 1.0399904, -0.009583473, -0.043359876, 1.2797451)
 
-[node name="JobComputer" type="StaticBody3D" parent="."]
+[node name="JobComputer" type="StaticBody3D" parent="." unique_id=2038801454]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9, 0, -1.9)
 script = ExtResource("9_computer")
 
-[node name="ScreenMesh" type="Marker3D" parent="JobComputer"]
+[node name="ScreenMesh" type="Marker3D" parent="JobComputer" unique_id=1056307293]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.044502437, 1.063629, 0.14143538)
 
-[node name="Model" parent="JobComputer" instance=ExtResource("22_orb")]
+[node name="Model" parent="JobComputer" unique_id=2068113944 instance=ExtResource("22_orb")]
 transform = Transform3D(0.29164284, 0, -0.43051648, 0, 0.52, 0, 0.43051648, 0, 0.29164284, 0, 1.2983007, 0.09943056)
 
-[node name="CrystalGlow" type="OmniLight3D" parent="JobComputer"]
+[node name="CrystalGlow" type="OmniLight3D" parent="JobComputer" unique_id=1184801352]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7596191, 1.7884753, -0.2729112)
 light_color = Color(0.6, 0.35, 1, 1)
 light_energy = 0.8
 omni_range = 2.5
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="JobComputer"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="JobComputer" unique_id=1228965778]
 transform = Transform3D(0.87565845, 0, 0.48293093, 0, 1, 0, -0.48293093, 0, 0.87565845, 0.01683861, 1.0694611, 0.13788533)
 shape = SubResource("BoxShape_desk")
 
-[node name="Label3D" type="Label3D" parent="JobComputer"]
+[node name="Label3D" type="Label3D" parent="JobComputer" unique_id=270118067]
 transform = Transform3D(0.4636524, 0, 0.22416829, 0, 0.515, 0, -0.22416829, 0, 0.4636524, 0.011330724, 1.6208584, 0.085696936)
 billboard = 1
 modulate = Color(0.75, 0.55, 1, 1)
 text = "JOBS  [E]"
 
-[node name="HintLabel" type="Label3D" parent="JobComputer"]
+[node name="HintLabel" type="Label3D" parent="JobComputer" unique_id=194881116]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0.3)
 visible = false
 billboard = 1
 modulate = Color(1, 0.7, 0.3, 1)
 text = "The head wizard picks the job"
 
-[node name="Ambience" type="AudioStreamPlayer" parent="."]
+[node name="Ambience" type="AudioStreamPlayer" parent="." unique_id=1341198785]
 stream = ExtResource("13_ambience")
 volume_db = -8.0
 autoplay = true
 
-[node name="Bgm" type="AudioStreamPlayer" parent="."]
+[node name="Bgm" type="AudioStreamPlayer" parent="." unique_id=2072474551]
 stream = ExtResource("23_bgm")
 volume_db = -16.0
 
-[node name="HorseWalk" type="AudioStreamPlayer" parent="."]
+[node name="HorseWalk" type="AudioStreamPlayer" parent="." unique_id=1253059502]
 stream = ExtResource("24_horsewalk")
 volume_db = -20.0
 autoplay = true
 
-[node name="HorseAmbience" type="AudioStreamPlayer" parent="."]
+[node name="HorseAmbience" type="AudioStreamPlayer" parent="." unique_id=189211397]
 stream = ExtResource("26_horseambience")
 volume_db = -14.0
 autoplay = true
 
-[node name="MusicHint" type="Label3D" parent="."]
+[node name="MusicHint" type="Label3D" parent="." unique_id=1448024154]
 transform = Transform3D(0.26863164, 0, 0.20015512, 0, 0.33500004, 0, -0.20015512, 0, 0.26863164, -0.7829673, 1.0967335, -1.60033)
 billboard = 1
 modulate = Color(0.55, 0.85, 0.75, 1)
 text = "MUSIC  [Q]"
 
-[node name="PlayerSpawners" type="Node3D" parent="."]
-
-[node name="PlayerSpawn1" type="Marker3D" parent="PlayerSpawners"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35, 0, 0.5)
-
-[node name="PlayerSpawn2" type="Marker3D" parent="PlayerSpawners"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, 0, 0.5)
-
-[node name="PlayerSpawn3" type="Marker3D" parent="PlayerSpawners"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0, 0.5)
-
-[node name="PlayerSpawn4" type="Marker3D" parent="PlayerSpawners"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35, 0, 0.5)
-
-[node name="Players" type="Node3D" parent="."]
-
-[node name="PlayerSpawner" type="MultiplayerSpawner" parent="."]
-_spawnable_scenes = PackedStringArray("uid://d2wm6wow7y4c7")
-spawn_path = NodePath("../Players")
-
-[node name="Scenery" type="Node3D" parent="."]
+[node name="Scenery" type="Node3D" parent="." unique_id=1698637462]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.7, 0)
 script = ExtResource("12_scenery")
 
-[node name="Road" type="MeshInstance3D" parent="Scenery"]
+[node name="Road" type="MeshInstance3D" parent="Scenery" unique_id=825275225]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011016846, -0.36654514, 0.0031499863)
 mesh = SubResource("BoxMesh_road")
 surface_material_override/0 = SubResource("Mat_road")
 
-[node name="Grass" type="MeshInstance3D" parent="Scenery"]
+[node name="Grass" type="MeshInstance3D" parent="Scenery" unique_id=282198181]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0028636456, -0.39778715, 0.009754539)
 mesh = SubResource("BoxMesh_grass")
 surface_material_override/0 = SubResource("Mat_grass")
 
-[node name="GrassBlades" type="MultiMeshInstance3D" parent="Scenery/Grass"]
+[node name="GrassBlades" type="MultiMeshInstance3D" parent="Scenery/Grass" unique_id=1410117912]
 script = ExtResource("11_grass")
 
-[node name="RutLeft" type="MeshInstance3D" parent="Scenery"]
+[node name="RutLeft" type="MeshInstance3D" parent="Scenery" unique_id=598161502]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85, -0.29, 0)
 mesh = SubResource("BoxMesh_rut")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="RutRight" type="MeshInstance3D" parent="Scenery"]
+[node name="RutRight" type="MeshInstance3D" parent="Scenery" unique_id=1538721564]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, -0.29, 0)
 mesh = SubResource("BoxMesh_rut")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Movers" type="Node3D" parent="Scenery"]
+[node name="Movers" type="Node3D" parent="Scenery" unique_id=710013035]
 
-[node name="Stripe1" type="MeshInstance3D" parent="Scenery/Movers"]
+[node name="Stripe1" type="MeshInstance3D" parent="Scenery/Movers" unique_id=60093887]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85, -0.28, -39)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Stripe2" type="MeshInstance3D" parent="Scenery/Movers"]
+[node name="Stripe2" type="MeshInstance3D" parent="Scenery/Movers" unique_id=1982598242]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, -0.28, -26)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Stripe3" type="MeshInstance3D" parent="Scenery/Movers"]
+[node name="Stripe3" type="MeshInstance3D" parent="Scenery/Movers" unique_id=484818008]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85, -0.28, -13)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Stripe4" type="MeshInstance3D" parent="Scenery/Movers"]
+[node name="Stripe4" type="MeshInstance3D" parent="Scenery/Movers" unique_id=1628835397]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, -0.28, 0)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Stripe5" type="MeshInstance3D" parent="Scenery/Movers"]
+[node name="Stripe5" type="MeshInstance3D" parent="Scenery/Movers" unique_id=1997267227]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.85, -0.28, 13)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Stripe6" type="MeshInstance3D" parent="Scenery/Movers"]
+[node name="Stripe6" type="MeshInstance3D" parent="Scenery/Movers" unique_id=29496674]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85, -0.28, 26)
 mesh = SubResource("BoxMesh_stripe")
 surface_material_override/0 = SubResource("Mat_stripe")
 
-[node name="Tree1" parent="Scenery/Movers" instance=ExtResource("14_tree00")]
+[node name="Tree1" parent="Scenery/Movers" unique_id=433375148 instance=ExtResource("14_tree00")]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, -6, -0.32, -36)
 
-[node name="Tree2" parent="Scenery/Movers" instance=ExtResource("15_tree01")]
+[node name="Tree2" parent="Scenery/Movers" unique_id=903520089 instance=ExtResource("15_tree01")]
 transform = Transform3D(0, 0, -0.2, 0, 0.2, 0, 0.2, 0, 0, 7, -0.32, -28)
 
-[node name="Tree3" parent="Scenery/Movers" instance=ExtResource("16_tree02")]
+[node name="Tree3" parent="Scenery/Movers" unique_id=1964014932 instance=ExtResource("16_tree02")]
 transform = Transform3D(-0.16, 0, 0, 0, 0.16, 0, 0, 0, -0.16, -10, -0.32, -20)
 
-[node name="Tree4" parent="Scenery/Movers" instance=ExtResource("17_tree03")]
+[node name="Tree4" parent="Scenery/Movers" unique_id=1798726422 instance=ExtResource("17_tree03")]
 transform = Transform3D(0.42835924, -0.009639877, 0.10007711, 0, 0.43797284, 0.042187516, -0.10054031, -0.041071393, 0.42638573, 8.560197, -0.36179858, -12)
 
-[node name="Tree5" parent="Scenery/Movers" instance=ExtResource("18_tree04")]
+[node name="Tree5" parent="Scenery/Movers" unique_id=251807817 instance=ExtResource("18_tree04")]
 transform = Transform3D(0.092, 0, -0.092, 0, 0.13, 0, 0.092, 0, 0.092, -6, -0.32, -4)
 
-[node name="Tree6" parent="Scenery/Movers" instance=ExtResource("19_tree05")]
+[node name="Tree6" parent="Scenery/Movers" unique_id=1878956031 instance=ExtResource("19_tree05")]
 transform = Transform3D(-0.1414, 0, -0.1414, 0, 0.2, 0, 0.1414, 0, -0.1414, 9, -0.32, 4)
 
-[node name="Tree7" parent="Scenery/Movers" instance=ExtResource("14_tree00")]
+[node name="Tree7" parent="Scenery/Movers" unique_id=1797574482 instance=ExtResource("14_tree00")]
 transform = Transform3D(0, 0, -0.17, 0, 0.17, 0, 0.17, 0, 0, -12, -0.32, 12)
 
-[node name="Tree8" parent="Scenery/Movers" instance=ExtResource("16_tree02")]
+[node name="Tree8" parent="Scenery/Movers" unique_id=795303367 instance=ExtResource("16_tree02")]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 8.439671, -0.32, 20)
 
-[node name="Tree9" parent="Scenery/Movers" instance=ExtResource("18_tree04")]
+[node name="Tree9" parent="Scenery/Movers" unique_id=802209697 instance=ExtResource("18_tree04")]
 transform = Transform3D(-0.1, 0, 0, 0, 0.1, 0, 0, 0, -0.1, -7, -0.32, 28)
 
-[node name="Tree10" parent="Scenery/Movers" instance=ExtResource("15_tree01")]
+[node name="Tree10" parent="Scenery/Movers" unique_id=310694182 instance=ExtResource("15_tree01")]
 transform = Transform3D(0, 0, 0.24, 0, 0.24, 0, -0.24, 0, 0, 8, -0.32, 36)
 
-[node name="Tree11" parent="Scenery/Movers" instance=ExtResource("15_tree01")]
+[node name="Tree11" parent="Scenery/Movers" unique_id=559833542 instance=ExtResource("15_tree01")]
 transform = Transform3D(0, 0, -0.18, 0, 0.18, 0, 0.18, 0, 0, -13, -0.32, -40)
 
-[node name="Tree12" parent="Scenery/Movers" instance=ExtResource("18_tree04")]
+[node name="Tree12" parent="Scenery/Movers" unique_id=2028330705 instance=ExtResource("18_tree04")]
 transform = Transform3D(0.11, 0, 0, 0, 0.11, 0, 0, 0, 0.11, 11, -0.32, -38)
 
-[node name="Tree13" parent="Scenery/Movers" instance=ExtResource("19_tree05")]
+[node name="Tree13" parent="Scenery/Movers" unique_id=1053213467 instance=ExtResource("19_tree05")]
 transform = Transform3D(-0.16, 0, 0, 0, 0.16, 0, 0, 0, -0.16, -8, -0.32, -32)
 
-[node name="Tree14" parent="Scenery/Movers" instance=ExtResource("14_tree00")]
+[node name="Tree14" parent="Scenery/Movers" unique_id=1206682032 instance=ExtResource("14_tree00")]
 transform = Transform3D(0, 0, -0.13, 0, 0.13, 0, 0.13, 0, 0, 12, -0.32, -30)
 
-[node name="Tree15" parent="Scenery/Movers" instance=ExtResource("16_tree02")]
+[node name="Tree15" parent="Scenery/Movers" unique_id=225641017 instance=ExtResource("16_tree02")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -14, -0.32, -24)
 
-[node name="Tree16" parent="Scenery/Movers" instance=ExtResource("15_tree01")]
+[node name="Tree16" parent="Scenery/Movers" unique_id=1203146533 instance=ExtResource("15_tree01")]
 transform = Transform3D(0, 0, 0.15, 0, 0.15, 0, -0.15, 0, 0, 8.5, -0.32, -22)
 
-[node name="Tree17" parent="Scenery/Movers" instance=ExtResource("18_tree04")]
+[node name="Tree17" parent="Scenery/Movers" unique_id=1421284397 instance=ExtResource("18_tree04")]
 transform = Transform3D(0, 0, -0.12, 0, 0.12, 0, 0.12, 0, 0, -11, -0.32, -16)
 
-[node name="Tree18" parent="Scenery/Movers" instance=ExtResource("17_tree03")]
+[node name="Tree18" parent="Scenery/Movers" unique_id=2109533556 instance=ExtResource("17_tree03")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 13, 1.52, -14)
 
-[node name="Tree19" parent="Scenery/Movers" instance=ExtResource("19_tree05")]
+[node name="Tree19" parent="Scenery/Movers" unique_id=632504027 instance=ExtResource("19_tree05")]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, -9, -0.32, -8)
 
-[node name="Tree20" parent="Scenery/Movers" instance=ExtResource("14_tree00")]
+[node name="Tree20" parent="Scenery/Movers" unique_id=1613506453 instance=ExtResource("14_tree00")]
 transform = Transform3D(-0.17, 0, 0, 0, 0.17, 0, 0, 0, -0.17, 11.037172, -0.32, -6)
 
-[node name="Tree21" parent="Scenery/Movers" instance=ExtResource("16_tree02")]
+[node name="Tree21" parent="Scenery/Movers" unique_id=63264984 instance=ExtResource("16_tree02")]
 transform = Transform3D(-0.11480954, 0, -0.03491085, 0, 0.12, 0, 0.03491085, 0, -0.11480954, -13, -0.32, 0)
 
-[node name="Tree22" parent="Scenery/Movers" instance=ExtResource("15_tree01")]
+[node name="Tree22" parent="Scenery/Movers" unique_id=2093609971 instance=ExtResource("15_tree01")]
 transform = Transform3D(0.22, 0, 0, 0, 0.22, 0, 0, 0, 0.22, 12, -0.32, 2)
 
-[node name="Tree23" parent="Scenery/Movers" instance=ExtResource("18_tree04")]
+[node name="Tree23" parent="Scenery/Movers" unique_id=1297164937 instance=ExtResource("18_tree04")]
 transform = Transform3D(0, 0, 0.1, 0, 0.1, 0, -0.1, 0, 0, -7.5, -0.32, 8)
 
-[node name="Tree24" parent="Scenery/Movers" instance=ExtResource("19_tree05")]
+[node name="Tree24" parent="Scenery/Movers" unique_id=1299203116 instance=ExtResource("19_tree05")]
 transform = Transform3D(0, 0, -0.19, 0, 0.19, 0, 0.19, 0, 0, 11, -0.32, 10)
 
-[node name="Tree25" parent="Scenery/Movers" instance=ExtResource("14_tree00")]
+[node name="Tree25" parent="Scenery/Movers" unique_id=368400491 instance=ExtResource("14_tree00")]
 transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, -11, -0.32, 16)
 
-[node name="Tree26" parent="Scenery/Movers" instance=ExtResource("17_tree03")]
+[node name="Tree26" parent="Scenery/Movers" unique_id=747864284 instance=ExtResource("17_tree03")]
 transform = Transform3D(0, 0, -0.26, 0, 0.26, 0, 0.26, 0, 0, 9, 1.28, 18)
 
-[node name="Tree27" parent="Scenery/Movers" instance=ExtResource("16_tree02")]
+[node name="Tree27" parent="Scenery/Movers" unique_id=680945496 instance=ExtResource("16_tree02")]
 transform = Transform3D(-0.12988925, 0, -0.09342794, 0, 0.16, 0, 0.09342794, 0, -0.12988925, -11.191026, -0.32, 20.931751)
 
-[node name="Tree28" parent="Scenery/Movers" instance=ExtResource("18_tree04")]
+[node name="Tree28" parent="Scenery/Movers" unique_id=96758613 instance=ExtResource("18_tree04")]
 transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 13, -0.32, 26)
 
-[node name="Tree29" parent="Scenery/Movers" instance=ExtResource("15_tree01")]
+[node name="Tree29" parent="Scenery/Movers" unique_id=532143959 instance=ExtResource("15_tree01")]
 transform = Transform3D(0, 0, -0.11, 0, 0.11, 0, 0.11, 0, 0, -12, -0.32, 32)
 
-[node name="Tree30" parent="Scenery/Movers" instance=ExtResource("19_tree05")]
+[node name="Tree30" parent="Scenery/Movers" unique_id=1891638690 instance=ExtResource("19_tree05")]
 transform = Transform3D(0, 0, 0.21, 0, 0.21, 0, -0.21, 0, 0, 8, -0.32, 34)
 
-[node name="Carriage" parent="." instance=ExtResource("21_carriage")]
+[node name="Carriage" parent="." unique_id=1043906666 instance=ExtResource("21_carriage")]
 transform = Transform3D(-1.25, 0, 0, 0, 1.25, 0, 0, 0, -1.25, -0.0039818287, -1.3124828, -1.1165739)
 
-[node name="CabinLight" type="OmniLight3D" parent="."]
+[node name="CabinLight" type="OmniLight3D" parent="." unique_id=1507458910]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4962964, 2.1687093, 0.48355883)
 light_color = Color(1, 0.5294118, 0.8901961, 1)
 light_energy = 1.2
 omni_range = 7.0
 
-[node name="magic_lantern" parent="." instance=ExtResource("25_lantern")]
+[node name="magic_lantern" parent="." unique_id=593120724 instance=ExtResource("25_lantern")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79711914, 2.3240054, 0.6815573)
+
+[node name="PlayerSpawners" type="Node3D" parent="." unique_id=1876660009]
+
+[node name="PlayerSpawn1" type="Marker3D" parent="PlayerSpawners" unique_id=1507515507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.35, 0, 0.5)
+
+[node name="PlayerSpawn2" type="Marker3D" parent="PlayerSpawners" unique_id=700552251]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, 0, 0.5)
+
+[node name="PlayerSpawn3" type="Marker3D" parent="PlayerSpawners" unique_id=885914801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0, 0.5)
+
+[node name="PlayerSpawn4" type="Marker3D" parent="PlayerSpawners" unique_id=87663408]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35, 0, 0.5)
+
+[node name="Players" type="Node3D" parent="." unique_id=275318160]
+
+[node name="PlayerSpawner" type="MultiplayerSpawner" parent="." unique_id=32555951]
+_spawnable_scenes = PackedStringArray("uid://d2wm6wow7y4c7")
+spawn_path = NodePath("../Players")
 
 [connection signal="activated" from="JobComputer" to="." method="_on_job_computer_activated"]
