@@ -9,7 +9,7 @@ extends BaseDirectory
 
 
 const GAME_LEVELS: Dictionary = {
-	"forest" : "uid://bqtk4n0u250kb",
+	"dungeon" : "uid://dph0olcl5aio",
 }
 
 const MUSIC: Dictionary = {
@@ -23,6 +23,6 @@ func _init() -> void:
 	CORE_LEVELS = {
 		"splash" : "uid://1ta4uyq1kbo4",
 		"main_menu" : "uid://boamc4f1glu8m",
-		"hub" : "uid://cqtcmhntie66",
-		"first_level" : "uid://cqtcmhntie66",
+		"hub" : "uid://dph0olcl5aio",
+		"first_level" : "uid://dph0olcl5aio",
 	}

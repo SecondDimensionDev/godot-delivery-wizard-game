@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://bwpetsp5bniri" path="res://scripts/core_components/general_components/state_machine/base_state_machine.gd" id="3_mbekb"]
 [ext_resource type="Script" uid="uid://bw1w123qrdqv8" path="res://managers/gameplay_manager/gameplay_states/setup_level.gd" id="4_22kvn"]
 [ext_resource type="Script" uid="uid://ruo3hnkiudsa" path="res://managers/gameplay_manager/gameplay_states/play_mode.gd" id="5_p1lvr"]
+[ext_resource type="Script" uid="uid://bj6k16n4ln5va" path="res://levels/main_game_levels/warehouse/debug.gd" id="8_22kvn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_m24gl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -366,3 +367,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.97
 [node name="PlayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1977595812]
 _spawnable_scenes = PackedStringArray("uid://d2wm6wow7y4c7")
 spawn_path = NodePath("../Players")
+
+[node name="Node" type="Node" parent="." unique_id=688319470]
+process_mode = 3
+script = ExtResource("8_22kvn")
