@@ -91,6 +91,7 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 13.5
 [node name="Players" type="Node3D" parent="." unique_id=1978542467]
 
 [node name="PlayerSpawner" type="MultiplayerSpawner" parent="." unique_id=992470377]
+_spawnable_scenes = PackedStringArray("uid://d2wm6wow7y4c7")
 spawn_path = NodePath("../Players")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=1804108539]
