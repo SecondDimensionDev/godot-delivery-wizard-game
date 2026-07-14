@@ -361,9 +361,6 @@ transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 2.83
 [node name="PlayerSpawn6" type="Marker3D" parent="PlayerSpawners" unique_id=1707379079]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.9772377, 0, -15.734555)
 
-[node name="CargoSpawn" type="Marker3D" parent="." unique_id=1044762057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, -12)
-
 [node name="Players" type="Node3D" parent="." unique_id=1925063452]
 
 [node name="PlayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1977595812]

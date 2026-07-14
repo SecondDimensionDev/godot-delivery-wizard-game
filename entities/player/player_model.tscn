@@ -1209,7 +1209,7 @@ bind/64/pose = Transform3D(-1, 2.6469807e-22, -2.1175776e-22, 2.3535266e-16, 5.9
 
 [node name="PlayerModel" type="Node3D" unique_id=226534529 node_paths=PackedStringArray("meshes_to_hide")]
 script = ExtResource("2_58iv5")
-meshes_to_hide = [NodePath("Male_Ranger_Arms"), NodePath("Male_Ranger_Body"), NodePath("Male_Ranger_Body_Belt_1"), NodePath("Male_Ranger_Body_Belt_2"), NodePath("Male_Ranger_Legs"), NodePath("Male_Ranger_Head_Hood"), NodePath("Male_Ranger_Feet_Boots")]
+meshes_to_hide = [NodePath("Male_Ranger_Arms"), NodePath("Male_Ranger_Body"), NodePath("Male_Ranger_Body_Belt_1"), NodePath("Male_Ranger_Body_Belt_2"), NodePath("Male_Ranger_Head_Hood")]
 hidden_layer = 2
 
 [node name="Male_Ranger_Arms" type="MeshInstance3D" parent="." unique_id=1014214676]

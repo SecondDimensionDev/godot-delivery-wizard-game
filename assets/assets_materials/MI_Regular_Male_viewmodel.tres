@@ -1,0 +1,21 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cfh4qmjgsbll4"]
+
+[ext_resource type="Texture2D" uid="uid://bmiq8oci2q8y3" path="res://assets/assets_textures/T_Regular_Male_Dark_BaseColor.png" id="1_dxdxs"]
+[ext_resource type="Texture2D" uid="uid://botrh7nkmfww6" path="res://assets/assets_textures/T_Regular_Male_Normal.png" id="2_1y7we"]
+[ext_resource type="Texture2D" uid="uid://r1skvcilbonl" path="res://assets/assets_textures/T_Regular_Male_Roughness.png" id="3_rivn0"]
+
+[resource]
+resource_name = "MI_Regular_Male"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_dxdxs")
+metallic = 1.0
+metallic_texture_channel = 2
+roughness_texture = ExtResource("3_rivn0")
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_1y7we")
+use_z_clip_scale = true
+z_clip_scale = 0.25
+use_fov_override = true
+fov_override = 60.0
