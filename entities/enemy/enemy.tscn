@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://vn3ivso8btt3"]
+
+[ext_resource type="Script" uid="uid://b8ydw61d64yor" path="res://entities/enemy/enemy.gd" id="1_721x4"]
+[ext_resource type="Script" uid="uid://bwpetsp5bniri" path="res://scripts/core_components/general_components/state_machine/base_state_machine.gd" id="1_ksmh7"]
+[ext_resource type="Script" uid="uid://c8xw28na56tul" path="res://entities/player/mulitplayer_guard.gd" id="2_eaj7m"]
+[ext_resource type="Script" uid="uid://bowfy7e14up0g" path="res://scripts/core_components/general_components/hit_point_components/hit_point_component.gd" id="2_im2q6"]
+[ext_resource type="Script" uid="uid://bycwm7ia4b4tb" path="res://entities/enemy/enemy_movement_controller.gd" id="4_eaj7m"]
+[ext_resource type="Script" uid="uid://boya7gh2rbx6o" path="res://entities/enemy/enemy_animation_controller.gd" id="5_a8fs5"]
+[ext_resource type="Script" uid="uid://8x63ots2327e" path="res://entities/enemy/enemy_rotation_controller.gd" id="6_7vrfk"]
+[ext_resource type="Script" uid="uid://3uwppal1drru" path="res://entities/enemy/enemy_navigation_controller.gd" id="7_4ohlc"]
+[ext_resource type="Script" uid="uid://cvkmvdnf2kvd6" path="res://entities/enemy/enemy_senses.gd" id="8_aqotc"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_3fvr7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2mydr"]
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2mydr"]
+
+[node name="Enemy" type="CharacterBody3D" unique_id=1541066730]
+script = ExtResource("1_721x4")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=224374075]
+replication_config = SubResource("SceneReplicationConfig_3fvr7")
+
+[node name="MultiplayerGuard" type="Node" parent="." unique_id=1400131513]
+script = ExtResource("2_eaj7m")
+metadata/_custom_type_script = "uid://c8xw28na56tul"
+
+[node name="EnemyStateMachine" type="Node" parent="." unique_id=1645880614]
+script = ExtResource("1_ksmh7")
+metadata/_custom_type_script = "uid://bwpetsp5bniri"
+
+[node name="HitPointComponent" type="Node" parent="." unique_id=396582954]
+script = ExtResource("2_im2q6")
+metadata/_custom_type_script = "uid://bowfy7e14up0g"
+
+[node name="EnemyMovementController" type="Node" parent="." unique_id=670264412]
+script = ExtResource("4_eaj7m")
+
+[node name="EnemyAnimationController" type="Node" parent="." unique_id=664276641]
+script = ExtResource("5_a8fs5")
+
+[node name="EnemyRotationController" type="Node" parent="." unique_id=817566329]
+script = ExtResource("6_7vrfk")
+
+[node name="EnemyNavigationController" type="Node" parent="." unique_id=682148127]
+script = ExtResource("7_4ohlc")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1337249826]
+
+[node name="EnemySenses" type="Node3D" parent="." unique_id=1690323064]
+script = ExtResource("8_aqotc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1716007601]
+shape = SubResource("CapsuleShape3D_2mydr")
+
+[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=92982760]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=62976990]
+
+[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1590652924]
+active = false
+tree_root = SubResource("AnimationNodeBlendTree_2mydr")
+anim_player = NodePath("../AnimationPlayer")
