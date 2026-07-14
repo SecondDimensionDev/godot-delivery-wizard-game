@@ -15,8 +15,11 @@ func _ready() -> void:
 	# If we DO have authority, we just return and let everything run normally.
 	if get_parent().is_multiplayer_authority():
 		return
-		
-	# If we are a puppet, shut down the specified systems.
+	
+	get_parent().ready.connect(_disable_puppet_systems, CONNECT_ONE_SHOT)
+
+
+func _disable_puppet_systems() -> void:
 	_disable_logic_nodes()
 	_hide_ui()
 	_deactivate_cameras()
