@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://kqt6rm75o1jn"]
+
+[ext_resource type="Script" uid="uid://c8xw28na56tul" path="res://entities/player/mulitplayer_guard.gd" id="1_sryc5"]
+[ext_resource type="Script" uid="uid://b72uu4ewcwd0c" path="res://scripts/game_specific_components/spell_receiver.gd" id="2_xjrkp"]
+[ext_resource type="Texture2D" uid="uid://bas6x66bo4muo" path="res://assets/assets_textures/Dungeon_set_Floor_A_D.png" id="3_xjrkp"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_adxva"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2mydr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sryc5"]
+albedo_color = Color(0.8875177, 0.5530028, 0.20677692, 1)
+albedo_texture = ExtResource("3_xjrkp")
+uv1_scale = Vector3(6, 6, 6)
+texture_filter = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2mydr"]
+
+[node name="Crate" type="RigidBody3D" unique_id=1324634692]
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=1906992992]
+replication_config = SubResource("SceneReplicationConfig_adxva")
+
+[node name="MultiplayerGuard" type="Node" parent="." unique_id=2102838074 node_paths=PackedStringArray("rigid_bodies_to_freeze")]
+script = ExtResource("1_sryc5")
+rigid_bodies_to_freeze = [NodePath("..")]
+metadata/_custom_type_script = "uid://c8xw28na56tul"
+
+[node name="SpellReceiver" type="Node" parent="." unique_id=1103099110 node_paths=PackedStringArray("target_body")]
+script = ExtResource("2_xjrkp")
+target_body = NodePath("..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=415233414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49742073, 0)
+mesh = SubResource("BoxMesh_2mydr")
+surface_material_override/0 = SubResource("StandardMaterial3D_sryc5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1098293054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49742073, 0)
+shape = SubResource("BoxShape3D_2mydr")

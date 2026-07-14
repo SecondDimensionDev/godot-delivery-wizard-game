@@ -9,6 +9,7 @@ extends Node
 @export var logic_nodes_to_disable: Array[Node] ## Nodes that will have their process, physics, and input turned off.
 @export var ui_to_hide: Array[CanvasLayer] ## CanvasLayers that will be hidden.
 @export var cameras_to_turn_off: Array[Camera3D] ## Cameras that will have 'current' set to false.
+@export var rigid_bodies_to_freeze: Array[RigidBody3D] ## Physics bodies that will become kinematic puppets.
 
 func _ready() -> void:
 	# Check if the parent node (the Player CharacterBody3D) is owned by the local client.
@@ -23,6 +24,7 @@ func _disable_puppet_systems() -> void:
 	_disable_logic_nodes()
 	_hide_ui()
 	_deactivate_cameras()
+	_freeze_rigid_bodies()
 
 
 func _disable_logic_nodes() -> void:
@@ -46,3 +48,10 @@ func _deactivate_cameras() -> void:
 	for cam in cameras_to_turn_off:
 		if cam:
 			cam.current = false
+
+
+func _freeze_rigid_bodies() -> void:
+	for body in rigid_bodies_to_freeze:
+		if body:
+			body.freeze = true
+			body.freeze_mode = RigidBody3D.FREEZE_MODE_KINEMATIC
