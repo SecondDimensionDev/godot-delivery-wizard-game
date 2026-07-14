@@ -20,6 +20,9 @@ extends CharacterBody3D
 @export var anim_tree: AnimationTree
 @export var animation_control: PlayerAnimationControl
 
+# PUBLIC VARIABLES
+var aim: Vector3 ## Replicated camera forward direction; used by senses that check "is this player looking at X" (e.g. EnemySenses.is_seen_by_any_player).
+
 # PRIVATE VARIABLES
 
 
@@ -33,5 +36,15 @@ func _ready() -> void:
 		player_state_machine.state_changed.connect(_temp_state_change)
 
 
+func _process(_delta: float) -> void: ## Recomputes aim locally; MultiplayerGuard freezes camera_anchor on puppets, so only the authority's value is meaningful.
+	if camera_anchor and is_multiplayer_authority():
+		aim = -camera_anchor.global_transform.basis.z
+
+
 func _temp_state_change(old_state_name: String, new_state_name: String) ->void:
 	print("Player State Changed from %s to %s" % [old_state_name, new_state_name])
+
+
+# PUBLIC FUNCTIONS
+func teleport_to(new_position: Vector3) -> void: ## Moves the body directly to a world position (e.g. after being caught by an enemy).
+	global_position = new_position

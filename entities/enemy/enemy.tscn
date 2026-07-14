@@ -11,54 +11,77 @@
 [ext_resource type="Script" uid="uid://cvkmvdnf2kvd6" path="res://entities/enemy/enemy_senses.gd" id="8_aqotc"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_3fvr7"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:rotation")
+properties/1/spawn = true
+properties/1/replication_mode = 1
+properties/2/path = NodePath("EnemyStateMachine:current_state_name")
+properties/2/spawn = true
+properties/2/replication_mode = 1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2mydr"]
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2mydr"]
-
-[node name="Enemy" type="CharacterBody3D" unique_id=1541066730]
+[node name="Enemy" type="CharacterBody3D" unique_id=1541066730 node_paths=PackedStringArray("enemy_anim_player", "enemy_anim_tree", "enemy_multiplayer_guard", "enemy_state_machine", "enemy_senses", "enemy_movement_controller", "enemy_animation_controller", "enemy_rotation_controller", "enemy_naviagation_controller", "enemy_hit_point_component")]
 script = ExtResource("1_721x4")
+enemy_anim_player = NodePath("AnimationPlayer")
+enemy_anim_tree = NodePath("AnimationTree")
+enemy_multiplayer_guard = NodePath("MultiplayerGuard")
+enemy_state_machine = NodePath("EnemyStateMachine")
+enemy_senses = NodePath("EnemySenses")
+enemy_movement_controller = NodePath("EnemyMovementController")
+enemy_animation_controller = NodePath("EnemyAnimationController")
+enemy_rotation_controller = NodePath("EnemyRotationController")
+enemy_naviagation_controller = NodePath("EnemyNavigationController")
+enemy_hit_point_component = NodePath("HitPointComponent")
 
 [node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="." unique_id=224374075]
 replication_config = SubResource("SceneReplicationConfig_3fvr7")
 
-[node name="MultiplayerGuard" type="Node" parent="." unique_id=1400131513]
+[node name="MultiplayerGuard" type="Node" parent="." unique_id=1400131513 node_paths=PackedStringArray("logic_nodes_to_disable")]
 script = ExtResource("2_eaj7m")
+logic_nodes_to_disable = [NodePath("../EnemyStateMachine")]
 metadata/_custom_type_script = "uid://c8xw28na56tul"
 
-[node name="EnemyStateMachine" type="Node" parent="." unique_id=1645880614]
+[node name="EnemyStateMachine" type="Node" parent="." unique_id=1645880614 node_paths=PackedStringArray("parent")]
 script = ExtResource("1_ksmh7")
+parent = NodePath("..")
 metadata/_custom_type_script = "uid://bwpetsp5bniri"
 
 [node name="HitPointComponent" type="Node" parent="." unique_id=396582954]
 script = ExtResource("2_im2q6")
 metadata/_custom_type_script = "uid://bowfy7e14up0g"
 
-[node name="EnemyMovementController" type="Node" parent="." unique_id=670264412]
+[node name="EnemyMovementController" type="Node" parent="." unique_id=670264412 node_paths=PackedStringArray("parent")]
 script = ExtResource("4_eaj7m")
+parent = NodePath("..")
 
-[node name="EnemyAnimationController" type="Node" parent="." unique_id=664276641]
+[node name="EnemyAnimationController" type="Node" parent="." unique_id=664276641 node_paths=PackedStringArray("parent", "anim_player")]
 script = ExtResource("5_a8fs5")
+parent = NodePath("..")
+anim_player = NodePath("../AnimationPlayer")
 
-[node name="EnemyRotationController" type="Node" parent="." unique_id=817566329]
+[node name="EnemyRotationController" type="Node" parent="." unique_id=817566329 node_paths=PackedStringArray("parent")]
 script = ExtResource("6_7vrfk")
+parent = NodePath("..")
 
-[node name="EnemyNavigationController" type="Node" parent="." unique_id=682148127]
+[node name="EnemyNavigationController" type="Node" parent="." unique_id=682148127 node_paths=PackedStringArray("parent", "nav_agent")]
 script = ExtResource("7_4ohlc")
+parent = NodePath("..")
+nav_agent = NodePath("../NavigationAgent3D")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1337249826]
 
-[node name="EnemySenses" type="Node3D" parent="." unique_id=1690323064]
+[node name="EnemySenses" type="Node3D" parent="." unique_id=1690323064 node_paths=PackedStringArray("parent")]
 script = ExtResource("8_aqotc")
+parent = NodePath("..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1716007601]
 shape = SubResource("CapsuleShape3D_2mydr")
-
-[node name="Skeleton3D" type="Skeleton3D" parent="." unique_id=92982760]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=62976990]
 
 [node name="AnimationTree" type="AnimationTree" parent="." unique_id=1590652924]
 active = false
-tree_root = SubResource("AnimationNodeBlendTree_2mydr")
 anim_player = NodePath("../AnimationPlayer")

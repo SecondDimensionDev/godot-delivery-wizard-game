@@ -55,6 +55,9 @@ properties/7/replication_mode = 2
 properties/8/path = NodePath("AnimationTree:parameters/AddPistolAim/add_amount")
 properties/8/spawn = true
 properties/8/replication_mode = 2
+properties/9/path = NodePath(".:aim")
+properties/9/spawn = true
+properties/9/replication_mode = 1
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_enorm"]
 resource_local_to_scene = true

@@ -1,0 +1,41 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="PackedScene" uid="uid://vn3ivso8btt3" path="res://entities/enemy/enemy.tscn" id="1_base"]
+[ext_resource type="Resource" path="res://entities/enemy/stone_choir/stone_choir_behaviour.tres" id="2_behaviour"]
+[ext_resource type="PackedScene" uid="uid://c6jr37qr6v67g" path="res://assets/assets_meshes/enemy_meshes/statue/stone_choire.glb" id="3_model"]
+[ext_resource type="AudioStream" uid="uid://c4n5eywegn7u4" path="res://assets/assets_audio/audio_sfx/enemy_sfx/statue_whisper.mp3" id="4_whisper"]
+[ext_resource type="AudioStream" uid="uid://kdo1ow2vij7f" path="res://assets/assets_audio/audio_sfx/enemy_sfx/statue_look_chant.mp3" id="5_chant"]
+[ext_resource type="Script" path="res://entities/enemy/enemy_states/enemy_state_dormant.gd" id="6_dormant"]
+[ext_resource type="Script" path="res://entities/enemy/enemy_states/enemy_state_chase.gd" id="7_moving"]
+[ext_resource type="Script" path="res://entities/enemy/enemy_states/enemy_state_observed.gd" id="8_observed"]
+[ext_resource type="Script" path="res://entities/enemy/enemy_states/enemy_state_catch.gd" id="9_catch"]
+[ext_resource type="Script" path="res://entities/enemy/enemy_states/enemy_state_gone.gd" id="10_gone"]
+
+[node name="StoneChoirEnemy" instance=ExtResource("1_base")]
+behaviour_data = ExtResource("2_behaviour")
+enemy_model_scene = ExtResource("3_model")
+state_audio_paths = Dictionary[String, NodePath]({
+"Moving": NodePath("ChantAudio"),
+"Observed": NodePath("WhisperAudio")
+})
+
+[node name="EnemyStateMachine" parent="."]
+set_state_scripts = Dictionary[String, Script]({
+"Dormant": ExtResource("6_dormant"),
+"Moving": ExtResource("7_moving"),
+"Observed": ExtResource("8_observed"),
+"Catch": ExtResource("9_catch"),
+"Gone": ExtResource("10_gone")
+})
+set_initial_state = "Dormant"
+use_physics_state = true
+
+[node name="WhisperAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_whisper")
+volume_db = -18.0
+unit_size = 8.0
+
+[node name="ChantAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_chant")
+volume_db = -26.0
+unit_size = 8.0
