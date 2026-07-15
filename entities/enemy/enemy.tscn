@@ -5,7 +5,7 @@
 [ext_resource type="Resource" path="res://entities/enemy/stone_choir/stone_choir_behaviour.tres" id="2_dh3ca"]
 [ext_resource type="Script" uid="uid://c8xw28na56tul" path="res://entities/player/mulitplayer_guard.gd" id="2_eaj7m"]
 [ext_resource type="Script" uid="uid://bowfy7e14up0g" path="res://scripts/core_components/general_components/hit_point_components/hit_point_component.gd" id="2_im2q6"]
-[ext_resource type="PackedScene" path="res://entities/enemy/stone_choir/stone_choir_enemy.tscn" id="3_j3q2q"]
+[ext_resource type="PackedScene" uid="uid://c6jr37qr6v67g" path="res://assets/assets_meshes/enemy_meshes/statue/stone_choire.glb" id="3_j3q2q"]
 [ext_resource type="Script" uid="uid://bycwm7ia4b4tb" path="res://entities/enemy/enemy_movement_controller.gd" id="4_eaj7m"]
 [ext_resource type="Script" uid="uid://boya7gh2rbx6o" path="res://entities/enemy/enemy_animation_controller.gd" id="5_a8fs5"]
 [ext_resource type="Script" uid="uid://bhvi0tbs1si7p" path="res://entities/enemy/enemy_states/enemy_state_agitated.gd" id="5_mrix5"]

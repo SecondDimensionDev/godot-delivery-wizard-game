@@ -1,0 +1,44 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://b21eknqsi3os3"
+path.s3tc="res://.godot/imported/hole_ORM_8c9e8b58-4525-427e-b0b5-8d8389f3234e.jpg-1d324ae4cfe3850ea829eee4605da3a6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "99279915ff6ab213597bfc718e3d0d4f"
+}
+
+[deps]
+
+source_file="res://assets/assets_meshes/dungeon_set/hole_ORM_8c9e8b58-4525-427e-b0b5-8d8389f3234e.jpg"
+dest_files=["res://.godot/imported/hole_ORM_8c9e8b58-4525-427e-b0b5-8d8389f3234e.jpg-1d324ae4cfe3850ea829eee4605da3a6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

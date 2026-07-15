@@ -14,3 +14,4 @@ export_credentials.cfg
 # Mono-specific ignores
 .mono/
 mono_crash.*.json
+project.godot

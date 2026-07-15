@@ -1,6 +1,6 @@
 [gd_scene format=3]
 
-[ext_resource type="PackedScene" uid="uid://vn3ivso8btt3" path="res://entities/enemy/enemy.tscn" id="1_base"]
+[ext_resource type="PackedScene" uid="uid://8wigyna1bfyf" path="res://assets/assets_meshes/enemy_meshes/statue/stone_choire.blend" id="1_base"]
 [ext_resource type="Resource" path="res://entities/enemy/stone_choir/stone_choir_behaviour.tres" id="2_behaviour"]
 [ext_resource type="PackedScene" uid="uid://c6jr37qr6v67g" path="res://assets/assets_meshes/enemy_meshes/statue/stone_choire.glb" id="3_model"]
 [ext_resource type="AudioStream" uid="uid://c4n5eywegn7u4" path="res://assets/assets_audio/audio_sfx/enemy_sfx/statue_whisper.mp3" id="4_whisper"]

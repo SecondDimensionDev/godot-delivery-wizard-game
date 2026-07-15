@@ -10,7 +10,8 @@
 [ext_resource type="Script" uid="uid://ruo3hnkiudsa" path="res://managers/gameplay_manager/gameplay_states/play_mode.gd" id="6_tj8nm"]
 [ext_resource type="Script" uid="uid://bw1w123qrdqv8" path="res://managers/gameplay_manager/gameplay_states/setup_level.gd" id="7_iloqx"]
 [ext_resource type="PackedScene" uid="uid://kqt6rm75o1jn" path="res://entities/moveable_objects/crate.tscn" id="10_bnot3"]
-[ext_resource type="PackedScene" path="res://entities/enemy/stone_choir/stone_choir_enemy.tscn" id="11_wyxee"]
+[ext_resource type="PackedScene" uid="uid://c6jr37qr6v67g" path="res://assets/assets_meshes/enemy_meshes/statue/stone_choire.glb" id="11_wyxee"]
+[ext_resource type="PackedScene" uid="uid://dn8u8ir48m550" path="res://assets/assets_meshes/dungeon_set/hole.glb" id="12_wyxee"]
 
 [sub_resource type="Environment" id="Environment_lu8ay"]
 background_mode = 1
@@ -114,4 +115,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.215738, 4.399498, 14.87731
 transform = Transform3D(0.9999996, 0.000907491, 0, -0.000907491, 0.9999996, 0, 0, 0, 1, 9.142327, 4.399498, 13.264245)
 
 [node name="StoneChoirEnemy" parent="." unique_id=667142490 instance=ExtResource("11_wyxee")]
-transform = Transform3D(-0.8660254, 0, 0.50000006, 0, 1, 0, -0.50000006, 0, -0.8660254, 5.8739805, 3.3363733, 30.144684)
+transform = Transform3D(0.27197716, 0, 1.7590986, 0, 1.78, 0, -1.7590986, 0, 0.27197716, 5.8739805, 3.8963928, 30.144684)
+
+[node name="hole" parent="." unique_id=509933768 instance=ExtResource("12_wyxee")]
+transform = Transform3D(-0.051497355, -2.0643578, 0, 2.0643578, -0.051497355, 0, 0, 0, 2.065, 15.357288, 3.0102322, 8.807738)
+
+[node name="hole2" parent="." unique_id=1448642998 instance=ExtResource("12_wyxee")]
+transform = Transform3D(-1.6249692, 0, 0.009983096, 0, 1.625, 0, -0.009983096, 0, -1.6249692, 10.834097, 4.124024, 20.892508)
