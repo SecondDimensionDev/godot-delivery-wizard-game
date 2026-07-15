@@ -2,9 +2,8 @@
 
 [ext_resource type="Material" uid="uid://b3oogsxbxk7t1" path="res://assets/assets_materials/standard_materials/electric_waves.material" id="1_7cbht"]
 
-
 [sub_resource type="PlaneMesh" id="PlaneMesh_eeb7c"]
 material = ExtResource("1_7cbht")
 
-[node name="ElectricWaves" type="MeshInstance3D"]
+[node name="ElectricWaves" type="MeshInstance3D" unique_id=1001831953]
 mesh = SubResource("PlaneMesh_eeb7c")

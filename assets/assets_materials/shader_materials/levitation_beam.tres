@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://8svi78ac7p25"]
+
+[ext_resource type="Shader" uid="uid://ilsf2vet003k" path="res://assets/assets_materials/shader_materials/levitation_beam_shader.gdshader" id="1_hdh2x"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_hn0wb"]
+noise_type = 2
+frequency = 0.008
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_b5a1q"]
+noise = SubResource("FastNoiseLite_hn0wb")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_hdh2x")
+shader_parameter/noise = SubResource("NoiseTexture2D_b5a1q")
+shader_parameter/time_scale = 4.0
+shader_parameter/scale = 0.5
+shader_parameter/emission_color = Color(0.86595494, 0.3988141, 0.68635994, 1)
+shader_parameter/emission_strength = 2.0
+shader_parameter/arc_thickness = 0.10000000149012
+shader_parameter/sharpness = 0.90000004275

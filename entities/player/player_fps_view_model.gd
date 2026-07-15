@@ -8,6 +8,7 @@ enum HideMode {SHADOWS_ONLY, MOVE_TO_HIDDEN_LAYER}
 @export var bone_bone: CopyTransformModifier3D
 @export var spell_beam_pivot: Marker3D
 @export var current_spell_beam: MeshInstance3D
+@export var current_spell_particles: GPUParticles3D
 
 @export_group("Local Visibility")
 @export var hide_mode: HideMode = HideMode.SHADOWS_ONLY
