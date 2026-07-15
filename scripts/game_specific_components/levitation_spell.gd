@@ -1,23 +1,17 @@
 class_name LevitationSpell
 extends Spell
 
+@export_group("References")
 @export var raycast: RayCast3D
-@export var lift_force: float = 15.0
 @export var player_camera: Camera3D
 @export var player_view_model: PlayerViewModel
 
-#@export_group("Beam Visuals")
-#@export var beam_segments: int = 16
-#@export var beam_sag: float = 0.18
-#@export var beam_width: float = 0.05
-#@export var beam_wobble: float = 0.07
-#@export var beam_crackle_speed: float = 3.0
-@export_group("Beam Visuals")
-@export var beam_segments: int = 16
-@export var canvas_width: float = 0.2 # Add this new export variable
+@export_group("Spell Settings")
+@export var lift_force: float = 12.0
 
-# Internal state for the beam animation
-#var _beam_phase: float = 0.0
+@export_group("Spell Visuals")
+@export var beam_segments: int = 16
+@export var canvas_width: float = 0.2
 
 
 # BUILT-IN VIRTUAL METHODS
@@ -29,8 +23,11 @@ func _ready() -> void:
 # PUBLIC FUNCTIONS
 func start_cast() -> void:
 	super()
-	if player_view_model and player_view_model.current_spell_beam:
-		player_view_model.current_spell_beam.visible = true
+	if player_view_model:
+		if player_view_model.current_spell_beam:
+			player_view_model.current_spell_beam.visible = true
+		if player_view_model.current_spell_particles:
+			player_view_model.current_spell_particles.emitting = true
 
 
 func process_cast(delta: float) -> void:
@@ -67,9 +64,12 @@ func process_cast(delta: float) -> void:
 
 func stop_cast() -> void:
 	super()
-	if player_view_model and player_view_model.current_spell_beam:
-		player_view_model.current_spell_beam.visible = false
-		# Clear the mesh data when we stop casting
+	if player_view_model:
+		if player_view_model.current_spell_beam:
+			player_view_model.current_spell_beam.visible = false
+		if player_view_model.current_spell_particles:
+			player_view_model.current_spell_particles.emitting = false
+			
 		var immediate_mesh = player_view_model.current_spell_beam.mesh as ImmediateMesh
 		if immediate_mesh:
 			immediate_mesh.clear_surfaces()
@@ -146,7 +146,7 @@ func _get_spell_receiver(hit_node: Node) -> SpellReceiver:
 	#beam_mesh.surface_end()
 
 
-func _build_beam_mesh(from: Vector3, to: Vector3, delta: float) -> void:
+func _build_beam_mesh(from: Vector3, to: Vector3, _delta: float) -> void:
 	var beam_node = player_view_model.current_spell_beam
 	var beam_mesh = beam_node.mesh as ImmediateMesh
 	

@@ -1,0 +1,25 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://vn3ivso8btt3" path="res://entities/enemy/enemy.tscn" id="1_base"]
+[ext_resource type="Resource" uid="uid://ddwus3i1mvavg" path="res://entities/enemy/listener/listener_behaviour.tres" id="2_behaviour"]
+[ext_resource type="PackedScene" uid="uid://cmsnlj61cpxcj" path="res://assets/assets_meshes/enemy_meshes/listener/listener_animated_skeletal.fbx" id="3_model"]
+[ext_resource type="Script" uid="uid://m1rsn5flnyxc" path="res://entities/enemy/enemy_states/enemy_state_dormant.gd" id="4_dormant"]
+[ext_resource type="Script" uid="uid://bhvi0tbs1si7p" path="res://entities/enemy/enemy_states/enemy_state_agitated.gd" id="5_agitated"]
+[ext_resource type="Script" uid="uid://cnycucx8ho718" path="res://entities/enemy/enemy_states/enemy_state_moving.gd" id="6_moving"]
+[ext_resource type="Script" uid="uid://c6bi2pq8wngpt" path="res://entities/enemy/enemy_states/enemy_state_catch.gd" id="7_catch"]
+[ext_resource type="Script" uid="uid://c2oftcu16xppl" path="res://entities/enemy/enemy_states/enemy_state_gone.gd" id="8_gone"]
+
+[node name="ListenerEnemy" instance=ExtResource("1_base")]
+behaviour_data = ExtResource("2_behaviour")
+enemy_model_scene = ExtResource("3_model")
+
+[node name="EnemyStateMachine" parent="."]
+set_state_scripts = Dictionary[String, Script]({
+"Dormant": ExtResource("4_dormant"),
+"Agitated": ExtResource("5_agitated"),
+"Moving": ExtResource("6_moving"),
+"Catch": ExtResource("7_catch"),
+"Gone": ExtResource("8_gone")
+})
+set_initial_state = "Dormant"
+use_physics_state = true

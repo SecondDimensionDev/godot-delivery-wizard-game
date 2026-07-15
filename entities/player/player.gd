@@ -20,6 +20,15 @@ extends CharacterBody3D
 @export var anim_tree: AnimationTree
 @export var animation_control: PlayerAnimationControl
 
+# PUBLIC VARIABLES
+#TODO Remove this and replace with a proper component solution
+## Replicated camera forward direction; used by senses that check "is this player looking at X" (e.g. EnemySenses.is_seen_by_any_player).
+var aim: Vector3:
+	get:
+		if is_instance_valid(camera_anchor) and is_multiplayer_authority():
+			return -camera_anchor.global_transform.basis.z
+		return Vector3.ZERO
+
 # PRIVATE VARIABLES
 
 
@@ -35,3 +44,9 @@ func _ready() -> void:
 
 func _temp_state_change(old_state_name: String, new_state_name: String) ->void:
 	print("Player State Changed from %s to %s" % [old_state_name, new_state_name])
+
+
+# PUBLIC FUNCTIONS
+#TODO Remove this and replace with a proper component solution
+func teleport_to(new_position: Vector3) -> void: ## Moves the body directly to a world position (e.g. after being caught by an enemy).
+	global_position = new_position

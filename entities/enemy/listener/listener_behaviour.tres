@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="EnemyBehaviourData" format=3 uid="uid://ddwus3i1mvavg"]
+
+[ext_resource type="Script" uid="uid://75hm5rby61sa" path="res://scripts/game_specific_resources/enemy_behaviour_data.gd" id="1_behaviour"]
+
+[resource]
+script = ExtResource("1_behaviour")
+use_hearing = true
+catch_range = 1.4
+respawn_delay_ms = 4000
+mesh_forward_offset_deg = 180.0
+state_clip_map = Dictionary[String, String]({
+"Agitated": "agitated-idle",
+"Catch": "zombie_attack2_1",
+"Dormant": "zombie_idle1",
+"Moving": "zombie_run1"
+})
+state_clip_speed_map = Dictionary[String, float]({
+"Moving": 0.5
+})
+motion_clip_sources = Dictionary[String, String]({
+"agitated-idle": "res://assets/assets_meshes/enemy_meshes/listener/agitated_idle.fbx",
+"zombie_attack2_1": "res://assets/assets_meshes/enemy_meshes/listener/zombie_attack2_1.fbx",
+"zombie_run1": "res://assets/assets_meshes/enemy_meshes/listener/zombie_run1.fbx"
+})
+looped_clips = Array[String](["zombie_idle1", "agitated-idle", "zombie_run1"])
