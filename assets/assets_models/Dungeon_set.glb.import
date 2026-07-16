@@ -16,8 +16,6 @@ dest_files=["res://.godot/imported/Dungeon_set.glb-2b9f5da97a8f61935f73ce3111538
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
-mesh_library/use_node_names_as_mesh_names=false
-array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -47,7 +45,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_002.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_002.res",
 "save_to_file/path": "uid://ewakbe8t85k1"
 },
 "Dungeon_set_Cube_003": {
@@ -56,7 +54,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_003.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_003.res",
 "save_to_file/path": "uid://d0p5k82xhejgp"
 },
 "Dungeon_set_Cube_005": {
@@ -65,7 +63,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_005.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_005.res",
 "save_to_file/path": "uid://y6wunhcr41ky"
 },
 "Dungeon_set_Cube_007": {
@@ -74,7 +72,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_007.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_007.res",
 "save_to_file/path": "uid://cxp56ejdj440s"
 },
 "Dungeon_set_Cube_008": {
@@ -83,7 +81,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_008.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_008.res",
 "save_to_file/path": "uid://b3s0e1t5355hv"
 },
 "Dungeon_set_Cube_009": {
@@ -92,7 +90,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_009.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_009.res",
 "save_to_file/path": "uid://rhqrfy5lqpku"
 },
 "Dungeon_set_Cube_010": {
@@ -101,7 +99,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_010.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_010.res",
 "save_to_file/path": "uid://bd7dt2vksuti1"
 },
 "Dungeon_set_Cube_011": {
@@ -110,7 +108,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_011.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_011.res",
 "save_to_file/path": "uid://cokgaxby3ltm5"
 },
 "Dungeon_set_Cube_015": {
@@ -119,7 +117,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_015.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_015.res",
 "save_to_file/path": "uid://bg6160uf0ct6w"
 },
 "Dungeon_set_Cube_016": {
@@ -128,7 +126,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_016.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_016.res",
 "save_to_file/path": "uid://rph4vecddewu"
 },
 "Dungeon_set_Cube_017": {
@@ -137,7 +135,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_017.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_017.res",
 "save_to_file/path": "uid://fckcol73d5t3"
 },
 "Dungeon_set_Cube_019": {
@@ -146,7 +144,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_019.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_019.res",
 "save_to_file/path": "uid://506nl5w8kcsv"
 },
 "Dungeon_set_Cube_021": {
@@ -155,7 +153,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_021.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_021.res",
 "save_to_file/path": "uid://m4cc6p045sbs"
 },
 "Dungeon_set_Cube_022": {
@@ -164,7 +162,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_022.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_022.res",
 "save_to_file/path": "uid://l0morn6v4y01"
 },
 "Dungeon_set_Cube_025": {
@@ -173,7 +171,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_025.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_025.res",
 "save_to_file/path": "uid://c70u5p72ir0uy"
 },
 "Dungeon_set_Cube_027": {
@@ -182,7 +180,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_027.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_027.res",
 "save_to_file/path": "uid://p4cs1tgde3pa"
 },
 "Dungeon_set_Cube_029": {
@@ -191,7 +189,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_029.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_029.res",
 "save_to_file/path": "uid://pw4vjajk5dwj"
 },
 "Dungeon_set_Cube_032": {
@@ -200,7 +198,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_032.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_032.res",
 "save_to_file/path": "uid://xvedbci3g60k"
 },
 "Dungeon_set_Cube_034": {
@@ -209,7 +207,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_034.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_034.res",
 "save_to_file/path": "uid://ffebpd1f8esu"
 },
 "Dungeon_set_Cube_036": {
@@ -218,7 +216,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_036.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_036.res",
 "save_to_file/path": "uid://dr0fmyy87yhge"
 },
 "Dungeon_set_Cube_045": {
@@ -227,7 +225,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_045.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_045.res",
 "save_to_file/path": "uid://c0ne8pmiu8wt7"
 },
 "Dungeon_set_Cube_049": {
@@ -236,7 +234,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_049.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_049.res",
 "save_to_file/path": "uid://bj3ay7n2s6og8"
 },
 "Dungeon_set_Cube_051": {
@@ -245,7 +243,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_051.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_051.res",
 "save_to_file/path": "uid://cxus2mf0ub5eq"
 },
 "Dungeon_set_Cube_052": {
@@ -254,7 +252,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_052.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_052.res",
 "save_to_file/path": "uid://do4i8ya4nrfxp"
 },
 "Dungeon_set_Cube_053": {
@@ -263,7 +261,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_053.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_053.res",
 "save_to_file/path": "uid://0y68toxof5au"
 },
 "Dungeon_set_Cube_054": {
@@ -272,7 +270,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_054.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_054.res",
 "save_to_file/path": "uid://fosjosorwlkr"
 },
 "Dungeon_set_Cube_055": {
@@ -281,7 +279,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_055.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_055.res",
 "save_to_file/path": "uid://cdktb56jsqq2q"
 },
 "Dungeon_set_Cube_056": {
@@ -290,7 +288,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_056.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_056.res",
 "save_to_file/path": "uid://bkiu6wvqygquc"
 },
 "Dungeon_set_Cube_057": {
@@ -299,7 +297,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_057.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_057.res",
 "save_to_file/path": "uid://bsrn3iaopa2i3"
 },
 "Dungeon_set_Cube_059": {
@@ -308,7 +306,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_059.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_059.res",
 "save_to_file/path": "uid://b3wtbqopcdpw2"
 },
 "Dungeon_set_Cube_061": {
@@ -317,7 +315,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_061.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_061.res",
 "save_to_file/path": "uid://cotv01whqlon0"
 },
 "Dungeon_set_Cube_062": {
@@ -326,7 +324,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_062.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_062.res",
 "save_to_file/path": "uid://cvr2lsv1yq8rx"
 },
 "Dungeon_set_Cube_063": {
@@ -335,7 +333,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_063.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_063.res",
 "save_to_file/path": "uid://ctl07vyik3pbe"
 },
 "Dungeon_set_Cube_064": {
@@ -344,7 +342,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_064.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_064.res",
 "save_to_file/path": "uid://bsx1w4068bli4"
 },
 "Dungeon_set_Cube_065": {
@@ -353,7 +351,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_065.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_065.res",
 "save_to_file/path": "uid://b8njq13w4xu15"
 },
 "Dungeon_set_Cube_066": {
@@ -362,7 +360,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_066.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_066.res",
 "save_to_file/path": "uid://x7x5l8f0l67y"
 },
 "Dungeon_set_Cube_068": {
@@ -371,7 +369,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_068.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_068.res",
 "save_to_file/path": "uid://hu4108k4r1xd"
 },
 "Dungeon_set_Cube_069": {
@@ -380,7 +378,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_069.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_069.res",
 "save_to_file/path": "uid://keqsultynle1"
 },
 "Dungeon_set_Cube_070": {
@@ -389,7 +387,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_070.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_070.res",
 "save_to_file/path": "uid://d2y3ygk2ysny1"
 },
 "Dungeon_set_Cube_071": {
@@ -398,7 +396,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_071.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_071.res",
 "save_to_file/path": "uid://dywl3ftdph4di"
 },
 "Dungeon_set_Cube_072": {
@@ -407,7 +405,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_072.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_072.res",
 "save_to_file/path": "uid://hwqvlf2smx4u"
 },
 "Dungeon_set_Cube_073": {
@@ -416,7 +414,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_073.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_073.res",
 "save_to_file/path": "uid://c68ek2qehdl1e"
 },
 "Dungeon_set_Cube_074": {
@@ -425,7 +423,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_074.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_074.res",
 "save_to_file/path": "uid://bf2lb0604uj27"
 },
 "Dungeon_set_Cube_075": {
@@ -434,7 +432,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_075.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_075.res",
 "save_to_file/path": "uid://d4fagyfybgc7v"
 },
 "Dungeon_set_Cube_076": {
@@ -443,7 +441,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_076.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_076.res",
 "save_to_file/path": "uid://qer3vdtrfqdb"
 },
 "Dungeon_set_Cube_077": {
@@ -452,7 +450,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_077.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_077.res",
 "save_to_file/path": "uid://1acvsxw6dlhu"
 },
 "Dungeon_set_Cube_078": {
@@ -461,7 +459,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_078.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_078.res",
 "save_to_file/path": "uid://dxd8crmc10l0q"
 },
 "Dungeon_set_Cube_079": {
@@ -470,7 +468,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_079.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_079.res",
 "save_to_file/path": "uid://cj1meisoon7i5"
 },
 "Dungeon_set_Cube_080": {
@@ -479,7 +477,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_080.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_080.res",
 "save_to_file/path": "uid://d1ft72s5qdmh7"
 },
 "Dungeon_set_Cube_081": {
@@ -488,7 +486,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_081.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_081.res",
 "save_to_file/path": "uid://cuoklmm6p5pmy"
 },
 "Dungeon_set_Cube_082": {
@@ -497,7 +495,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_082.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_082.res",
 "save_to_file/path": "uid://d26a8hohbniup"
 },
 "Dungeon_set_Cube_084": {
@@ -506,7 +504,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_084.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_084.res",
 "save_to_file/path": "uid://butf2ec48kgit"
 },
 "Dungeon_set_Cube_085": {
@@ -515,7 +513,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_085.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_085.res",
 "save_to_file/path": "uid://cdelpfetrxtow"
 },
 "Dungeon_set_Cube_086": {
@@ -524,7 +522,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_086.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_086.res",
 "save_to_file/path": "uid://4v7s8xjoiagc"
 },
 "Dungeon_set_Cube_087": {
@@ -533,7 +531,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_087.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_087.res",
 "save_to_file/path": "uid://bb7arupwt5gmn"
 },
 "Dungeon_set_Cube_088": {
@@ -542,7 +540,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_088.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_088.res",
 "save_to_file/path": "uid://hkgh8hdvky7n"
 },
 "Dungeon_set_Cube_089": {
@@ -551,7 +549,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_089.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_089.res",
 "save_to_file/path": "uid://3plaerb84pmw"
 },
 "Dungeon_set_Cube_090": {
@@ -560,7 +558,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_090.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_090.res",
 "save_to_file/path": "uid://iksflh43hgk3"
 },
 "Dungeon_set_Cube_091": {
@@ -569,7 +567,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_091.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_091.res",
 "save_to_file/path": "uid://dspjb3ucyuugd"
 },
 "Dungeon_set_Cube_092": {
@@ -578,7 +576,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_092.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_092.res",
 "save_to_file/path": "uid://dc7nl6jwttshn"
 },
 "Dungeon_set_Cube_093": {
@@ -587,7 +585,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_093.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_093.res",
 "save_to_file/path": "uid://blnkwplry3qwd"
 },
 "Dungeon_set_Cube_094": {
@@ -596,7 +594,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_094.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_094.res",
 "save_to_file/path": "uid://7wd6fg587ysa"
 },
 "Dungeon_set_Cube_095": {
@@ -605,7 +603,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_095.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_095.res",
 "save_to_file/path": "uid://cgsjx666e61bi"
 },
 "Dungeon_set_Cube_096": {
@@ -614,7 +612,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_096.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_096.res",
 "save_to_file/path": "uid://b86wnio7ycn61"
 },
 "Dungeon_set_Cube_100": {
@@ -623,7 +621,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_100.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_100.res",
 "save_to_file/path": "uid://bqikh7aegslpb"
 },
 "Dungeon_set_Cube_103": {
@@ -632,7 +630,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_103.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_103.res",
 "save_to_file/path": "uid://cpilnn2cwv0l0"
 },
 "Dungeon_set_Cube_109": {
@@ -641,7 +639,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_109.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_109.res",
 "save_to_file/path": "uid://dm1aj6ks8e10k"
 },
 "Dungeon_set_Cube_114": {
@@ -650,7 +648,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_114.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_114.res",
 "save_to_file/path": "uid://bv3f7rq2wn4cp"
 },
 "Dungeon_set_Cube_116": {
@@ -659,7 +657,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_116.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_116.res",
 "save_to_file/path": "uid://dihqk666xpuc7"
 },
 "Dungeon_set_Cube_123": {
@@ -668,7 +666,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_123.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_123.res",
 "save_to_file/path": "uid://d2p88b1y3t87r"
 },
 "Dungeon_set_Cube_126": {
@@ -677,7 +675,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_126.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_126.res",
 "save_to_file/path": "uid://fhusq2mg02tr"
 },
 "Dungeon_set_Cube_131": {
@@ -686,7 +684,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_131.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_131.res",
 "save_to_file/path": "uid://cq661mf85dqbr"
 },
 "Dungeon_set_Cube_135": {
@@ -695,7 +693,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_135.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_135.res",
 "save_to_file/path": "uid://c0da86es70drb"
 },
 "Dungeon_set_Cube_204": {
@@ -704,7 +702,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_204.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_204.res",
 "save_to_file/path": "uid://xxoriuwhq4pk"
 },
 "Dungeon_set_Cube_205": {
@@ -713,7 +711,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_205.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_205.res",
 "save_to_file/path": "uid://byjhjjmawhbkc"
 },
 "Dungeon_set_Cube_207": {
@@ -722,7 +720,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_207.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_207.res",
 "save_to_file/path": "uid://bjvboirbpu3ql"
 },
 "Dungeon_set_Cube_208": {
@@ -731,7 +729,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_208.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_208.res",
 "save_to_file/path": "uid://d132b3jukfnvv"
 },
 "Dungeon_set_Cube_209": {
@@ -740,7 +738,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_209.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_209.res",
 "save_to_file/path": "uid://bw2noadaxbur3"
 },
 "Dungeon_set_Cube_210": {
@@ -749,7 +747,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_210.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_210.res",
 "save_to_file/path": "uid://cqkyv8divmx32"
 },
 "Dungeon_set_Cube_211": {
@@ -758,7 +756,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_211.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_211.res",
 "save_to_file/path": "uid://cxyadk2xwosma"
 },
 "Dungeon_set_Cube_213": {
@@ -767,7 +765,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_Cube_213.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_Cube_213.res",
 "save_to_file/path": "uid://i7jncs3w53u"
 },
 "Dungeon_set_plank8_low_002": {
@@ -776,7 +774,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_002.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_002.res",
 "save_to_file/path": "uid://bntvtw8g37fn7"
 },
 "Dungeon_set_plank8_low_003": {
@@ -785,7 +783,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_003.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_003.res",
 "save_to_file/path": "uid://dahgpxfgp23yh"
 },
 "Dungeon_set_plank8_low_004": {
@@ -794,7 +792,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_004.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_004.res",
 "save_to_file/path": "uid://mwd8tufqn10m"
 },
 "Dungeon_set_plank8_low_005": {
@@ -803,7 +801,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_005.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_005.res",
 "save_to_file/path": "uid://dgryr3428fnue"
 },
 "Dungeon_set_plank8_low_006": {
@@ -812,7 +810,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_006.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_006.res",
 "save_to_file/path": "uid://dqsucpgiwipl8"
 },
 "Dungeon_set_plank8_low_007": {
@@ -821,7 +819,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_007.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_007.res",
 "save_to_file/path": "uid://23lbt0cxnq8n"
 },
 "Dungeon_set_plank8_low_008": {
@@ -830,7 +828,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_008.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_008.res",
 "save_to_file/path": "uid://150cbo3mbd5r"
 },
 "Dungeon_set_plank8_low_009": {
@@ -839,7 +837,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_009.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_009.res",
 "save_to_file/path": "uid://bi86ui56mjb3f"
 },
 "Dungeon_set_plank8_low_010": {
@@ -848,7 +846,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_010.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_010.res",
 "save_to_file/path": "uid://bgivyxkbw1hl2"
 },
 "Dungeon_set_plank8_low_011": {
@@ -857,7 +855,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_011.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_011.res",
 "save_to_file/path": "uid://dd2cygdvnbjmm"
 },
 "Dungeon_set_plank8_low_012": {
@@ -866,7 +864,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_012.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_012.res",
 "save_to_file/path": "uid://cpn3wmqr4dqak"
 },
 "Dungeon_set_plank8_low_013": {
@@ -875,7 +873,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_013.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_013.res",
 "save_to_file/path": "uid://ceg3vno50pu6v"
 },
 "Dungeon_set_plank8_low_014": {
@@ -884,7 +882,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_014.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_014.res",
 "save_to_file/path": "uid://v66r1h5ec000"
 },
 "Dungeon_set_plank8_low_015": {
@@ -893,7 +891,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_015.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_015.res",
 "save_to_file/path": "uid://bisb4xa7krfss"
 },
 "Dungeon_set_plank8_low_016": {
@@ -902,7 +900,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_016.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_016.res",
 "save_to_file/path": "uid://b518udx0g30pa"
 },
 "Dungeon_set_plank8_low_017": {
@@ -911,7 +909,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_017.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_017.res",
 "save_to_file/path": "uid://d3l4o5snial3y"
 },
 "Dungeon_set_plank8_low_018": {
@@ -920,7 +918,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_018.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_018.res",
 "save_to_file/path": "uid://bt8jhpsnrj25g"
 },
 "Dungeon_set_plank8_low_019": {
@@ -929,7 +927,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_019.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_019.res",
 "save_to_file/path": "uid://bwfh5e0gx03vu"
 },
 "Dungeon_set_plank8_low_020": {
@@ -938,7 +936,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_020.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_020.res",
 "save_to_file/path": "uid://kx76ytlcwyp5"
 },
 "Dungeon_set_plank8_low_021": {
@@ -947,7 +945,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_021.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_021.res",
 "save_to_file/path": "uid://ppqr2w8m651p"
 },
 "Dungeon_set_plank8_low_022": {
@@ -956,7 +954,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_022.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_022.res",
 "save_to_file/path": "uid://c81gejwv4argt"
 },
 "Dungeon_set_plank8_low_023": {
@@ -965,7 +963,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_023.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_023.res",
 "save_to_file/path": "uid://bsaysh5njy1p8"
 },
 "Dungeon_set_plank8_low_024": {
@@ -974,7 +972,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_024.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_024.res",
 "save_to_file/path": "uid://c2vm74qvdferq"
 },
 "Dungeon_set_plank8_low_025": {
@@ -983,7 +981,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_025.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_025.res",
 "save_to_file/path": "uid://dkjfjg3ab5kkx"
 },
 "Dungeon_set_plank8_low_026": {
@@ -992,7 +990,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_026.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_026.res",
 "save_to_file/path": "uid://d235ovj6tyjfb"
 },
 "Dungeon_set_plank8_low_027": {
@@ -1001,7 +999,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_027.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_027.res",
 "save_to_file/path": "uid://df516gu8pesd4"
 },
 "Dungeon_set_plank8_low_028": {
@@ -1010,7 +1008,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_028.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_028.res",
 "save_to_file/path": "uid://b3tft2e23j4pb"
 },
 "Dungeon_set_plank8_low_029": {
@@ -1019,7 +1017,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_029.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_029.res",
 "save_to_file/path": "uid://ynlipcuomfx3"
 },
 "Dungeon_set_plank8_low_030": {
@@ -1028,7 +1026,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_030.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_030.res",
 "save_to_file/path": "uid://dr83orjb4noip"
 },
 "Dungeon_set_plank8_low_031": {
@@ -1037,7 +1035,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_031.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_031.res",
 "save_to_file/path": "uid://be0tajhl6lkph"
 },
 "Dungeon_set_plank8_low_032": {
@@ -1046,7 +1044,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_032.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_032.res",
 "save_to_file/path": "uid://daa67nruldprv"
 },
 "Dungeon_set_plank8_low_033": {
@@ -1055,7 +1053,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_033.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_033.res",
 "save_to_file/path": "uid://bhgsctjtadl6"
 },
 "Dungeon_set_plank8_low_034": {
@@ -1064,7 +1062,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_034.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_034.res",
 "save_to_file/path": "uid://c67wwp4bgebjw"
 },
 "Dungeon_set_plank8_low_035": {
@@ -1073,7 +1071,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_035.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_035.res",
 "save_to_file/path": "uid://dxxnuky7bywp0"
 },
 "Dungeon_set_plank8_low_036": {
@@ -1082,7 +1080,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_036.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_036.res",
 "save_to_file/path": "uid://df0wxwyb7njoq"
 },
 "Dungeon_set_plank8_low_037": {
@@ -1091,7 +1089,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_037.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_037.res",
 "save_to_file/path": "uid://hkj4c184axqv"
 },
 "Dungeon_set_plank8_low_039": {
@@ -1100,7 +1098,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_039.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_039.res",
 "save_to_file/path": "uid://b4fert8n3l7q5"
 },
 "Dungeon_set_plank8_low_040": {
@@ -1109,7 +1107,7 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_040.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_040.res",
 "save_to_file/path": "uid://bygxs7p03jjq1"
 },
 "Dungeon_set_plank8_low_041": {
@@ -1118,11 +1116,10 @@ _subresources={
 "generate/shadow_meshes": 0,
 "lods/normal_merge_angle": 20.0,
 "save_to_file/enabled": true,
-"save_to_file/fallback_path": "res://assets/assets_meshes/Dungeon_set_plank8_low_041.res",
+"save_to_file/fallback_path": "res://assets/assets_meshes/dungeon_set/Dungeon_set_plank8_low_041.res",
 "save_to_file/path": "uid://dhpeyfghuhwgp"
 }
 }
 }
 gltf/naming_version=2
 gltf/embedded_image_handling=1
-gltf/texture_map_mode=1
